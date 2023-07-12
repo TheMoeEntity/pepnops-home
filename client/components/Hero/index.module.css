@@ -16,11 +16,28 @@
     height: fit-content;
     visibility: hidden;
 }
-.caption {
-    margin-left: 70px;
-    width: 40%;
-    margin-top: 45px;
+.captions {
+    top: 60%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 50px;
+    color: white;
+    line-height: 1.2 !important;
+    font-size: 27px;
+
+
 }
+.captions h1 {
+    font-weight: 900;
+}
+.captions p {
+    font-weight: 200;
+    font-size: small;
+    width: 65%;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
 .caption:nth-child(2) {
     margin-top: 60px !important;
 }
