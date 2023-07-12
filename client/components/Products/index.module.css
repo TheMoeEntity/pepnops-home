@@ -41,9 +41,15 @@
 }
 
 .grid > div .img {
-    width: 100%;
-    height: 200px;
+    width: 95%;
+    height: 220px;
+    padding: 20px;
+    border-radius: 9px;
     position: relative;
+    margin: auto;
+}
+.grid > div .img img {
+    border-radius: 9px;
 }
 .grid > div .capt {
     width: 100%;

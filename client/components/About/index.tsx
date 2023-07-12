@@ -46,7 +46,7 @@ const About = () => {
         </div>
         <div>
           <div className={styles.capt}>
-            Our solutions are Reliable, and tailored to consistently exceed client's expectations
+            Our solutions are Reliable, and tailored to consistently exceed {`client's`} expectations
           </div>
           <Image
             src={third}

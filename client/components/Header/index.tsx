@@ -8,7 +8,7 @@ const Header = () => {
         <ul>
           <li>Products</li>
           <li>Who we are</li>
-          <li>Let's Talk</li>
+          <li>{`Let's Talk`}</li>
         </ul>
       </div>
     </div>
