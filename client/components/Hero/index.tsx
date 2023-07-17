@@ -18,12 +18,13 @@ const Hero = () => {
       <div className={styles.captions}>
         <h1>
           Delivering Innovative & <br /> Customised Technology <br /> Solutions
+          <span style={{ color: "#00D169" }}>.</span>
         </h1>
         <p>
           Staying ahead of {`today's`} fast paced and highly competitive
           technological changes is crucial to success. At pepnops, we specialize
           in delivering cuttting-edge technology solutions that are tailored to
-          meet the unique needs of your business.
+          meet the unique needs of your business
         </p>
       </div>
     </div>

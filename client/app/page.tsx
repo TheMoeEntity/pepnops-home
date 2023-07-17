@@ -1,7 +1,8 @@
-import About from '@/components/About'
-import Hero from '@/components/Hero'
-import Products from '@/components/Products'
-import styles from './page.module.css'
+import About from "@/components/About";
+import Hero from "@/components/Hero";
+import Products from "@/components/Products";
+import Sponsors from "@/components/Sponsors";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <About />
       <Products />
+      <Sponsors />
     </main>
-  )
+  );
 }
