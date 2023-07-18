@@ -85,3 +85,51 @@
   color: #a4a4a4;
   margin-top: 20px;
 }
+.container {
+  width: fit-content;
+  margin: 20px auto;
+  padding: 0;
+  height: fit-content;
+  overflow: hidden;
+}
+.sponsors .sponsorsGrid {
+  width: fit-content;
+  padding: 20px 0px;
+  height: auto;
+  margin-top: 15px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  animation-name: prop-600;
+  animation: rotation 6.5s infinite linear;
+}
+.sponsors .sponsorsGrid > div {
+  position: relative;
+  min-width: 270px;
+  height: 125.5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sponsors .sponsorsGrid > div:nth-child(1) {
+  margin-left: 0;
+}
+.sponsors .sponsorsGrid > div:last-child {
+  margin-right: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100vw);
+  }
+  /* 0% {
+    -webkit-transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-100px);
+  } */
+}
