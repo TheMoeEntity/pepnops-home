@@ -4,10 +4,12 @@ import Image from "next/image";
 import pepnops from "../../public/images/pheader.png";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [sidebar, setSideBar] = useState<boolean>(false);
   const sideContent = useRef<HTMLDivElement | null>(null);
+  const router = useRouter();
   const show = () => {
     setSideBar(true);
     setTimeout(() => {
@@ -75,7 +77,7 @@ const Header = () => {
       </div>
       <div>
         <ul>
-          <li>Products</li>
+          <li onClick={() => router.push("#solutions")}>Solutions</li>
           <li>Who we are</li>
           <li>{`Let's Talk`}</li>
         </ul>

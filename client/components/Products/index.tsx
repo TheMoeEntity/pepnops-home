@@ -5,7 +5,7 @@ import worker2 from "../../public/images/motor.jpg";
 import worker3 from "../../public/images/IT.jpg";
 const Products = () => {
   return (
-    <div className={styles.products}>
+    <div id="solutions" className={styles.products}>
       <div className={styles.title}>
         <h2>OUR SOLUTIONS</h2>
       </div>
