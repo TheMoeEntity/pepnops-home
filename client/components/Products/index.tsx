@@ -28,9 +28,8 @@ const Products = () => {
               <p className={styles.secondp}>Community management system</p>
             </div>
             <p className={styles.detail}>
-              Seeking for an administrative backend to efficiently manage
-              residents and guests within your community? Our software solution
-              is all you...
+              An administrative backend to efficiently manage residents, guests
+              and all processes within your community
               {/* need to take charge of your processes */}
             </p>
             <button>LEARN MORE</button>
@@ -54,9 +53,8 @@ const Products = () => {
               <p className={styles.secondp}>Fleet management system</p>
             </div>
             <p className={styles.detail}>
-              Keeping track of guests and visitors within an estate can be a
-              problem. Our software solution is all you need to efficiently
-              manage your guests
+              A software system to keep track of your vehicles, as well as get
+              notified of vehicle maintenance requirements in real time.
             </p>
             <button>LEARN MORE</button>
           </div>
@@ -83,7 +81,6 @@ const Products = () => {
             <p className={styles.detail}>
               Professional IT consulting and outsourcing to help drive growth,
               enhance efficiency, and unlock your full business potential.
-              Discover ways...
               {/* Discover ways to partner with us for professional expertise andn
               accelerated growth. */}
             </p>
