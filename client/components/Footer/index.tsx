@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
-import logo from "../../public/images/pepnops2.svg";
+import logo from "../../public/images/footer.png";
 import icon1 from "../../public/images/1.png";
 import icon2 from "../../public/images/2.png";
 import icon3 from "../../public/images/3.png";
@@ -17,7 +17,7 @@ const Footer = () => {
               src={logo}
               objectFit="cover"
               alt="card-image"
-              layout="fill"
+              fill
               quality={100}
               priority={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -43,7 +43,7 @@ const Footer = () => {
                 src={icon1}
                 objectFit="cover"
                 alt="card-image"
-                layout="fill"
+                fill
                 quality={100}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -58,7 +58,7 @@ const Footer = () => {
                 src={icon2}
                 objectFit="cover"
                 alt="card-image"
-                layout="fill"
+                fill
                 quality={100}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -72,7 +72,7 @@ const Footer = () => {
                 src={icon3}
                 objectFit="cover"
                 alt="card-image"
-                layout="fill"
+                fill
                 quality={100}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

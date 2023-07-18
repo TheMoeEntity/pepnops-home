@@ -27,7 +27,7 @@
 }
 .grid > div:nth-child(2) > div {
   display: flex;
-  margin: 50px 10px;
+  margin: 32px 10px;
   font-size: 14px;
 }
 .grid > div:nth-child(2) {
@@ -35,7 +35,7 @@
 }
 .icons {
   width: 55%;
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -69,8 +69,9 @@
 .logo {
   width: 235.8px;
   height: 44px;
-  width: 160.77px;
-  height: 160.77px;
+  width: 216px;
+  height: 216px;
+  /* background-color: orange; */
   position: relative;
 }
 .logo img {
@@ -133,6 +134,11 @@
   margin: 0 12px;
   color: #ffb703;
   font-size: 8px;
+}
+@media screen and (max-width: 1200px) {
+  .grid {
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 400px) {
   .footer {
