@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
-import logo from "../../public/images/footer.png";
+import logo from "../../public/images/footer2.png";
 import icon1 from "../../public/images/10.png";
 import icon2 from "../../public/images/11.png";
 import icon3 from "../../public/images/12.png";
@@ -116,7 +116,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.copyright}>
-        <div>© 2023 Pepnops Inc </div>
+        <div>© 2023 Pepnops Inc. </div>
       </div>
     </div>
   );
