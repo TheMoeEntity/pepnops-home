@@ -11,6 +11,14 @@
   flex-flow: row wrap;
   color: white;
 }
+.bars {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  right: 30px;
+  display: none;
+}
 .header ul li {
   list-style-type: none;
   display: inline;
@@ -31,4 +39,22 @@
   overflow: hidden;
   position: relative;
   margin-left: 40px;
+}
+@media screen and (max-width: 700px) {
+  .bars {
+    display: block;
+  }
+  .header ul li {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 0 10px;
+  }
+  .logo {
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+  }
 }

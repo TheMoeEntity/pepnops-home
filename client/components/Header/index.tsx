@@ -5,6 +5,9 @@ import pepnops from "../../public/images/pepnops2.svg";
 const Header = () => {
   return (
     <div className={styles.header}>
+      <div className={styles.bars}>
+        <i className="fa-solid fa-bars"></i>
+      </div>
       <div className={styles.logo}>
         <Image
           src={pepnops}

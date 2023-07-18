@@ -17,7 +17,8 @@ const Hero = () => {
       />
       <div className={styles.captions}>
         <h1>
-          Delivering Innovative & <br /> Customised Technology <br /> Solutions
+          Delivering Innovative & Customised Technology <br />
+          <span className={styles.move}> Solutions</span>
           <span className={styles.dot}>.</span>
         </h1>
         <p>
