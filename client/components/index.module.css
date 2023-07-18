@@ -51,6 +51,16 @@
   font-size: 40px;
   font-weight: 700;
 }
+.grid > div:first-child .capt2 {
+  bottom: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  z-index: 100;
+  color: white;
+  left: 20px;
+  padding-right: 15px;
+}
 .grid > div:nth-child(2) .capt {
   font-size: 26px;
   font-weight: 700;

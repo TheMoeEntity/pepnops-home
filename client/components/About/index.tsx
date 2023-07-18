@@ -20,6 +20,9 @@ const About = () => {
             Choose <br />
             US
           </div>
+          <div className={styles.capt2}>
+            Our solutions are tailored to suit your specific needs
+          </div>
           <Image
             src={shake}
             objectFit="cover"
@@ -32,7 +35,8 @@ const About = () => {
         </div>
         <div>
           <div className={styles.capt}>
-            We have <br />over a decade of collective experience
+            We have <br />
+            over a decade of collective experience
           </div>
           <Image
             src={laptop}
@@ -46,7 +50,8 @@ const About = () => {
         </div>
         <div>
           <div className={styles.capt}>
-            Our solutions are Reliable, and tailored to consistently exceed {`client's`} expectations
+            Our solutions are Reliable, and tailored to consistently exceed{" "}
+            {`client's`} expectations
           </div>
           <Image
             src={third}

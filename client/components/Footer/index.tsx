@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
-import logo from "../../public/images/logo-white.png";
+import logo from "../../public/images/pepnops2.svg";
 import icon1 from "../../public/images/1.png";
 import icon2 from "../../public/images/2.png";
 import icon3 from "../../public/images/3.png";
@@ -23,22 +23,22 @@ const Footer = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do
             eiusmod tempor in cididunt ut labore.
-          </p>
-          <strong>Opening Hours :</strong> Monday Sat: 9am to 6pm
-          <div className={styles.icons}>
+          </p> */}
+          {/* <strong>Opening Hours :</strong> Monday Sat: 9am to 6pm */}
+          {/* <div className={styles.icons}>
             <i className="fa-brands fa-facebook"></i>
             <i className="fa-brands fa-twitter"></i>
             <i className="fa-brands fa-pinterest"></i>
             <i className="fa-brands fa-instagram"></i>
-          </div>
+          </div> */}
         </div>
         <div>
           <h2>CONTACT INFO</h2>
           <div>
-            <div>
+            <div style={{ width: "30px" }}>
               <Image
                 src={icon1}
                 objectFit="cover"
@@ -49,11 +49,11 @@ const Footer = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div>Ta-134/A, Gulshan Badda Link Rd, Dhaka</div>
+            <div>Lagos, Nigeria</div>
           </div>
 
           <div>
-            <div>
+            <div style={{ width: "30px" }}>
               <Image
                 src={icon2}
                 objectFit="cover"
@@ -64,10 +64,10 @@ const Footer = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div>(+234) 807 548 9362, (+880) 155 69569 366</div>
+            <div>(+234) 807 548 9362</div>
           </div>
           <div>
-            <div style={{ width: "50px" }}>
+            <div style={{ width: "30px" }}>
               <Image
                 src={icon3}
                 objectFit="cover"
@@ -78,70 +78,48 @@ const Footer = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div>mosesnwigberi@gmail.com, moseschukwudinwigberi@gmail.com</div>
+            <div>biz@pepnops.com</div>
           </div>
         </div>
         <div>
-          <h2>OUR SERVICES</h2>
+          <h2>OUR SOLUTIONS</h2>
           <div>
             <i className="fa fa-angle-right"></i>
-            General Construction
+            Smart X
           </div>
           <div>
             <i className="fa fa-angle-right"></i>
-            Property Maintenance
+            Tracker 360
           </div>
           <div>
             <i className="fa fa-angle-right"></i>
-            Project Management
-          </div>
-          <div>
-            <i className="fa fa-angle-right"></i>
-            Virtual Design & Build
-          </div>
-          <div>
-            <i className="fa fa-angle-right"></i>
-            Preconstruction
-          </div>
-          <div>
-            <i className="fa fa-angle-right"></i>
-            Design Build
+            IT Consulting
           </div>
         </div>
         <div>
-          <h2>NEWSLETTER</h2>
-          <form action="">
-            Tetur adipiscing elit, sed do eiusmod tempor in cididunt ut labore
-            <input placeholder="Your Email Address" type="text" />
-            <button type="submit">SUBSCRIBE NOW</button>
-          </form>
+          <h2>ABOUT US</h2>
+          <div>
+            <i className="fa fa-angle-right"></i>
+            Careers
+          </div>
+          <div>
+            <i className="fa fa-angle-right"></i>
+            Tracker 360
+          </div>
+          <div>
+            {/* <i className="fa fa-angle-right"></i> */}
+            <div className={styles.icons}>
+              <i className="fa-brands fa-facebook"></i>
+              <i className="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-instagram"></i>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className={styles.copyright}>
-        <div>© 2023 Konstruk. Designed By Moses Nwigberi</div>
-        <div>
-          <ul>
-            <li>
-              Home <i className="fas fa-circle"></i>
-            </li>
-            <li>
-              About <i className="fas fa-circle"></i>
-            </li>
-            <li>
-              Services <i className="fas fa-circle"></i>
-            </li>
-            <li>
-              Pages <i className="fas fa-circle"></i>
-            </li>
-            <li>
-              Blog <i className="fas fa-circle"></i>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
+        <div>© 2023 PEPNOPS TEAM. </div>
       </div>
     </div>
   );

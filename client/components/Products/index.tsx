@@ -1,13 +1,13 @@
 import styles from "./index.module.css";
 import Image from "next/image";
-import worker from "../../public/images/topview.jpg";
+import worker from "../../public/images/smartx.png";
 import worker2 from "../../public/images/motor.jpg";
-import worker3 from "../../public/images/watches.jpg";
+import worker3 from "../../public/images/IT.jpg";
 const Products = () => {
   return (
     <div className={styles.products}>
       <div className={styles.title}>
-        <h2>OUR PRODUCTS</h2>
+        <h2>OUR SOLUTIONS</h2>
       </div>
       <div className={styles.grid}>
         <div>
@@ -25,7 +25,7 @@ const Products = () => {
           <div className={styles.capt}>
             <div className={styles.date}>
               <h2>SMART X</h2>
-              <p>Visitors management system</p>
+              <p className={styles.secondp}>Visitors management system</p>
             </div>
             <p className={styles.detail}>
               Keeping track of guests and visitors within an estate can be a
@@ -49,8 +49,8 @@ const Products = () => {
           </div>
           <div className={styles.capt}>
             <div className={styles.date}>
-              <h2>Tracker</h2>
-              <p>Fleet management system</p>
+              <h2>Tracker 360</h2>
+              <p className={styles.secondp}>Fleet management system</p>
             </div>
             <p className={styles.detail}>
               Keeping track of guests and visitors within an estate can be a
@@ -74,19 +74,19 @@ const Products = () => {
           </div>
           <div className={styles.capt}>
             <div className={styles.date}>
-              <h2>SMART X</h2>
-              <p>Visitors management system</p>
+              <h2>IT Consulting</h2>
+              <p className={styles.secondp}>
+                Software consulting and outsourcing
+              </p>
             </div>
             <p className={styles.detail}>
-              Keeping track of guests and visitors within an estate can be a
-              problem. Our software solution is all you need to efficiently
-              manage your guests
+              Professional IT consulting and outsourcing to help drive growth,
+              enhance efficiency, and unlock your full business potential...
             </p>
             <button>LEARN MORE</button>
           </div>
         </div>
       </div>
-
     </div>
   );
 };

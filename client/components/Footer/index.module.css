@@ -49,11 +49,13 @@
 .grid > div:nth-child(2) > div > div:nth-child(2) {
   line-height: 1.6;
 }
-.grid > div:nth-child(3) > div {
+.grid > div:nth-child(3) > div,
+.grid > div:nth-child(4) > div {
   margin: 35px 0;
   cursor: pointer;
 }
-.grid > div:nth-child(3) > div i {
+.grid > div:nth-child(3) > div i,
+.grid > div:nth-child(4) > div i {
   margin-right: 13px;
   color: #ffb703;
 }
@@ -68,7 +70,7 @@
   width: 235.8px;
   height: 44px;
   width: 160.77px;
-  height: 30px;
+  height: 160.77px;
   position: relative;
 }
 .logo img {
@@ -110,7 +112,7 @@
   background: rgba(51, 51, 51, 0.4);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 30px;
 }
 .copyright > div {

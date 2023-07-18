@@ -1,9 +1,21 @@
-import styles from './index.module.css'
+import styles from "./index.module.css";
+import Image from "next/image";
+import pepnops from "../../public/images/pepnops2.svg";
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <div>Logo</div>
+      <div className={styles.logo}>
+        <Image
+          src={pepnops}
+          objectFit="cover"
+          alt="card-image"
+          layout="fill"
+          quality={100}
+          priority={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
       <div>
         <ul>
           <li>Products</li>
@@ -12,7 +24,7 @@ const Header = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
