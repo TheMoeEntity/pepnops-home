@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
 import logo from "../../public/images/footer.png";
-import icon1 from "../../public/images/1.png";
-import icon2 from "../../public/images/2.png";
-import icon3 from "../../public/images/3.png";
+import icon1 from "../../public/images/10.png";
+import icon2 from "../../public/images/11.png";
+import icon3 from "../../public/images/12.png";
 
 const Footer = () => {
   return (
@@ -27,13 +27,6 @@ const Footer = () => {
             Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do
             eiusmod tempor in cididunt ut labore.
           </p> */}
-          {/* <strong>Opening Hours :</strong> Monday Sat: 9am to 6pm */}
-          {/* <div className={styles.icons}>
-            <i className="fa-brands fa-facebook"></i>
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-pinterest"></i>
-            <i className="fa-brands fa-instagram"></i>
-          </div> */}
         </div>
         <div>
           <h2>CONTACT INFO</h2>
