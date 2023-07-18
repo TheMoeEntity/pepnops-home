@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import Image from "next/image";
-import pepnops from "../../public/images/pepnops2.svg";
+import pepnops from "../../public/images/pheader.png";
 
 const Header = () => {
   return (

@@ -18,17 +18,20 @@
   display: flex;
   flex-flow: row wrap;
 }
+.icons i {
+  font-size: 20px;
+}
 .grid > div {
   flex: 20%;
   margin: 10px 14px;
 }
 .grid > div h2 {
-  font-size: 24px;
+  font-size: 18px;
 }
 .grid > div:nth-child(2) > div {
   display: flex;
   margin: 32px 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .grid > div:nth-child(2) {
   flex-grow: 3;
@@ -53,6 +56,7 @@
 .grid > div:nth-child(4) > div {
   margin: 35px 0;
   cursor: pointer;
+  font-size: 12px;
 }
 .grid > div:nth-child(3) > div i,
 .grid > div:nth-child(4) > div i {
@@ -69,8 +73,8 @@
 .logo {
   width: 235.8px;
   height: 44px;
-  width: 216px;
-  height: 216px;
+  width: 270px;
+  height: 270px;
   /* background-color: orange; */
   position: relative;
 }

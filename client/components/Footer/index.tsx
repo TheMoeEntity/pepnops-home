@@ -31,7 +31,7 @@ const Footer = () => {
         <div>
           <h2>CONTACT INFO</h2>
           <div>
-            <div style={{ width: "30px" }}>
+            <div style={{ width: "22px", height: "22px" }}>
               <Image
                 src={icon1}
                 objectFit="cover"
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <div style={{ width: "30px" }}>
+            <div style={{ width: "22px", height: "22px" }}>
               <Image
                 src={icon2}
                 objectFit="cover"
@@ -60,7 +60,7 @@ const Footer = () => {
             <div>(+234) 807 548 9362</div>
           </div>
           <div>
-            <div style={{ width: "30px" }}>
+            <div style={{ width: "22px", height: "22px" }}>
               <Image
                 src={icon3}
                 objectFit="cover"
@@ -116,7 +116,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.copyright}>
-        <div>© 2023 PEPNOPS TEAM. </div>
+        <div>© 2023 Pepnops Inc </div>
       </div>
     </div>
   );
