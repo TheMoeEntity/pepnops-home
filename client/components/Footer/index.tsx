@@ -97,7 +97,11 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h2>ABOUT US</h2>
+          <h2>COMPANY</h2>
+          <div>
+            <i className="fa fa-angle-right"></i>
+            About Us
+          </div>
           <div>
             <i className="fa fa-angle-right"></i>
             Careers

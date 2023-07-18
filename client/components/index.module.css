@@ -10,6 +10,13 @@
   margin: auto;
   height: auto;
   text-align: center;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.about .title.addWidth {
+  transform: translateY(0);
+  opacity: 1;
 }
 .about .title h2 {
   color: #4331ff;
@@ -36,10 +43,18 @@
   width: 300px;
   height: 360px;
   position: relative;
-  margin: 0 15px;
+  margin: 30px 15px;
   box-shadow: 5px 9px 15px 0 rgba(143, 143, 143, 0.6),
     2.5px 9px 10px 0 rgba(143, 143, 143, 0.6);
+  transition: 0.5s;
+  transform: translateX(80px);
+  opacity: 0;
 }
+.grid > div.addWidth {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .grid > div .capt {
   position: absolute;
   z-index: 100;
@@ -111,7 +126,7 @@
   flex-flow: row;
   justify-content: space-between;
   animation-name: prop-600;
-  animation: rotation 6.5s infinite linear;
+  animation: rotation 5.5s infinite linear;
 }
 .sponsors .sponsorsGrid > div {
   position: relative;

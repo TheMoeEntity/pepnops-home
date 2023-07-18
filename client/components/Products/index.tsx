@@ -25,12 +25,13 @@ const Products = () => {
           <div className={styles.capt}>
             <div className={styles.date}>
               <h2>SMART X</h2>
-              <p className={styles.secondp}>Visitors management system</p>
+              <p className={styles.secondp}>Community management system</p>
             </div>
             <p className={styles.detail}>
-              Keeping track of guests and visitors within an estate can be a
-              problem. Our software solution is all you need to efficiently
-              manage your guests
+              Seeking for an administrative backend to efficiently manage
+              residents and guests within your community? Our software solution
+              is all you...
+              {/* need to take charge of your processes */}
             </p>
             <button>LEARN MORE</button>
           </div>
@@ -81,7 +82,10 @@ const Products = () => {
             </div>
             <p className={styles.detail}>
               Professional IT consulting and outsourcing to help drive growth,
-              enhance efficiency, and unlock your full business potential...
+              enhance efficiency, and unlock your full business potential.
+              Discover ways...
+              {/* Discover ways to partner with us for professional expertise andn
+              accelerated growth. */}
             </p>
             <button>LEARN MORE</button>
           </div>

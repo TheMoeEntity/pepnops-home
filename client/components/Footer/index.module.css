@@ -57,7 +57,7 @@
 .grid > div:nth-child(3) > div i,
 .grid > div:nth-child(4) > div i {
   margin-right: 13px;
-  color: #ffb703;
+  color: #00b960;
 }
 .grid > div:nth-child(1) p {
   width: 100%;
@@ -111,6 +111,7 @@
   height: 67.2px;
   background: rgba(51, 51, 51, 0.4);
   display: flex;
+  color: #00b960;
   align-items: center;
   justify-content: center;
   padding: 0 30px;
