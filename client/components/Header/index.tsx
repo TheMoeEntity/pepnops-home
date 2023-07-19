@@ -55,7 +55,7 @@ const Header = () => {
             <li onClick={() => LinkAction("/")}>Home</li>
             <li onClick={() => LinkAction("#solutions")}>Solutions</li>
             <li>Who we are</li>
-            <li>Let's talk</li>
+            <li>{`Let's Talk`}</li>
           </ol>
         </div>
       </div>
