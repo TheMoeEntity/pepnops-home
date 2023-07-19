@@ -17,7 +17,7 @@ const Header = () => {
     setTimeout(() => {
       if (sideContent.current && sideBar.current) {
         sideBar.current.style.display = "block";
-        sideContent.current.style.width = "70%";
+        sideContent.current.style.width = "85%";
         sideContent.current.style.visibility = "visible";
       }
     }, 700);
