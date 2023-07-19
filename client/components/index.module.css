@@ -231,18 +231,39 @@
   font-weight: 200;
   font-size: 14px;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.9;
+  width: 60%;
+  text-align: center;
 }
 .solutions .featured {
   width: 100%;
-  height: 700px;
+  height: fit-content;
+  padding-bottom: 50px;
   background: linear-gradient(90deg, #f1ffff, #00d1692d);
   position: relative;
+}
+.key .action {
+  font-size: 19px !important;
+}
+.key button {
+  background-color: #00d169;
+  color: white;
+  border: none;
+  outline: none;
+  margin: 30px 0;
+  padding: 15px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .solutions .featured .phone {
   width: 323px;
   height: 643px;
+  height: 593px;
+  width: 298.5px;
   position: absolute;
   right: 15px;
   top: -130px;
@@ -250,26 +271,48 @@
   transform: rotate(0.02turn);
   /* animation: skew 2.9s infinite linear; */
 }
-.solutions .featured.grid {
-  width: auto;
-  padding: 10px 15px;
-  height: fit-content;
+.cards {
+  margin: auto;
+  margin-top: 90px;
+  width: 85%;
+  height: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
-.solutions .featured .grid > div {
-  height: 270px;
-  width: 270px;
+.cards > div {
+  height: auto;
+  padding-bottom: 30px;
   flex: 40%;
+  margin: 20px;
   background-color: #010d14;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   color: white;
+  border-radius: 10px;
+}
+.cards > div > div {
+  margin: 20px 0;
+}
+.cards > div > div p {
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0 35px;
+  font-weight: lighter;
+  text-align: center;
+  color: lightgray;
+}
+.icons {
+  width: 60px;
+  height: 60px;
+  position: relative;
 }
 @media screen and (max-width: 500px) {
+  .cards {
+    width: 95%;
+  }
   .solutions .featured .phone {
     width: 129.2px;
     height: 257.2px;
@@ -286,6 +329,8 @@
   .solutions .key p {
     font-size: small;
     padding-top: 20px;
+    width: 100%;
+    text-align: right;
   }
 
   @keyframes bounce2 {
@@ -311,7 +356,7 @@
     top: 90%;
     left: 50%;
     transform: translate(-50%, -90%);
-    padding-top: 15px;
+    padding-top: 45px;
   }
   .about .title h2 {
     font-size: 30px;
