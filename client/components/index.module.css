@@ -174,6 +174,12 @@
   transform: translate(-50%, -90%);
   padding-top: 90px;
 }
+.solutions .centered div {
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  /* color: rgb(139, 139, 139); */
+}
 .solutions .centered h1 {
   color: #00d169;
   text-align: center;
@@ -205,12 +211,35 @@
   -webkit-filter: drop-shadow(5px 9px 35px rgba(143, 143, 143, 0.2));
   filter: drop-shadow(5px 9px 35px rgba(143, 143, 143, 0.2));
 }
+.solutions .about h3 {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.solutions .key {
+  width: fit-content;
+  margin: auto;
+  padding-top: 90px;
+  text-align: center;
+}
+.solutions .key h3 {
+  color: #00d169;
+  font-weight: 500;
+  font-size: 30px;
+}
+.solutions .key p {
+  font-weight: 200;
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 1.9;
+}
 .solutions .featured {
   width: 100%;
   height: 700px;
   background: linear-gradient(90deg, #f1ffff, #00d1692d);
   position: relative;
 }
+
 .solutions .featured .phone {
   width: 323px;
   height: 643px;
@@ -221,12 +250,42 @@
   transform: rotate(0.02turn);
   /* animation: skew 2.9s infinite linear; */
 }
+.solutions .featured.grid {
+  width: auto;
+  padding: 10px 15px;
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.solutions .featured .grid > div {
+  height: 270px;
+  width: 270px;
+  flex: 40%;
+  background-color: #010d14;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 @media screen and (max-width: 500px) {
   .solutions .featured .phone {
     width: 129.2px;
     height: 257.2px;
     top: -60px;
+    left: 15px;
     animation: bounce2 2.5s ease infinite;
+  }
+  .solutions .key {
+    padding-top: 100px;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 25px;
+  }
+  .solutions .key p {
+    font-size: small;
+    padding-top: 20px;
   }
 
   @keyframes bounce2 {
@@ -252,7 +311,7 @@
     top: 90%;
     left: 50%;
     transform: translate(-50%, -90%);
-    padding-top: 50px;
+    padding-top: 15px;
   }
   .about .title h2 {
     font-size: 30px;
@@ -263,6 +322,7 @@
     z-index: 102;
     margin-top: -90px;
   }
+
   .solutions .centered h2 {
     font-size: 19px;
     margin: 10px 0;

@@ -40,8 +40,33 @@ const SolutionsPage = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
+        <h3>The centralised community management system</h3>
+        {/* <div className={styles.key}>
+          <h3>KEY FEATURES</h3>
+          <p>
+            Our SmartX solution provides an effective and efficient way <br />
+            to manage your community administrative processes and keep track of
+            guests
+          </p>
+        </div> */}
       </div>
       <div className={styles.featured}>
+        <div className={styles.key}>
+          <h3>KEY FEATURES</h3>
+          <p>
+            Our SmartX solution provides an effective and efficient way to
+            manage your community administrative processes and keep track of
+            guests
+          </p>
+        </div>
+        {/* <div className={styles.grid}>
+          <div>fdfd</div>
+          <div>fdf</div>
+          <div>fdfd</div>
+          <div>fdfd</div>
+          <div></div>
+          <div></div>
+        </div> */}
         <div className={styles.phone}>
           <Image
             src={phone}
