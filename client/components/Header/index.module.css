@@ -90,10 +90,11 @@
   cursor: pointer;
 }
 .header ul li:last-child {
-  border: 1px solid #00b960;
+  border: 2.5px solid #00b960;
   border-radius: 8px;
   padding: 5px 10px;
   color: #00b960;
+  font-weight: bolder;
 }
 .logo {
   width: 294.75px;
