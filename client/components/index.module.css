@@ -194,7 +194,7 @@
   width: 100%;
   background-image: url("/images/bg333.png");
   background-size: cover;
-  padding-bottom: 90px;
+  padding-bottom: 120px;
   height: fit-content;
   position: relative;
 }
@@ -240,7 +240,7 @@
 .solutions .featured {
   width: 100%;
   height: fit-content;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   background: linear-gradient(90deg, #f1ffff, #00d1692d);
   position: relative;
 }
@@ -252,8 +252,9 @@
   color: white;
   border: none;
   outline: none;
-  margin: 30px 0;
-  padding: 15px 20px;
+  margin: 40px 0;
+  padding: 20px 30px;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
@@ -284,7 +285,7 @@
   height: auto;
   padding-bottom: 30px;
   flex: 40%;
-  margin: 20px;
+  margin: 20px 25px;
   background-color: #010d14;
   display: flex;
   flex-flow: column wrap;
@@ -305,8 +306,8 @@
   color: lightgray;
 }
 .icons {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   position: relative;
 }
 @media screen and (max-width: 500px) {
@@ -316,21 +317,17 @@
   .solutions .featured .phone {
     width: 129.2px;
     height: 257.2px;
-    top: -60px;
-    left: 15px;
+    top: -90px;
     animation: bounce2 2.5s ease infinite;
   }
   .solutions .key {
-    padding-top: 100px;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 25px;
+    padding-top: 130px;
   }
   .solutions .key p {
     font-size: small;
-    padding-top: 20px;
     width: 100%;
-    text-align: right;
+    padding-right: 20px;
+    padding-left: 25px;
   }
 
   @keyframes bounce2 {

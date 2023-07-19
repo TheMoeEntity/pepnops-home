@@ -4,34 +4,46 @@ import styles from "../../../components/index.module.css";
 import worker from "../../../public/images/smartx.png";
 import dashboard from "../../../public/images/dashboard.png";
 import phone from "../../../public/images/phone.png";
-import icon1 from "../../../public/images/10.png";
-import icon2 from "../../../public/images/11.png";
-import icon3 from "../../../public/images/12.png";
+import manage from "../../../public/images/manage.png";
+import payment from "../../../public/images/payment.png";
+import push from "../../../public/images/push.png";
+import reporting from "../../../public/images/reporting.png";
+import sos from "../../../public/images/sos.png";
+import guide from "../../../public/images/guide.png";
+
 import { useState } from "react";
 
 const SolutionsPage = () => {
-  const [assets, setAssets] = useState<{ text: string; title: string }[]>([
+  const [assets, setAssets] = useState<
+    { text: string; title: string; icon: any }[]
+  >([
     {
+      icon: manage,
       title: "MANAGE VISITORS",
-      text: "This feature allows resident to create instant and scheduled visits for their guests. Residents can also set the duration for one-off and recurring visits",
+      text: "This feature allows resident to create instant and scheduled visits for their guests. Residents can also set the duration for one-off and recurring visits.",
     },
     {
+      icon: guide,
       title: "ESTATE GUIDE",
       text: "Residents can explore notable locations in the estate. This features helps new residents easily locate places within the estate.",
     },
     {
+      icon: reporting,
       title: "REPORTING",
       text: "Easily access the records for previous visits and that of guests withing the estate at every point in time.",
     },
     {
+      icon: sos,
       title: "SOS",
       text: "Residents can easily report an emergency and get help just by the Click of a button.",
     },
     {
+      icon: payment,
       title: "PAYMENT",
       text: "Easily collect all estate payments within our platform. Our Smart X helps with proper invoicing and bookkeeping.",
     },
     {
+      icon: push,
       title: "PUSH NOTIFICATIONS",
       text: `The Estate would share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
     },
@@ -71,8 +83,8 @@ const SolutionsPage = () => {
           />
         </div>
         <h3>
-          The centralised community management system. Customizable to cater{" "}
-          <br /> for your specific needs
+          The centralised community management system. Customizable to cater
+          <br /> for your specific needs.
         </h3>
       </div>
       <div className={styles.featured}>
@@ -89,7 +101,7 @@ const SolutionsPage = () => {
             <div key={i}>
               <div className={styles.icons}>
                 <Image
-                  src={icon1}
+                  src={x.icon}
                   objectFit="cover"
                   alt="card-image"
                   layout="fill"
@@ -108,7 +120,7 @@ const SolutionsPage = () => {
           ))}
         </div>
         <div className={styles.key}>
-          <p className={styles.action}>
+          <p style={{ paddingTop: "0px" }} className={styles.action}>
             These and many more customizable features are available to suit your
             community management needs.
           </p>
