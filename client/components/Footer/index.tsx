@@ -106,10 +106,35 @@ const Footer = () => {
           <div>
             {/* <i className="fa fa-angle-right"></i> */}
             <div className={styles.icons}>
-              <i className="fa-brands fa-facebook"></i>
-              <i className="fa-brands fa-twitter"></i>
-              <i className="fa-brands fa-linkedin"></i>
-              <i className="fa-brands fa-instagram"></i>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://web.facebook.com/Moses.Nwigberi/"
+              >
+                <i className="fa-brands fa-facebook"></i>
+              </a>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://twitter.com/pepnops"
+              >
+                <i className="fa-brands fa-twitter"></i>
+              </a>
+
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/company/pepnops/"
+              >
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="https://instagram.com/pepnops"
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
             </div>
           </div>
         </div>
