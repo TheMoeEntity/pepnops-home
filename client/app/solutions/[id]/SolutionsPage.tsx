@@ -119,7 +119,7 @@ const SolutionsPage = () => {
             </div>
           ))}
         </div>
-        <div className={styles.key}>
+        <div className={styles.key + " " + styles.keyTwo}>
           <p style={{ paddingTop: "0px" }} className={styles.action}>
             These and many more customizable features are available to suit your
             community management needs.
