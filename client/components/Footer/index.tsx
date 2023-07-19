@@ -101,7 +101,7 @@ const Footer = () => {
           </div>
           <div>
             <i className="fa fa-angle-right"></i>
-            Tracker 360
+            Contact us
           </div>
           <div>
             {/* <i className="fa fa-angle-right"></i> */}

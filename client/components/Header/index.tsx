@@ -9,11 +9,14 @@ import { useRouter } from "next/navigation";
 const Header = () => {
   const [sidebar, setSideBar] = useState<boolean>(false);
   const sideContent = useRef<HTMLDivElement | null>(null);
+  const sideBar = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
+
   const show = () => {
     setSideBar(true);
     setTimeout(() => {
-      if (sideContent.current) {
+      if (sideContent.current && sideBar.current) {
+        sideBar.current.style.display = "block";
         sideContent.current.style.width = "70%";
         sideContent.current.style.visibility = "visible";
       }
@@ -29,51 +32,48 @@ const Header = () => {
       }
     }, 400);
   };
+
+  const LinkAction = (where: string) => {
+    hide();
+    router.push(where);
+  };
+
   return (
     <div className={styles.header}>
       <div
-        style={{ right: sidebar ? "0%" : "-100%" }}
+        style={{
+          right: sidebar ? "0%" : "-100%",
+        }}
         className={styles.sidebar}
+        ref={sideBar}
       >
-        <div ref={sideContent} className={styles.sidecontent}>
-          <div onClick={() => hide()} className={styles.close}>
+        <div ref={sideContent} className={styles.sideContent}>
+          <div onClick={hide} className={styles.close}>
             &times;
           </div>
-          <ul>
-            <li>
-              <span>Home</span>
-              <span>
-                <i className="fa fa-plus"></i>
-              </span>
-            </li>
-            <li>About</li>
-
-            <li>
-              <span>Pages</span>
-              <span>
-                <i className="fa fa-plus"></i>
-              </span>
-            </li>
-            <li>Blog</li>
-            <li>
-              <Link href={"/contact"}>Contact</Link>
-            </li>
-          </ul>
+          <ol>
+            <li onClick={() => LinkAction("/")}>Home</li>
+            <li onClick={() => LinkAction("#solutions")}>Solutions</li>
+            <li>Who we are</li>
+            <li>Let's talk</li>
+          </ol>
         </div>
       </div>
-      <div className={styles.bars}>
-        <i onClick={show} className="fa-solid fa-bars"></i>
+      <div onClick={show} className={styles.bars}>
+        <i className="fa-solid fa-bars"></i>
       </div>
       <div className={styles.logo}>
-        <Image
-          src={pepnops}
-          objectFit="cover"
-          alt="card-image"
-          layout="fill"
-          quality={100}
-          priority={true}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        <Link href={"/"}>
+          <Image
+            src={pepnops}
+            objectFit="cover"
+            alt="card-image"
+            layout="fill"
+            quality={100}
+            priority={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </Link>
       </div>
       <div>
         <ul>
