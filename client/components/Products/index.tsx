@@ -3,6 +3,7 @@ import Image from "next/image";
 import worker from "../../public/images/smartx.png";
 import worker2 from "../../public/images/motor.jpg";
 import worker3 from "../../public/images/IT.jpg";
+import Link from "next/link";
 const Products = () => {
   return (
     <div id="solutions" className={styles.products}>
@@ -32,7 +33,9 @@ const Products = () => {
               and all processes within your community
               {/* need to take charge of your processes */}
             </p>
-            <button>LEARN MORE</button>
+            <Link href={"/solutions/smartx"}>
+              <button>LEARN MORE</button>
+            </Link>
           </div>
         </div>
         <div>
