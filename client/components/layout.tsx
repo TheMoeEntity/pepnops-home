@@ -7,9 +7,13 @@ import { usePathname } from "next/navigation";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
+  console.log(pathname);
   const validRoutes: string[] = [
     "/localhost:3000",
+    "/localhost:3000/solutions/smartx",
     "/",
+    "/solutions/smartx",
+    "/solutions/tracker_360",
     "https://pepnops.vercel.app",
     "/solutions" + pathname.slice(8, pathname.length),
   ];

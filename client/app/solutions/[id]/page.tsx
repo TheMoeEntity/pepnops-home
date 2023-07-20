@@ -11,7 +11,7 @@ const Solutions = async ({ params }: any) => {
   if (!data) {
     redirect("/not-found.tsx");
   }
-  return <Sponsors />;
+  return <Sponsors data={data} />;
 };
 
 export default Solutions;

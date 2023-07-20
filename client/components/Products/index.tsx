@@ -59,7 +59,9 @@ const Products = () => {
               A software system to keep track of your vehicles, as well as get
               notified of vehicle maintenance requirements in real time.
             </p>
-            <button>LEARN MORE</button>
+            <Link href={"/solutions/tracker_360"}>
+              <button>LEARN MORE</button>
+            </Link>
           </div>
         </div>
         <div>

@@ -1,3 +1,13 @@
+export type fetchdata = {
+  title: string;
+  capt1: string;
+  capt2: string;
+  showPhone: boolean;
+  KeyFeatures: {
+    title: string;
+    features: { title: string; icon: string; text: string }[];
+  };
+};
 export class Helpers {
   static FetchData = async (id: string) => {
     switch (id) {

@@ -10,10 +10,11 @@ import push from "../../../public/images/push.png";
 import reporting from "../../../public/images/reporting.png";
 import sos from "../../../public/images/sos.png";
 import guide from "../../../public/images/guide.png";
-
-import { useState } from "react";
-
-const SolutionsPage = () => {
+import motor from "../../../public/images/motor.jpg";
+import { useEffect, useState } from "react";
+import { fetchdata } from "@/helpers";
+const SolutionsPage = ({ data }: any) => {
+  const [fetchData, setFetch] = useState<fetchdata>(data);
   const [assets, setAssets] = useState<
     { text: string; title: string; icon: any }[]
   >([
@@ -48,20 +49,35 @@ const SolutionsPage = () => {
       text: `The Estate would share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
     },
   ]);
+
+  useEffect(() => {
+    if (fetchData.title === "Tracker 360") {
+      setAssets(
+        assets.map((x, i) => {
+          return {
+            ...x,
+            title: fetchData.KeyFeatures.features[i].title,
+            text: fetchData.KeyFeatures.features[i].text,
+          };
+        })
+      );
+    }
+  }, []);
   return (
     <div className={styles.solutions}>
       <div className={styles.hero}>
         <div className={styles.overlay}></div>
         <div className={styles.centered}>
           <h2 style={{ visibility: "hidden" }}>Solutions</h2>
-          <h1>Smart X</h1>
+          <h1>{fetchData.title}</h1>
           <h2>
-            Efficiently manage your processes and keep track of visitors <br />{" "}
-            within your community
+            {/* Efficiently manage your processes and keep track of visitors <br />{" "}
+            within your community */}
+            {fetchData.capt1}
           </h2>
         </div>
         <Image
-          src={worker}
+          src={fetchData.title === "Smart X" ? worker : motor}
           objectFit="cover"
           alt="card-image"
           layout="fill"
@@ -83,18 +99,15 @@ const SolutionsPage = () => {
           />
         </div>
         <h3>
-          The centralised community management system. Customizable to cater
-          <br /> for your specific needs.
+          {/* The centralised community management system. Customizable to cater
+          <br /> for your specific needs. */}
+          {fetchData.capt2}
         </h3>
       </div>
       <div className={styles.featured}>
         <div className={styles.key}>
           <h3>KEY FEATURES</h3>
-          <p>
-            Our Smart X solution provides an effective and efficient way to
-            manage your community administrative processes and keep track of
-            guests.
-          </p>
+          <p>{fetchData.KeyFeatures.title}</p>
         </div>
         <div className={styles.cards}>
           {assets.map((x, i) => (
@@ -126,17 +139,19 @@ const SolutionsPage = () => {
           </p>
           <button>REQUEST DEMO</button>
         </div>
-        <div className={styles.phone}>
-          <Image
-            src={phone}
-            objectFit="cover"
-            alt="Dashboard image"
-            fill
-            quality={100}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </div>
+        {fetchData.showPhone === true && (
+          <div className={styles.phone}>
+            <Image
+              src={phone}
+              objectFit="cover"
+              alt="Dashboard image"
+              fill
+              quality={100}
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
