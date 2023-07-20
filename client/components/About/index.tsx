@@ -1,8 +1,8 @@
 "use client";
 import styles from "../index.module.css";
-import third from "../../public/images/shake2.png";
+import third from "../../public/images/third.jpg";
 import laptop from "../../public/images/laptop.jpg";
-import shake from "../../public/images/mark2.jpg";
+import shake from "../../public/images/shake.jpg";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 const About = () => {

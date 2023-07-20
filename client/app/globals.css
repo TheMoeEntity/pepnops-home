@@ -101,7 +101,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+button {
+  cursor: pointer;
+}
 /* // ----------------------- -------- 404 page --------------- */
 
 /*

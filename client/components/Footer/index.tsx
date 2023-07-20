@@ -77,12 +77,16 @@ const Footer = () => {
         <div>
           <h2>OUR SOLUTIONS</h2>
           <div>
-            <i className="fa fa-angle-right"></i>
-            Smart X
+            <Link href={"/solutions/smartx"}>
+              <i className="fa fa-angle-right"></i>
+              Smart X
+            </Link>
           </div>
           <div>
-            <i className="fa fa-angle-right"></i>
-            Tracker 360
+          <Link href={"/solutions/tracker_360"}>
+              <i className="fa fa-angle-right"></i>
+              Tracker 360
+            </Link>
           </div>
           <div>
             <i className="fa fa-angle-right"></i>

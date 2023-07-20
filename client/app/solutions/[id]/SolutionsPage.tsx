@@ -11,6 +11,11 @@ import reporting from "../../../public/images/reporting.png";
 import sos from "../../../public/images/sos.png";
 import guide from "../../../public/images/guide.png";
 import motor from "../../../public/images/motor.jpg";
+import fencing from "../../../public/images/fencing.png";
+import gps from "../../../public/images/gps.png";
+import safety from "../../../public/images/safety.png";
+import scheduling from "../../../public/images/scheduling.png";
+import security from "../../../public/images/security.png";
 import { useEffect, useState } from "react";
 import { fetchdata } from "@/helpers";
 const SolutionsPage = ({ data }: any) => {
@@ -49,13 +54,13 @@ const SolutionsPage = ({ data }: any) => {
       text: `Share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
     },
   ]);
-
+  const icons = [gps, fencing, reporting, scheduling, safety, security];
   useEffect(() => {
     if (fetchData.title === "Tracker 360") {
       setAssets(
         assets.map((x, i) => {
           return {
-            ...x,
+            icon: icons[i],
             title: fetchData.KeyFeatures.features[i].title,
             text: fetchData.KeyFeatures.features[i].text,
           };

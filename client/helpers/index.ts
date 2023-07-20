@@ -96,7 +96,7 @@ export class Helpers {
               {
                 icon: "push",
                 title: "THEFT PROTECTION",
-                text: `The Estate would share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
+                text: `This feature protects your fleet from unauthorized access and usage. Remotely immobilize your fleet preventing it from moving in case of theft and get GPS information for vehicle recovery`,
               },
             ],
           },
