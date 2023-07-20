@@ -31,7 +31,7 @@ const SolutionsPage = ({ data }: any) => {
     {
       icon: reporting,
       title: "REPORTING",
-      text: "Easily access the records for previous visits and that of guests withing the estate at every point in time.",
+      text: "Easily access the records for previous visits and that of guests withing your estate, offices, service apartments, etc at every point in time.",
     },
     {
       icon: sos,
@@ -41,12 +41,12 @@ const SolutionsPage = ({ data }: any) => {
     {
       icon: payment,
       title: "PAYMENT",
-      text: "Easily collect all estate payments within our platform. Our Smart X helps with proper invoicing and bookkeeping.",
+      text: "Easily automate the collection of payments. Our Smart X solution also helps with proper invoicing and bookkeeping.",
     },
     {
       icon: push,
       title: "PUSH NOTIFICATIONS",
-      text: `The Estate would share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
+      text: `Share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
     },
   ]);
 
