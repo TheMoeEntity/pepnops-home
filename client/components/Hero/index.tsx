@@ -1,9 +1,19 @@
 "use client";
 import styles from "./index.module.css";
+import icon2 from "../../public/images/landing3.jpg";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div className={styles.hero}>
+      <Image
+        src={icon2}
+        alt="card-image"
+        fill={true}
+        quality={100}
+        priority={true}
+        sizes="(max-width: 1920px) 100vw, (max-width: 1920px) 50vw, 33vw"
+      />
       <div className={styles.captions}>
         <h1>
           Delivering Innovative & Customised Technology

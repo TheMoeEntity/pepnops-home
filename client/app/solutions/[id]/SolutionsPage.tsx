@@ -83,7 +83,7 @@ const SolutionsPage = ({ data }: any) => {
           layout="fill"
           quality={100}
           priority={true}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 1000px) 100vw, (max-width: 1920px) 50vw, 33vw"
         />
       </div>
       <div className={styles.about}>
@@ -95,7 +95,7 @@ const SolutionsPage = ({ data }: any) => {
             fill
             quality={100}
             priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 1523px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <h3>
@@ -148,7 +148,7 @@ const SolutionsPage = ({ data }: any) => {
               fill
               quality={100}
               priority={true}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 597px) 100vw, (max-width: 100%) 50vw, 33vw"
             />
           </div>
         )}

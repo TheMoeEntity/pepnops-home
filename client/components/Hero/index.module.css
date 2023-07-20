@@ -3,9 +3,12 @@
   height: 702px;
   position: relative;
   padding-bottom: 0px;
-  background-image: url("/images/landing3.jpg");
+  /* background-image: url("/images/landing3.jpg"); */
   background-size: cover;
   background-position: center;
+}
+.hero img {
+  object-fit: cover;
 }
 
 .captions {
