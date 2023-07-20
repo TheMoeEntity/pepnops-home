@@ -58,7 +58,7 @@ const SolutionsPage = ({ data }: any) => {
   useEffect(() => {
     if (fetchData.title === "Tracker 360") {
       setAssets(
-        assets.map((x, i) => {
+        assets.map((_x, i) => {
           return {
             icon: icons[i],
             title: fetchData.KeyFeatures.features[i].title,
@@ -139,8 +139,7 @@ const SolutionsPage = ({ data }: any) => {
         </div>
         <div className={styles.key + " " + styles.keyTwo}>
           <p style={{ paddingTop: "0px" }} className={styles.action}>
-            These and many more customizable features are available to suit your
-            community management needs.
+            {fetchData.callToAction}
           </p>
           <button>REQUEST DEMO</button>
         </div>

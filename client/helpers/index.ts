@@ -3,6 +3,7 @@ export type fetchdata = {
   capt1: string;
   capt2: string;
   showPhone: boolean;
+  callToAction: string;
   KeyFeatures: {
     title: string;
     features: { title: string; icon: string; text: string }[];
@@ -19,6 +20,8 @@ export class Helpers {
           capt2:
             "The centralised community management system. Customizable to cater for your specific needs.",
           showPhone: true,
+          callToAction:
+            "These and many more customizable features are available to suit your community management needs.",
           KeyFeatures: {
             title:
               "Our Smart X solution provides an effective and efficient way to manage your community administrative processes and keep track of guests",
@@ -62,11 +65,13 @@ export class Helpers {
           title: "Tracker 360",
           capt1: "Real time monitoring system for your vehicles and drivers",
           capt2:
-            "Accurately track your fleet and obtain detailed information on vehicle and driver performance",
+            "Accurately track your fleet and obtain detailed information on vehicle and driver performance.",
           showPhone: false,
+          callToAction:
+            "These and many more customizable features are available to suit your fleet management needs.",
           KeyFeatures: {
             title:
-              "Tracker 360 is a centralized system to efficiently monitor your driver/fleets operations. Get important real time information on vehicle location and performance",
+              "Tracker 360 is a centralized system to efficiently monitor your driver & fleets operations. Get important real time information on vehicle location and performance.",
             features: [
               {
                 icon: "manage",
@@ -96,7 +101,7 @@ export class Helpers {
               {
                 icon: "push",
                 title: "THEFT PROTECTION",
-                text: `This feature protects your fleet from unauthorized access and usage. Remotely immobilize your fleet preventing it from moving in case of theft and get GPS information for vehicle recovery`,
+                text: `This feature protects your fleet from unauthorized access and usage. Remotely immobilize your fleet preventing it from moving in case of theft and get GPS information for vehicle recovery.`,
               },
             ],
           },
