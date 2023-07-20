@@ -25,8 +25,8 @@ const SolutionsPage = ({ data }: any) => {
     },
     {
       icon: guide,
-      title: "ESTATE GUIDE",
-      text: "Residents can explore notable locations in the estate. This features helps new residents easily locate places within the estate.",
+      title: "COMMUNITY GUIDE",
+      text: "Residents can explore notable locations in the community. This features helps new residents easily locate places within the community.",
     },
     {
       icon: reporting,
