@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../../../components/index.module.css";
 import worker from "../../../public/images/smartx.png";
 import dashboard from "../../../public/images/dashboard.png";
-import phone from "../../../public/images/phone.png";
+import phone from "../../../public/images/phone2.png";
 import manage from "../../../public/images/manage.png";
 import payment from "../../../public/images/payment.png";
 import push from "../../../public/images/push.png";
