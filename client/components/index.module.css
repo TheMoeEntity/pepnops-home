@@ -410,6 +410,7 @@
 
 .aboutSection2 > div p {
   /* color: white; */
+  text-align: justify;
   font-weight: lighter !important;
 }
 .aboutSection > div:nth-child(2) {

@@ -157,6 +157,9 @@
   .grid > div {
     margin: 30px 0;
   }
+  .grid > div .img {
+    height: 180px;
+  }
 }
 @media screen and (max-width: 420px) {
   .upcoming {

@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import Image from "next/image";
 import worker from "../../public/images/smartx.png";
-import worker2 from "../../public/images/motor.jpg";
+import worker2 from "../../public/images/tracker260.jpg";
 import worker3 from "../../public/images/IT.jpg";
 import Link from "next/link";
 const Products = () => {
