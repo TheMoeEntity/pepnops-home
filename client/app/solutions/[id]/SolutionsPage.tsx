@@ -10,7 +10,7 @@ import push from "../../../public/images/push.png";
 import reporting from "../../../public/images/reporting.png";
 import sos from "../../../public/images/sos.png";
 import guide from "../../../public/images/guide.png";
-import motor from "../../../public/images/motor.jpg";
+import motor from "../../../public/images/tracker260.jpg";
 import fencing from "../../../public/images/fencing.png";
 import gps from "../../../public/images/gps.png";
 import safety from "../../../public/images/safety.png";
@@ -67,7 +67,7 @@ const SolutionsPage = ({ data }: any) => {
         })
       );
     }
-  }, []);
+  }, [assets, fetchData.KeyFeatures.features, fetchData.title, icons]);
   return (
     <div className={styles.solutions}>
       <div className={styles.hero}>
