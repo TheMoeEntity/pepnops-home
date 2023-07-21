@@ -11,6 +11,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     "/localhost:3000",
     "/localhost:3000/solutions/smartx",
     "/",
+    "/about",
     "/solutions/smartx",
     "/solutions/tracker_360",
     "https://pepnops.vercel.app",

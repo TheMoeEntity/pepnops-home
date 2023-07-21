@@ -54,7 +54,7 @@ const Header = () => {
           <ol>
             <li onClick={() => LinkAction("/")}>Home</li>
             <li onClick={() => LinkAction("#solutions")}>Solutions</li>
-            <li>Who we are</li>
+            <li onClick={() => LinkAction("/about")}>Who we are</li>
             <li>{`Let's Talk`}</li>
           </ol>
         </div>
@@ -78,7 +78,7 @@ const Header = () => {
       <div>
         <ul>
           <li onClick={() => router.push("#solutions")}>Solutions</li>
-          <li>Who we are</li>
+          <li onClick={() => router.push("/about")}>Who we are</li>
           <li>{`Let's Talk`}</li>
         </ul>
       </div>
