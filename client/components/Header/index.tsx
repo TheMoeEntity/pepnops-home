@@ -66,9 +66,8 @@ const Header = () => {
         <Link href={"/"}>
           <Image
             src={pepnops}
-            objectFit="cover"
             alt="card-image"
-            layout="fill"
+            fill={true}
             quality={100}
             priority={true}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

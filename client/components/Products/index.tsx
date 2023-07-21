@@ -15,9 +15,8 @@ const Products = () => {
           <div className={styles.img}>
             <Image
               src={worker}
-              objectFit="cover"
               alt="card-image"
-              layout="fill"
+              fill={true}
               quality={100}
               priority={true}
               // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -30,7 +29,7 @@ const Products = () => {
             </div>
             <p className={styles.detail}>
               An administrative backend to efficiently manage residents, guests
-              and all processes within your community
+              and all processes within your community.
               {/* need to take charge of your processes */}
             </p>
             <Link href={"/solutions/smartx"}>
@@ -42,9 +41,8 @@ const Products = () => {
           <div className={styles.img}>
             <Image
               src={worker2}
-              objectFit="cover"
               alt="card-image"
-              layout="fill"
+              fill={true}
               quality={100}
               priority={true}
               // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -68,9 +66,8 @@ const Products = () => {
           <div className={styles.img}>
             <Image
               src={worker3}
-              objectFit="cover"
               alt="card-image"
-              layout="fill"
+              fill={true}
               quality={100}
               priority={true}
               // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

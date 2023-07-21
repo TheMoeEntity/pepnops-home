@@ -83,26 +83,37 @@ const SolutionsPage = ({ data }: any) => {
         </div>
         <Image
           src={fetchData.title === "Smart X" ? worker : motor}
-          objectFit="cover"
+          
           alt="card-image"
-          layout="fill"
+           fill={true}
           quality={100}
           priority={true}
           sizes="(max-width: 1000px) 100vw, (max-width: 1920px) 50vw, 33vw"
         />
       </div>
       <div className={styles.about}>
-        <div className={styles.dashboard}>
-          <Image
-            src={dashboard}
-            objectFit="cover"
-            alt="Dashboard image"
-            fill
-            quality={100}
-            priority={true}
-            sizes="(max-width: 1523px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+        {fetchData.showPhone && (
+          <div className={styles.dashboard}>
+            <Image
+              src={dashboard}
+         
+              alt="Dashboard image"
+              fill
+              quality={100}
+              priority={true}
+              sizes="(max-width: 1523px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        )}
+
+        <div className={styles.video}>
+          <video width="320" height="240" controls>
+            <source src="/videos/video.mp4" type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
         </div>
+
         <h3>
           {/* The centralised community management system. Customizable to cater
           <br /> for your specific needs. */}
@@ -120,9 +131,9 @@ const SolutionsPage = ({ data }: any) => {
               <div className={styles.icons}>
                 <Image
                   src={x.icon}
-                  objectFit="cover"
+                
                   alt="card-image"
-                  layout="fill"
+                  fill={true}
                   quality={100}
                   priority={true}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -147,7 +158,7 @@ const SolutionsPage = ({ data }: any) => {
           <div className={styles.phone}>
             <Image
               src={phone}
-              objectFit="cover"
+              
               alt="Dashboard image"
               fill
               quality={100}

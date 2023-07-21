@@ -18,7 +18,7 @@ const Sponsors = () => {
         <h2>Our Trusted Clients</h2>
         <p>
           Pepnops Inc. has provided top-notch software solutions to <br /> happy
-          clients across various industries
+          clients across various industries.
         </p>
       </div>
       <div className={styles.container}>
@@ -26,9 +26,8 @@ const Sponsors = () => {
           <div>
             <Image
               src={sponsor1}
-              objectFit="cover"
               alt="sponsors"
-              layout="fill"
+              fill={true}
               quality={100}
               priority={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -37,9 +36,8 @@ const Sponsors = () => {
           <div>
             <Image
               src={sponsor2}
-              objectFit="cover"
               alt="sponsors"
-              layout="fill"
+              fill={true}
               quality={100}
               priority={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -48,9 +46,8 @@ const Sponsors = () => {
           <div>
             <Image
               src={sponsor3}
-              objectFit="cover"
               alt="sponsors"
-              layout="fill"
+              fill={true}
               quality={100}
               priority={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -59,9 +56,8 @@ const Sponsors = () => {
           <div>
             <Image
               src={sponsor4}
-              objectFit="cover"
               alt="sponsors"
-              layout="fill"
+              fill={true}
               quality={100}
               priority={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

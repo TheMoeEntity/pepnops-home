@@ -15,7 +15,6 @@ const Footer = () => {
           <div className={styles.logo}>
             <Image
               src={logo}
-              objectFit="cover"
               alt="card-image"
               fill
               quality={100}
@@ -34,22 +33,6 @@ const Footer = () => {
             <div style={{ width: "22px", height: "22px" }}>
               <Image
                 src={icon1}
-                objectFit="cover"
-                alt="card-image"
-                fill
-                quality={100}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-            <div>Lagos, Nigeria</div>
-          </div>
-
-          <div>
-            <div style={{ width: "22px", height: "22px" }}>
-              <Image
-                src={icon2}
-                objectFit="cover"
                 alt="card-image"
                 fill
                 quality={100}
@@ -59,11 +42,11 @@ const Footer = () => {
             </div>
             <div>(+234) 807 548 9362</div>
           </div>
+
           <div>
             <div style={{ width: "22px", height: "22px" }}>
               <Image
-                src={icon3}
-                objectFit="cover"
+                src={icon2}
                 alt="card-image"
                 fill
                 quality={100}
@@ -72,6 +55,20 @@ const Footer = () => {
               />
             </div>
             <div>biz@pepnops.com</div>
+          </div>
+
+          <div>
+            <div style={{ width: "22px", height: "22px" }}>
+              <Image
+                src={icon3}
+                alt="card-image"
+                fill
+                quality={100}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+            <div>Lagos, Nigeria</div>
           </div>
         </div>
         <div>
