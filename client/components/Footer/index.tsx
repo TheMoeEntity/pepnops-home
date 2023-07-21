@@ -83,7 +83,7 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-          <Link href={"/solutions/tracker_360"}>
+            <Link href={"/solutions/tracker_360"}>
               <i className="fa fa-angle-right"></i>
               Tracker 360
             </Link>
@@ -96,8 +96,10 @@ const Footer = () => {
         <div>
           <h2>COMPANY</h2>
           <div>
-            <i className="fa fa-angle-right"></i>
-            About Us
+            <Link href={"/about"}>
+              <i className="fa fa-angle-right"></i>
+              About Us
+            </Link>
           </div>
           <div>
             <i className="fa fa-angle-right"></i>

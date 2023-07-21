@@ -86,10 +86,10 @@ const Products = () => {
             <p className={styles.detail}>
               Professional IT consulting and outsourcing to help drive growth,
               enhance efficiency, and unlock your full business potential.
-              {/* Discover ways to partner with us for professional expertise andn
-              accelerated growth. */}
             </p>
-            <button>LEARN MORE</button>
+            <Link href={"/IT_consulting"}>
+              <button>LEARN MORE</button>
+            </Link>
           </div>
         </div>
       </div>
