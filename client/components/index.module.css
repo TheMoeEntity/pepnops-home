@@ -501,7 +501,8 @@
 }
 @media screen and (max-width: 500px) {
   .solutions .about .video {
-    margin-top: -120px;
+    margin-top: 0px;
+    height: 216px;
   }
   .closely {
     width: 95%;
