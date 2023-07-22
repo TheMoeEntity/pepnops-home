@@ -651,10 +651,13 @@
 
 .left {
   /* background-color: #00d169; */
-
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   flex: 55%;
   color: black;
   padding: 80px 45px;
+  padding-top: 150px;
 }
 .left ul li {
   font-size: 13.5px;
@@ -676,8 +679,17 @@
   background: none;
   color: black;
   padding: 7px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   border-radius: 7px;
+}
+.right button {
+  /* width: 100%; */
+  height: auto;
+  padding: 15px 35px;
+  border-radius: 7px;
+  border: 1.5px solid white;
+  color: white;
+  background: none;
 }
 .left > div {
   font-size: 13.5px;
@@ -720,6 +732,19 @@
 .formGroup {
   width: 100%;
   margin: 40px 0;
+  position: relative;
+}
+.formGroup textarea::placeholder {
+  color: white;
+}
+.formGroup textarea {
+  width: 100%;
+  color: white;
+  background: none;
+  padding: 20px;
+  border: none;
+  outline: white;
+  border-bottom: 1px solid white;
 }
 @media screen and (max-width: 500px) {
   .contactForm {
