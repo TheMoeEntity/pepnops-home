@@ -107,8 +107,10 @@ button {
 img {
   object-fit: cover;
 }
-input[type="search"] {
+input[type="text"],
+input {
   -webkit-appearance: none;
+  border-radius: 0;
 }
 /* // ----------------------- -------- 404 page --------------- */
 
