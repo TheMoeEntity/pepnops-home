@@ -386,7 +386,7 @@
 }
 .itHero .centered {
   width: 80%;
-  height: 70%;
+  height: 80%;
   position: absolute;
   z-index: 101;
   top: 50%;
@@ -407,11 +407,11 @@
   font-size: 40px;
 }
 .capt3 {
-  font-size: small !important;
+  font-size: 15px !important;
   width: 70%;
   font-weight: lighter;
   margin: 20px auto;
-  color: #00d169;
+  color: white;
 }
 .aboutHero .centered h1 span,
 .itHero .centered h1 span {
@@ -531,7 +531,10 @@
     margin: 40px auto;
   }
   .itHero {
-    height: 500px;
+    height: 550px;
+  }
+  .capt3 {
+    width: 100%;
   }
   .aboutSection,
   .aboutSection2 {
