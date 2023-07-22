@@ -560,11 +560,9 @@
 /* ////------------------------- CONTACT FORM ------------ //////// */
 .contactForm {
   width: 100%;
-  height: 500px;
-  background-image: url("/images/contact.avif");
-  background-size: cover;
-  background-position: center;
+  height: auto;
 }
+
 @media screen and (max-width: 500px) {
   .cardDiv {
     flex: 50% !important;
