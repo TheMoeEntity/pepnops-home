@@ -527,7 +527,7 @@
   width: 100%;
   height: auto;
   padding: 80px 15px;
-  /* background: linear-gradient(90deg, #f1ffff, #00d1692d); */
+  background: linear-gradient(90deg, #f1ffff, #00d1692d);
 }
 .chooseUs .key {
   width: fit-content;
@@ -537,6 +537,7 @@
   align-items: center;
   justify-content: center;
   margin: 80px auto;
+  text-align: center;
   margin-bottom: 30px;
 }
 .chooseUs .key button {
@@ -551,7 +552,7 @@
   text-align: center;
   font-size: 16px;
   width: 80%;
-  color: #00d169;
+  /* color: #00d169; */
   font-weight: 200;
 
   margin: 20px auto;

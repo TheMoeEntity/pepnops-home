@@ -208,7 +208,7 @@ const Consulting = () => {
           <p style={{ paddingTop: "0px" }} className={styles.action}>
             {`Let's`} build something amazing together
           </p>
-          <button>REQUEST DEMO</button>
+          <button>GET IN TOUCH</button>
         </div>
       </div>
     </div>
