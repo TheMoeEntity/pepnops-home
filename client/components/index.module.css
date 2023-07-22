@@ -519,6 +519,80 @@
   transform: translateX(100px);
   opacity: 0;
 }
+.ourTeam {
+  width: 100%;
+  padding: 40px 15px;
+  background-image: url("/images/about-bg.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  padding-bottom: 40px;
+}
+.ourTeam .title p {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 70%;
+}
+.ourTeam h2 {
+  text-align: center;
+  color: #00d169;
+  font-size: 30px;
+}
+.ourTeam .cardss {
+  width: auto;
+  margin-top: 40px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-bottom: 50px;
+}
+.ourTeam .cardss > div {
+  height: 461px;
+  flex: 25%;
+  min-width: 335px;
+  transition: 0.5s;
+  margin: 10px 15px;
+  background-color: white;
+  box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
+    2.5px 9px 26px 0 rgba(143, 143, 143, 0.1);
+}
+.ourTeam .cardss > div .img img {
+  transition: 0.6s;
+}
+.ourTeam .cardss > div:hover .img img {
+  transform: scale(1.15);
+}
+.ourTeam .cardss > div .img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 69%;
+}
+.teamDetails {
+  width: 100%;
+  height: 31%;
+  padding: 20px 35px;
+}
+.teamDetails span {
+  color: #a4a4a4;
+  display: block;
+  text-align: center;
+  font-weight: lighter;
+}
+.teamDetails .icons {
+  margin: 10px auto;
+  color: #00d169;
+  width: fit-content;
+}
+.teamDetails .icons a {
+  margin: 0 9px;
+}
+.teamDetails h3 {
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
 .closely {
   font-size: 16px;
   width: 80%;
@@ -566,6 +640,15 @@
 }
 
 @media screen and (max-width: 500px) {
+  .ourTeam .cardss {
+    justify-content: center;
+  }
+  .ourTeam .title p {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+  }
   .cardDiv {
     flex: 50% !important;
     margin: 20px 0px !important;

@@ -5,8 +5,8 @@ import man from "../../public/images/group-9.jpeg";
 import mac from "../../public/images/off.jpg";
 import shake from "../../public/images/twoshake.jpg";
 import goals from "../../public/images/goals.png";
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import james from "../../public/images/James.jpeg";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -127,6 +127,68 @@ const AboutPage = () => {
             priority={true}
             sizes="(max-width: 711px) 100vw, (max-width: 711px) 50vw, 33vw"
           />
+        </div>
+      </div>
+      <div className={styles.ourTeam}>
+        <div className={styles.title}>
+          <h2>Our Team</h2>
+          <p>
+            Pepnops Inc. boasts of a forward-thinking leadership team with
+            extensive domain expertise that fosters a culture performance. We
+            have a remarkable group of technopreneurs and seasoned advisors with
+            a proven track record of success.
+          </p>
+        </div>
+        <div className={styles.cardss}>
+          {[...Array(6)].map((_x, i) => (
+            <div key={i}>
+              <div className={styles.img}>
+                <Image
+                  src={james}
+                  alt="team image"
+                  fill={true}
+                  quality={100}
+                  priority={true}
+                  sizes="(max-width: 599px) 100vw, (max-width:100%) 50vw, 33vw"
+                />
+              </div>
+              <div className={styles.teamDetails}>
+                <h3>MOSES NWIGBERI</h3>
+                <span>Frontend Developer</span>
+                <div className={styles.icons}>
+                  <a
+                    target={`_blank`}
+                    rel="noopener noreferrer"
+                    href="https://web.facebook.com/Moses.Nwigberi/"
+                  >
+                    <i className="fa-brands fa-facebook"></i>
+                  </a>
+                  <a
+                    target={`_blank`}
+                    rel="noopener noreferrer"
+                    href="https://twitter.com/pepnops"
+                  >
+                    <i className="fa-brands fa-twitter"></i>
+                  </a>
+
+                  <a
+                    target={`_blank`}
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/company/pepnops/"
+                  >
+                    <i className="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a
+                    target={`_blank`}
+                    rel="noopener noreferrer"
+                    href="https://instagram.com/pepnops"
+                  >
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
