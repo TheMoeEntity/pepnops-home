@@ -3,7 +3,8 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import pepnops from "../../public/images/pheader.png";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { CSSProperties, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
@@ -11,6 +12,20 @@ const Header = () => {
   const sideContent = useRef<HTMLDivElement | null>(null);
   const sideBar = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
+  const pathname = usePathname();
+
+  const showStyle = (): CSSProperties => {
+    const talkStyle: CSSProperties = {
+      position: "relative",
+      backgroundColor: "black",
+    };
+
+    const normStyle: CSSProperties = {
+      position: "absolute",
+      backgroundColor: "rgba(0, 0, 0, 0.45)",
+    };
+    return pathname === "/contact" ? talkStyle : normStyle;
+  };
 
   const show = () => {
     setSideBar(true);
@@ -38,8 +53,12 @@ const Header = () => {
     router.push(where);
   };
 
+  const setLinks = (where: string) => {
+    router.push("/" + where);
+  };
+
   return (
-    <div className={styles.header}>
+    <div style={showStyle()} className={styles.header}>
       <div
         style={{
           right: sidebar ? "0%" : "-100%",
@@ -76,6 +95,7 @@ const Header = () => {
       </div>
       <div>
         <ul>
+          <li onClick={() => router.push("/")}>Home</li>
           <li onClick={() => router.push("#solutions")}>Solutions</li>
           <li onClick={() => router.push("/about")}>Who we are</li>
           <li onClick={() => router.push("/contact")}>{`Let's Talk`}</li>

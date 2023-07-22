@@ -637,9 +637,98 @@
 .contactForm {
   width: 100%;
   height: auto;
+  padding: 40px 70px;
+}
+.contactForm .form {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  box-shadow: 5px 9px 40px 0 rgba(143, 143, 143, 0.1),
+    2.5px 9px 40px 0 rgba(143, 143, 143, 0.25);
+  display: flex;
+  flex-flow: row wrap;
 }
 
+.left {
+  /* background-color: #00d169; */
+
+  flex: 55%;
+  color: black;
+  padding: 80px 45px;
+}
+.left ul li {
+  font-size: 13.5px;
+  font-weight: lighter;
+  margin: 16px 0;
+  list-style-type: none;
+}
+.left ul li i {
+  margin-right: 8px;
+}
+.left p {
+  font-size: 13.5px;
+  margin: 20px 0;
+  line-height: 1.6;
+  font-weight: lighter;
+}
+.left button {
+  border: 2px solid black;
+  background: none;
+  color: black;
+  padding: 7px;
+  margin-bottom: 30px;
+  border-radius: 7px;
+}
+.left > div {
+  font-size: 13.5px;
+  margin-top: 8px;
+}
+.left > div i {
+  margin-right: 8px;
+}
+.right {
+  flex: 45%;
+  background-color: #02d28e;
+  padding: 20px 45px;
+}
+.right form {
+  width: 95%;
+  height: 100%;
+  color: white;
+}
+.maps {
+  width: 328px;
+  max-width: 90%;
+  position: relative;
+  height: 169.5px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.right form label {
+  display: block;
+}
+.right form input {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.formGroup {
+  width: 100%;
+  margin: 40px 0;
+}
 @media screen and (max-width: 500px) {
+  .contactForm {
+    padding: 40px 10px;
+  }
+  .left,
+  .right {
+    padding: 40px 20px;
+  }
   .ourTeam .cardss {
     justify-content: center;
   }

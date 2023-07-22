@@ -89,8 +89,14 @@
   margin: 0 30px;
   font-weight: 200;
   color: #fff;
+  padding-bottom: 7px;
   cursor: pointer;
   transition: 0.25s;
+}
+.header ul li.active {
+  color: #00b960;
+  font-weight: bolder;
+  border-bottom: 2px solid #00b960;
 }
 .header ul li:hover {
   padding-bottom: 5px;
