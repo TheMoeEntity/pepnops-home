@@ -707,19 +707,22 @@
 }
 .right form label {
   display: block;
+  margin: 15px 0;
 }
 .right form input {
   background: none;
   border: none;
   width: 100%;
-  height: 40px;
+  height: 45px;
   outline: none;
   color: white;
-  border-bottom: 1px solid white;
+  padding: 20px 20px;
+  border-radius: 5px;
+  border: 1px solid white;
 }
 .formGroup {
   width: 100%;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 @media screen and (max-width: 500px) {
   .contactForm {
