@@ -36,7 +36,7 @@ const Hero = () => {
           animate={{ transform: "scale(1)", opacity: 1 }}
           transition={{
             delay: 1.5,
-            duration: 1,
+            duration: 1.5,
             bounce: 0.5,
             type: "spring",
           }}
