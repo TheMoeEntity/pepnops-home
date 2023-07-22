@@ -47,19 +47,9 @@ const Consulting = () => {
     }
   };
 
-  const [assets, setAssets] = useState<
+  const [assets, _setAssets] = useState<
     { text: string; title: string; icon: any }[]
   >([
-    {
-      icon: manage,
-      title: "SOFTWARE CONSULTATION",
-      text: "We also collaborate with key stakeholders to define clear objectives and devise a comprehensive digital strategy that addresses their pain points. From ideation to implementation, we provide end-to-end support, ensuring that the digital solutions we develop are robust, scalable, and future-proof.",
-    },
-    {
-      icon: guide,
-      title: "STAYING UP TO DATE",
-      text: "Staying ahead of the curve can be a daunting task as there are a lot of new challenges involved in keeping up with the rapid technological change. That's where we come in. Our software consulting services are designed to empower businesses by enabling them to embrace emerging technologies, build digital solutions, and create a scalable IT strategy that aligns with their budget and vision.",
-    },
     {
       icon: reporting,
       title: "SOFTWARE ASSESSMENT",
@@ -85,15 +75,16 @@ const Consulting = () => {
       title: "UI/UX DESIGN",
       text: `We provide expertise in designing visually appealing and user-friendly interfaces to enhance user experience. Whether it's web, mobile, or desktop applications, we ensure that your digital product provides a consistent and optimized experience across all devices, enhancing user satisfaction and engagement. We also create wireframes, prototypes, and design systems that align with branding guidelines and best practices.`,
     },
-    {
-      icon: push,
-      title: "SYSTEM MODERNIZATION",
-      text: `We help businesses modernize and upgrade their outdated software systems. Our Legacy modernization service ranges across software reengineering, re-platforming, or building of new systems based on business requirements. We also facilitate data migration, integration with modern technologies, and knowledge transfer to go with the improvements.`,
-    },
+
     {
       icon: push,
       title: "PERFORMANCE OPTIMIZATION",
       text: `We provide software optimization services aimed at enhancing software performance. We offer code optimization, database querying, and server configuration for optimal software performance and smooth user experience.`,
+    },
+    {
+      icon: push,
+      title: "SYSTEM MODERNIZATION",
+      text: `We help businesses modernize and upgrade their outdated software systems. Our Legacy modernization service ranges across software reengineering, re-platforming, or building of new systems based on business requirements. We also facilitate data migration, integration with modern technologies, and knowledge transfer to go with the improvements.`,
     },
   ]);
 
@@ -119,34 +110,36 @@ const Consulting = () => {
       <div className={styles.itHero}>
         <div className={styles.centered}>
           <h1>
-            Innovation<span>. </span>Collaboration<span>. </span>Excellence
-            <span>. </span>
+            Partnering for progress: your trusted Ally for collaborative
+            software solutions.
           </h1>
           <h1 className={styles.capt3}>
-            In {`today's`} rapidly evolving technological landscape, companies,
-            including startups, are faced with constant advancements and
-            innovations that can significantly impact their operations.
+            We work closely with companies and startups to understand their
+            specific requirements, challenges, and aspirations. Whether{" "}
+            {`it's `}implementing cutting-edge software, adopting new
+            development methodologies, or integrating emerging technologies, we
+            provide guidance and support at every step of the journey.
           </h1>
         </div>
         <div className={styles.overlay}></div>
       </div>
       <div id="services" className={styles2.products}>
         <div ref={container} className={styles2.caption}>
-          <b>
+          {/* <b>
             Partnering for progress: your trusted Ally for collaborative
             software solutions
-          </b>
-          <br />
+          </b> */}
+
           <div className={styles.closely}>
-            We work closely with companies and startups to understand their
-            specific requirements, challenges, and aspirations. Whether {`it's`}
-            implementing cutting-edge software, adopting new development
-            methodologies, or integrating emerging technologies, we provide
-            guidance and support at every step of the journey.
+            Staying ahead of the curve can be a daunting task as there are a lot
+            of new challenges involved in keeping up with the rapid
+            technological change. {`That's`} where we come in. Our software
+            consulting services are designed to empower businesses by enabling
+            them to embrace emerging technologies, build digital solutions, and
+            create a scalable IT strategy that aligns with their budget and
+            vision.
           </div>
-          <h2>
-            Our <span>Servi</span>ces
-          </h2>
+          <h2>Our Services</h2>
         </div>
         <div ref={grid} className={styles2.grid}>
           {assets.map((x, i) => (
@@ -154,7 +147,7 @@ const Consulting = () => {
               <div className={styles2.overlay}>
                 <div>READ MORE</div>
               </div>
-              <div className={styles2.topIcon}>
+              {/* <div className={styles2.topIcon}>
                 <Image
                   src={payment}
                   alt="card-image"
@@ -163,7 +156,7 @@ const Consulting = () => {
                   priority={true}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-              </div>
+              </div> */}
               <div>
                 <h4>{x.title}</h4>
               </div>
@@ -206,7 +199,7 @@ const Consulting = () => {
         </div>
         <div className={styles.key}>
           <p style={{ paddingTop: "0px" }} className={styles.action}>
-            {`Let's`} build something amazing together
+            {`Let's`} build something amazing together.
           </p>
           <button>GET IN TOUCH</button>
         </div>

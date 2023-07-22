@@ -38,42 +38,9 @@ const AboutPage = () => {
       <div className={styles.aboutHero}>
         <div className={styles.centered}>
           <h1>
-            <motion.div
-              initial={{ y: "-100vh", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                delay: 0.8,
-                duration: 1,
-                bounce: 0.5,
-                type: "spring",
-              }}
-            >
-              Innovation<span>. </span>
-            </motion.div>
-            <motion.div
-              initial={{ x: "-400px", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                delay: 1.8,
-                duration: 1,
-                bounce: 0.5,
-                type: "spring",
-              }}
-            >
-              Collaboration<span>. </span>
-            </motion.div>
-            <motion.div
-              initial={{ y: "100px", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                delay: 2.8,
-                duration: 1,
-                bounce: 0.5,
-                type: "spring",
-              }}
-            >
-              Excellence<span>. </span>
-            </motion.div>
+            Innovation<span>. </span>
+            Collaboration<span>. </span>
+            Excellence<span>. </span>
           </h1>
         </div>
         <Image

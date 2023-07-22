@@ -105,20 +105,18 @@ const SolutionsPage = ({ data }: any) => {
           </div>
         )}
         {!fetchData.showPhone && (
-          <div className={styles.video}>
-            <video width="320" height="240" controls preload="auto">
-              <source src="/videos/video.mp4" type="video/mp4" />
-              <source src="movie.ogg" type="video/ogg" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <>
+            <h3 style={{ marginBottom: "40px" }}>{fetchData.capt2}</h3>
+            <div className={styles.video}>
+              <video width="320" height="240" controls preload="auto">
+                <source src="/videos/video.mp4" type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </>
         )}
-
-        <h3>
-          {/* The centralised community management system. Customizable to cater
-          <br /> for your specific needs. */}
-          {fetchData.capt2}
-        </h3>
+        {fetchData.showPhone && <h3>{fetchData.capt2}</h3>}
       </div>
       <div className={styles.featured}>
         <div className={styles.key}>
