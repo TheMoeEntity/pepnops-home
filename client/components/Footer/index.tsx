@@ -103,8 +103,10 @@ const Footer = () => {
             Careers
           </div>
           <div>
-            <i className="fa fa-angle-right"></i>
-            Contact us
+            <Link href={"/contact"}>
+              <i className="fa fa-angle-right"></i>
+              Contact Us
+            </Link>
           </div>
           <div>
             {/* <i className="fa fa-angle-right"></i> */}
