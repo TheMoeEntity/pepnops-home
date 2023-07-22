@@ -107,6 +107,9 @@ button {
 img {
   object-fit: cover;
 }
+input[type="search"] {
+  -webkit-appearance: none;
+}
 /* // ----------------------- -------- 404 page --------------- */
 
 /*
