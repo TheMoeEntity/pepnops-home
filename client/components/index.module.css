@@ -287,7 +287,7 @@
   color: white;
   border: none;
   outline: none;
-  margin: 40px 0;
+  margin: 40px auto;
   padding: 25px 33px;
   font-size: 16px;
   font-weight: 600;
@@ -328,6 +328,10 @@
   align-items: center;
   color: white;
   border-radius: 10px;
+}
+.cardDiv {
+  flex: 20% !important;
+  margin: 20px 10px !important;
 }
 .cards > div > div {
   margin: 20px 0;
@@ -519,7 +523,44 @@
   width: 80%;
   margin: 30px auto;
 }
+.chooseUs {
+  width: 100%;
+  height: auto;
+  padding: 80px 15px;
+  /* background: linear-gradient(90deg, #f1ffff, #00d1692d); */
+}
+.chooseUs .key {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 80px auto;
+  margin-bottom: 30px;
+}
+.chooseUs .key button {
+  margin-left: auto;
+  margin-right: auto;
+}
+.chooseUs h2 {
+  color: #00d169;
+  text-align: center;
+}
+.chooseUs h3 {
+  text-align: center;
+  font-size: 16px;
+  width: 80%;
+  color: #00d169;
+  font-weight: 200;
+
+  margin: 20px auto;
+}
 @media screen and (max-width: 500px) {
+  .cardDiv {
+    flex: 50% !important;
+    margin: 20px 0px !important;
+  }
   .solutions .about .video {
     margin-top: 0px;
     height: 216px;

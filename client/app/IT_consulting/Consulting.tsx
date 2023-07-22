@@ -96,6 +96,24 @@ const Consulting = () => {
       text: `We provide software optimization services aimed at enhancing software performance. We offer code optimization, database querying, and server configuration for optimal software performance and smooth user experience.`,
     },
   ]);
+
+  const assets2 = [
+    {
+      icon: guide,
+      title: "INNOVATION",
+      text: "Easily access the records for previous visits and that of guests.",
+    },
+    {
+      icon: manage,
+      title: "COLLABORATION",
+      text: "Easily access the records for previous visits and that of guests.",
+    },
+    {
+      icon: reporting,
+      title: "EXCELLENCE",
+      text: "Easily access the records for previous visits and that of guests.",
+    },
+  ];
   return (
     <div className={styles.consulting}>
       <div className={styles.itHero}>
@@ -155,6 +173,42 @@ const Consulting = () => {
               </div> */}
             </div>
           ))}
+        </div>
+      </div>
+      <div className={styles.chooseUs}>
+        <h2>Why Choose PEPNOPS?</h2>
+        <h3>
+          We are a company committed to excellence. Our high level of
+          professionalism is reflected in our cutting-edge technologies and
+          strategic solutions designed to unlock your full potential.
+        </h3>
+        <div className={styles.cards}>
+          {assets2.map((x, i) => (
+            <div className={styles.cardDiv} key={i}>
+              <div className={styles.icons}>
+                <Image
+                  src={x.icon}
+                  alt="card-image"
+                  fill={true}
+                  quality={100}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <h2>
+                <strong>{x.title}</strong>
+              </h2>
+              <div>
+                <p>{x.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className={styles.key}>
+          <p style={{ paddingTop: "0px" }} className={styles.action}>
+            {`Let's`} build something amazing together
+          </p>
+          <button>REQUEST DEMO</button>
         </div>
       </div>
     </div>
