@@ -56,6 +56,7 @@ const SolutionsPage = ({ data }: any) => {
     },
   ]);
   const icons = [gps, fencing, reporting, scheduling, safety, security];
+
   useEffect(() => {
     if (fetchData.title === "Tracker 360") {
       setAssets(
@@ -68,7 +69,7 @@ const SolutionsPage = ({ data }: any) => {
         })
       );
     }
-  }, [assets, fetchData.KeyFeatures.features, fetchData.title, icons]);
+  }, []);
   return (
     <div className={styles.solutions}>
       <div className={styles.hero}>
