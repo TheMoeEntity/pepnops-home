@@ -106,7 +106,7 @@ const SolutionsPage = ({ data }: any) => {
         )}
         {!fetchData.showPhone && (
           <div className={styles.video}>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" controls preload="auto">
               <source src="/videos/video.mp4" type="video/mp4" />
               <source src="movie.ogg" type="video/ogg" />
               Your browser does not support the video tag.
