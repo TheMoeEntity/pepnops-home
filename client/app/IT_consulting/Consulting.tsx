@@ -104,6 +104,11 @@ const Consulting = () => {
             Innovation<span>. </span>Collaboration<span>. </span>Excellence
             <span>. </span>
           </h1>
+          <h1 className={styles.capt3}>
+            In {`today's`} rapidly evolving technological landscape, companies,
+            including startups, are faced with constant advancements and
+            innovations that can significantly impact their operations.
+          </h1>
         </div>
         <div className={styles.overlay}></div>
       </div>
@@ -112,7 +117,7 @@ const Consulting = () => {
           <b>
             Partnering for progress: your trusted Ally for collaborative
             software solutions
-          </b>{" "}
+          </b>
           <br />
           <div className={styles.closely}>
             We work closely with companies and startups to understand their

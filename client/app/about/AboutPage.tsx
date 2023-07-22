@@ -6,6 +6,7 @@ import mac from "../../public/images/off.jpg";
 import shake from "../../public/images/twoshake.jpg";
 import goals from "../../public/images/goals.png";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const AboutPage = () => {
     for (let index = 0; index < widths.length; index++) {
       const element = widths[index];
       let revealTop = element.getBoundingClientRect().top;
-      let revealpoint = 120;
+      let revealpoint = 160;
       if (revealTop < height - revealpoint) {
         element.classList.add(styles.addWidth);
       }
@@ -37,8 +38,42 @@ const AboutPage = () => {
       <div className={styles.aboutHero}>
         <div className={styles.centered}>
           <h1>
-            Innovation<span>. </span>Collaboration<span>. </span>Excellence
-            <span>. </span>
+            <motion.div
+              initial={{ y: "-100vh", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 0.8,
+                duration: 1,
+                bounce: 0.5,
+                type: "spring",
+              }}
+            >
+              Innovation<span>. </span>
+            </motion.div>
+            <motion.div
+              initial={{ x: "-400px", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                delay: 1.8,
+                duration: 1,
+                bounce: 0.5,
+                type: "spring",
+              }}
+            >
+              Collaboration<span>. </span>
+            </motion.div>
+            <motion.div
+              initial={{ y: "100px", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 2.8,
+                duration: 1,
+                bounce: 0.5,
+                type: "spring",
+              }}
+            >
+              Excellence<span>. </span>
+            </motion.div>
           </h1>
         </div>
         <Image

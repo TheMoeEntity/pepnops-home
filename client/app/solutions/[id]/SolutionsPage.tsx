@@ -5,6 +5,7 @@ import worker from "../../../public/images/smartx.png";
 import dashboard from "../../../public/images/dashboard.png";
 import phone from "../../../public/images/phone2.png";
 import manage from "../../../public/images/manage.png";
+import { motion } from "framer-motion";
 import payment from "../../../public/images/payment.png";
 import push from "../../../public/images/push.png";
 import reporting from "../../../public/images/reporting.png";
@@ -83,9 +84,8 @@ const SolutionsPage = ({ data }: any) => {
         </div>
         <Image
           src={fetchData.title === "Smart X" ? worker : motor}
-          
           alt="card-image"
-           fill={true}
+          fill={true}
           quality={100}
           priority={true}
           sizes="(max-width: 1000px) 100vw, (max-width: 1920px) 50vw, 33vw"
@@ -96,7 +96,6 @@ const SolutionsPage = ({ data }: any) => {
           <div className={styles.dashboard}>
             <Image
               src={dashboard}
-         
               alt="Dashboard image"
               fill
               quality={100}
@@ -105,14 +104,15 @@ const SolutionsPage = ({ data }: any) => {
             />
           </div>
         )}
-
-        <div className={styles.video}>
-          <video width="320" height="240" controls>
-            <source src="/videos/video.mp4" type="video/mp4" />
-            <source src="movie.ogg" type="video/ogg" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        {!fetchData.showPhone && (
+          <div className={styles.video}>
+            <video width="320" height="240" controls>
+              <source src="/videos/video.mp4" type="video/mp4" />
+              <source src="movie.ogg" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
 
         <h3>
           {/* The centralised community management system. Customizable to cater
@@ -131,7 +131,6 @@ const SolutionsPage = ({ data }: any) => {
               <div className={styles.icons}>
                 <Image
                   src={x.icon}
-                
                   alt="card-image"
                   fill={true}
                   quality={100}
@@ -158,7 +157,6 @@ const SolutionsPage = ({ data }: any) => {
           <div className={styles.phone}>
             <Image
               src={phone}
-              
               alt="Dashboard image"
               fill
               quality={100}
