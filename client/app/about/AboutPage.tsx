@@ -140,7 +140,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div className={styles.cardss}>
-          {[...Array(6)].map((_x, i) => (
+          {[...Array(8)].map((_x, i) => (
             <div key={i}>
               <div className={styles.img}>
                 <Image

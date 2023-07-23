@@ -32,7 +32,7 @@ const ContactForm = () => {
               <li>
                 <i className="fa fa-angle-right"></i>
                 <i className="fa-solid fa-envelope"></i>
-                <b>Email: </b> biz@pepnops.com
+                biz@pepnops.com
               </li>
             </ul>
             <p>
@@ -62,7 +62,7 @@ const ContactForm = () => {
         </div>
         <div className={styles.right}>
           <form action="">
-            <h1>Contact Details</h1>
+            {/* <h1>Contact Details</h1> */}
             <div className={styles.formGroup}>
               <label htmlFor="">Full Name:</label>
               <input type="text" name="" id="" />
@@ -82,10 +82,11 @@ const ContactForm = () => {
                 style={{ width: "100%" }}
                 onChange={onOptionChangeHandler}
               >
-                <option>Frontend Developer</option>
-                <option>Backend Developer</option>
-                <option>UI/UX Designer</option>
-                <option>Project Manager</option>
+                <option>General Consulting</option>
+                <option>Product Demo</option>
+                <option>Partnership</option>
+                <option>Free Demo</option>
+                <option>Others</option>
               </select>
             </div>
             <div className={styles.formGroup}>
@@ -95,10 +96,11 @@ const ContactForm = () => {
                 style={{ width: "100%" }}
                 onChange={onOptionChangeHandler}
               >
-                <option>$29k - $40k </option>
-                <option>Backend Developer</option>
-                <option>UI/UX Designer</option>
-                <option>Project Manager</option>
+                <option>$10k - $49k </option>
+                <option>$50k - $249k </option>
+                <option>$150k - $449k </option>
+                <option>$500k and above</option>
+                <option>Below $10k </option>
               </select>
             </div>
             <div className={styles.formGroup}>
