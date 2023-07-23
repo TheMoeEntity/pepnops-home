@@ -715,7 +715,7 @@
   height: 169.5px;
   border-radius: 10px;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 15px !important;
 }
 .right form label {
   display: block;

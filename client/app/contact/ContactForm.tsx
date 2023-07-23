@@ -45,15 +45,18 @@ const ContactForm = () => {
               <i className="fa-solid fa-building"></i>
               Ikoyi, Lagos State, Nigeria.
             </div>
+            <br />
             <div className={styles.maps}>
-              <Image
-                src={map}
-                alt="Ikoyi map"
-                fill={true}
-                quality={100}
-                priority={true}
-                sizes="(max-width: 1312px) 100vw, (max-width: 100%) 50vw, 33vw"
-              />
+              <iframe
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=ikoyi+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                aria-hidden="false"
+                tabIndex={0}
+              ></iframe>
             </div>
           </div>
         </div>
