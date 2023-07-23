@@ -125,11 +125,6 @@ const Consulting = () => {
       </div>
       <div id="services" className={styles2.products}>
         <div ref={container} className={styles2.caption}>
-          {/* <b>
-            Partnering for progress: your trusted Ally for collaborative
-            software solutions
-          </b> */}
-
           <div className={styles.closely}>
             Staying ahead of the curve can be a daunting task as there are a lot
             of new challenges involved in keeping up with the rapid
