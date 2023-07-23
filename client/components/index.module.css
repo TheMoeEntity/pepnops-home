@@ -428,7 +428,7 @@
   width: 100%;
   height: auto;
   /* background: linear-gradient(90deg, #f1ffff, #66d19b2d); */
-  background-image: url("/images/about-bg.jpeg");
+  background-image: url("/images/pepbg.png");
   background-size: cover;
   background-position: bottom;
   padding: 40px 50px;
@@ -440,7 +440,7 @@
 .aboutSection2 {
   width: 100%;
   height: auto;
-  background-image: url("/images/about-bg.jpeg");
+  background-image: url("/images/pepbg.png");
   background-size: cover;
   background-position: bottom;
   padding: 40px 50px;
@@ -524,8 +524,8 @@
 .ourTeam {
   width: 100%;
   padding: 40px 10px;
-  background-image: url("/images/about-bg.jpeg");
-  background-size: cover;
+  background-image: url("/images/pepbg.png");
+  background-size: contain;
   background-position: bottom;
   padding-bottom: 40px;
 }
@@ -548,13 +548,18 @@
   justify-content: space-between;
   flex-flow: row wrap;
   margin-bottom: 50px;
+  padding: 0 50px;
+}
+.aria {
+  flex: 25%;
+  margin: 10px 11px;
 }
 .ourTeam .cardss > div {
   height: 461px;
-  flex: 20%;
-  /* min-width: 335px; */
+  flex: 25%;
+  min-width: 335px;
   transition: 0.5s;
-  margin: 10px 11px;
+  margin: 20px 15px;
   background-color: white;
   box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
     2.5px 9px 26px 0 rgba(143, 143, 143, 0.1);
@@ -641,7 +646,7 @@
 .contactForm {
   width: 100%;
   height: auto;
-  padding: 40px 120px;
+  padding: 40px 100px;
 }
 .contactForm .form {
   width: 100%;

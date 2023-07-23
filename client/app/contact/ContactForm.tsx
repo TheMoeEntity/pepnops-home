@@ -52,7 +52,15 @@ const ContactForm = () => {
               For general enquiries and to speak directly with an expert kindly
               reach us via:
             </p>{" "}
-            <button>info@pepnops.com</button>
+            <button>
+              <a
+                target={`_blank`}
+                rel="noopener noreferrer"
+                href="mailto:info@pepnops.com"
+              >
+                info@pepnops.com
+              </a>
+            </button>
             <h3>Head Office:</h3>
             <div>
               <i className="fa-solid fa-building"></i>
@@ -137,9 +145,8 @@ const ContactForm = () => {
                 style={{ fontSize: "small", fontWeight: "200" }}
                 className="container"
               >
-                I would like to receive information about pepnops inc. news and
-                events. By submitting this form, you agree to our Privacy
-                Policy.
+                I would like to receive information, news and events about
+                pepnops Inc. Policy.
                 <input type="checkbox" />
                 <span className="checkmark"></span>
               </label>
@@ -149,14 +156,15 @@ const ContactForm = () => {
                 style={{ fontSize: "small", fontWeight: "200" }}
                 className="container"
               >
-                I want a copy of the NDA
+                By submitting this form I agree to {`pepnops'`} privacy policy
+                and non disclosure agreement.
                 <input type="checkbox" />
                 <span className="checkmark"></span>
               </label>
             </div>
 
             <div className={styles.formGroup}>
-              <button>Send Message</button>
+              <button>Submit</button>
             </div>
           </form>
         </div>

@@ -153,8 +153,8 @@ const AboutPage = () => {
                 />
               </div>
               <div className={styles.teamDetails}>
-                <h3>MOSES NWIGBERI</h3>
-                <span>Frontend Developer</span>
+                <h3>CLEVER EGUASA</h3>
+                <span>CEO</span>
                 <div className={styles.icons}>
                   <a
                     target={`_blank`}
@@ -189,6 +189,8 @@ const AboutPage = () => {
               </div>
             </div>
           ))}
+          <i className={styles.aria} aria-hidden="true"></i>
+          <i className={styles.aria} aria-hidden="true"></i>
         </div>
       </div>
     </div>

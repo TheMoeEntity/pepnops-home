@@ -7,13 +7,14 @@ import payment from "../../public/images/payment.png";
 import push from "../../public/images/push.png";
 import reporting from "../../public/images/reporting.png";
 import sos from "../../public/images/sos.png";
-import guide from "../../public/images/guide.png";
+import innovation from "../../public/images/innovation.png";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Consulting = () => {
   const container = useRef<HTMLDivElement | null>(null);
   const grid = useRef<HTMLDivElement | null>(null);
-
+  const router = useRouter();
   useEffect(() => {
     window.addEventListener("scroll", animateIn);
     return () => {
@@ -90,19 +91,19 @@ const Consulting = () => {
 
   const assets2 = [
     {
-      icon: guide,
+      icon: innovation,
       title: "INNOVATION",
-      text: "Easily access the records for previous visits and that of guests.",
+      text: "We are a forward thinking company driven by a passion for innovation. We pride ourselves on offering creative and advanced solutions to enable organizations stay ahead of the curve.",
     },
     {
-      icon: manage,
+      icon: innovation,
       title: "COLLABORATION",
-      text: "Easily access the records for previous visits and that of guests.",
+      text: "We believe in forging strong partnerships with our clients. Our collaborative process ensures that your insight and feeble are actively incooperated throughout the project.",
     },
     {
-      icon: reporting,
+      icon: innovation,
       title: "EXCELLENCE",
-      text: "Easily access the records for previous visits and that of guests.",
+      text: "Our unwavering dedication to excellence shines through every of our projects. We ensure that every solution we provide is of the highest industry standard and aligns with client's vision.",
     },
   ];
   return (
@@ -187,7 +188,7 @@ const Consulting = () => {
                 <strong>{x.title}</strong>
               </h2>
               <div>
-                <p>{x.text}</p>
+                <p style={{ fontSize: "12px" }}>{x.text}</p>
               </div>
             </div>
           ))}
@@ -196,7 +197,7 @@ const Consulting = () => {
           <p style={{ paddingTop: "0px" }} className={styles.action}>
             {`Let's`} build something amazing together.
           </p>
-          <button>GET IN TOUCH</button>
+          <button onClick={() => router.push("/contact")}>GET IN TOUCH</button>
         </div>
       </div>
     </div>

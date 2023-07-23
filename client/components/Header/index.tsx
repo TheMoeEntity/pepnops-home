@@ -96,7 +96,7 @@ const Header = () => {
       <div>
         <ul>
           <li onClick={() => router.push("/")}>Home</li>
-          <li onClick={() => router.push("#solutions")}>Solutions</li>
+          <li onClick={() => router.push("/#solutions")}>Solutions</li>
           <li onClick={() => router.push("/about")}>Who we are</li>
           <li onClick={() => router.push("/contact")}>{`Let's Talk`}</li>
         </ul>

@@ -1,14 +1,37 @@
 "use client";
 import Header from "./Header/";
 import Script from "next/script";
-import dynamic from "next/dynamic";
 import Footer from "./Footer";
-// const Footer = dynamic(() => import("./Footer"));
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
+  const scrollBtn = useRef<HTMLDivElement | null>(null);
+  const isBrowser = () => typeof window !== "undefined";
+  useEffect(() => {
+    window.addEventListener("scroll", animateIn);
+    return () => {
+      window.removeEventListener("scroll", animateIn);
+    };
+  }, []);
+  const animateIn = () => {
+    if (!isBrowser()) return;
+    if (scrollBtn.current) {
+      if (
+        document.body.scrollTop > 120 ||
+        document.documentElement.scrollTop > 120
+      ) {
+        scrollBtn.current.style.bottom = "30px";
+      } else {
+        scrollBtn.current.style.bottom = "-100%";
+      }
+    }
+  };
+  const scrollTop = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const validRoutes: string[] = [
     "/localhost:3000",
     "/localhost:3000/solutions/smartx",
@@ -32,6 +55,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
         src="https://kit.fontawesome.com/4ef8c63dd7.js"
         crossOrigin="anonymous"
       ></Script>
+      <div ref={scrollBtn} onClick={scrollTop} className="scrollTop">
+        <i className="fa-solid fa-caret-up"></i>
+      </div>
       {!checkValid(pathname) ? <></> : <Footer />}
     </div>
   );

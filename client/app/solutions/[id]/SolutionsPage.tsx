@@ -19,8 +19,10 @@ import scheduling from "../../../public/images/scheduling.png";
 import security from "../../../public/images/security.png";
 import { useEffect, useState } from "react";
 import { fetchdata } from "@/helpers";
+import { useRouter } from "next/navigation";
 const SolutionsPage = ({ data }: any) => {
   const [fetchData, setFetch] = useState<fetchdata>(data);
+  const router = useRouter();
   const [assets, setAssets] = useState<
     { text: string; title: string; icon: any }[]
   >([
@@ -150,7 +152,7 @@ const SolutionsPage = ({ data }: any) => {
           <p style={{ paddingTop: "0px" }} className={styles.action}>
             {fetchData.callToAction}
           </p>
-          <button>REQUEST DEMO</button>
+          <button onClick={() => router.push("/contact")}>REQUEST DEMO</button>
         </div>
         {fetchData.showPhone === true && (
           <div className={styles.phone}>
