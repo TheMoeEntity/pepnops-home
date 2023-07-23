@@ -1,7 +1,9 @@
 "use client";
 import Header from "./Header/";
 import Script from "next/script";
-import Footer from "./Footer";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("./Footer"));
 import { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 
