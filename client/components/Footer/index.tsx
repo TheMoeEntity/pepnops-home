@@ -86,8 +86,10 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <i className="fa fa-angle-right"></i>
-            IT Consulting
+            <Link href={"/IT_consulting"}>
+              <i className="fa fa-angle-right"></i>
+              IT Consulting
+            </Link>
           </div>
         </div>
         <div>

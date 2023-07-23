@@ -27,12 +27,25 @@ const ContactForm = () => {
               <li>
                 <i className="fa fa-angle-right"></i>
                 <i className="fa-solid fa-phone"></i>
-                +234 916 912 6429
+                <a
+                  target={`_blank`}
+                  rel="noopener noreferrer"
+                  href="https://wa.me/+2348119264151"
+                >
+                  +234 811 926 4151
+                </a>
               </li>
               <li>
                 <i className="fa fa-angle-right"></i>
                 <i className="fa-solid fa-envelope"></i>
-                biz@pepnops.com
+
+                <a
+                  target={`_blank`}
+                  rel="noopener noreferrer"
+                  href="mailto:biz@pepnops.com"
+                >
+                  biz@pepnops.com
+                </a>
               </li>
             </ul>
             <p>
@@ -82,6 +95,7 @@ const ContactForm = () => {
                 style={{ width: "100%" }}
                 onChange={onOptionChangeHandler}
               >
+                <option>--Choose--</option>
                 <option>General Consulting</option>
                 <option>Product Demo</option>
                 <option>Partnership</option>
@@ -96,11 +110,12 @@ const ContactForm = () => {
                 style={{ width: "100%" }}
                 onChange={onOptionChangeHandler}
               >
+                <option>--Choose--</option>
+                <option>Below $10k </option>
                 <option>$10k - $49k </option>
                 <option>$50k - $249k </option>
-                <option>$150k - $449k </option>
+                <option>$150k - $499k </option>
                 <option>$500k and above</option>
-                <option>Below $10k </option>
               </select>
             </div>
             <div className={styles.formGroup}>
@@ -112,6 +127,34 @@ const ContactForm = () => {
                 rows={3}
               ></textarea>
             </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="">Attach File:</label>
+              <i className="fas fa-file"></i>
+              No file selected*
+            </div>
+            <div className={styles.formGroup}>
+              <label
+                style={{ fontSize: "small", fontWeight: "200" }}
+                className="container"
+              >
+                I would like to receive information about pepnops inc. news and
+                events. By submitting this form, you agree to our Privacy
+                Policy.
+                <input type="checkbox" />
+                <span className="checkmark"></span>
+              </label>
+            </div>
+            <div className={styles.formGroup}>
+              <label
+                style={{ fontSize: "small", fontWeight: "200" }}
+                className="container"
+              >
+                I want a copy of the NDA
+                <input type="checkbox" />
+                <span className="checkmark"></span>
+              </label>
+            </div>
+
             <div className={styles.formGroup}>
               <button>Send Message</button>
             </div>

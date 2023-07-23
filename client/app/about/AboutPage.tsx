@@ -2,9 +2,9 @@
 import Image from "next/image";
 import styles from "../../components/index.module.css";
 import man from "../../public/images/group-9.jpeg";
-import mac from "../../public/images/off.jpg";
-import shake from "../../public/images/twoshake.jpg";
-import goals from "../../public/images/goals.png";
+import mac from "../../public/images/about3.png";
+import shake from "../../public/images/about2.png";
+import goals from "../../public/images/about1.png";
 import { useEffect } from "react";
 import james from "../../public/images/James.jpeg";
 
@@ -125,7 +125,7 @@ const AboutPage = () => {
             fill={true}
             quality={100}
             priority={true}
-            sizes="(max-width: 711px) 100vw, (max-width: 711px) 50vw, 33vw"
+            sizes="(max-width: 464px) 100vw, (max-width: 100%) 50vw, 33vw"
           />
         </div>
       </div>

@@ -114,11 +114,11 @@ const Consulting = () => {
             software solutions.
           </h1>
           <h1 className={styles.capt3}>
-            We work closely with companies and startups to understand their
-            specific requirements, challenges, and aspirations. Whether{" "}
-            {`it's `}implementing cutting-edge software, adopting new
-            development methodologies, or integrating emerging technologies, we
-            provide guidance and support at every step of the journey.
+            We work closely with organizations and startups to understand their
+            specific software requirements, challenges, and aspirations. Whether
+            {` it's `}implementing automated processes, adopting new development
+            methodologies, or integrating emerging technologies, we provide
+            guidance and support at every step of the journey.
           </h1>
         </div>
         <div className={styles.overlay}></div>
