@@ -108,6 +108,7 @@ img {
   object-fit: cover;
 }
 input[type="text"],
+textarea,
 input {
   -webkit-appearance: none;
   border-radius: 0;
