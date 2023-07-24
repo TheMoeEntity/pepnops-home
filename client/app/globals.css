@@ -124,14 +124,15 @@ img {
   height: 40px;
   background-color: #121214;
   position: fixed;
-  bottom: -50%;
+  bottom: -20px;
+  opacity: 0;
   border-radius: 50%;
   right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 0.6s ease-out;
+  transition: 0.4s;
   z-index: 9999999999;
 }
 .scrollTop i {

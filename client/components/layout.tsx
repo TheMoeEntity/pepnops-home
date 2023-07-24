@@ -4,6 +4,7 @@ import Script from "next/script";
 import Footer from "./Footer";
 import { ReactNode, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { SnackbarProvider } from "notistack";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
@@ -23,8 +24,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
         document.documentElement.scrollTop > 120
       ) {
         scrollBtn.current.style.bottom = "30px";
+        scrollBtn.current.style.opacity = "1";
       } else {
-        scrollBtn.current.style.bottom = "-100%";
+        scrollBtn.current.style.bottom = "-20px";
+        scrollBtn.current.style.opacity = "0";
       }
     }
   };
@@ -48,7 +51,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
     return validRoutes.includes(pathname);
   };
   return (
-    <div>
+    <SnackbarProvider
+      classes={{ containerRoot: "z-alert" }}
+      anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
+    >
       {!checkValid(pathname) ? <></> : <Header />}
       {children}
       <Script
@@ -59,7 +65,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <i className="fa-solid fa-caret-up"></i>
       </div>
       {!checkValid(pathname) ? <></> : <Footer />}
-    </div>
+    </SnackbarProvider>
   );
 };
 

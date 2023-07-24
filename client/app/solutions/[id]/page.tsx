@@ -36,7 +36,7 @@ const Solutions = async ({ params }: any) => {
   if (!data) {
     redirect("/not-found.tsx");
   }
-  return <Sponsors data={data} />;
+  return <Sponsors data={data} />
 };
 
 export default Solutions;

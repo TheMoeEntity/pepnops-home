@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
-import { ChangeEvent, useState } from "react";
+import React, { FormEvent } from "react";
+import { ChangeEvent, useRef, useState } from "react";
 import styles from "../../components/index.module.css";
-import map from "../../public/images/maps.png";
+import { useSnackbar } from "notistack";
 
 const ContactForm = () => {
+  const { enqueueSnackbar } = useSnackbar();
+  const policyRef = useRef<HTMLInputElement | null>(null);
   const [selectedOption, setSelectedOption] =
     useState<String>("Frontend Developer");
   const onOptionChangeHandler = (
@@ -12,6 +15,48 @@ const ContactForm = () => {
   ): void => {
     console.log("User Selected Value - ", event.target.value);
     setSelectedOption(event.target.value);
+  };
+  const inputFile = useRef<HTMLInputElement | null>(null);
+  const [currFile, setCurrFile] = useState<string>("No file selected*");
+  const [size, setSize] = useState("2MB");
+  const [userFile, setUserFile] = useState<File | null>(null);
+  const openFiles = () => {
+    if (inputFile.current) inputFile.current.click();
+  };
+  function formatBytes(bytes: number, decimals = 2) {
+    if (!+bytes) return "0 Bytes";
+
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+  }
+  const handleFileSelected = (e: ChangeEvent<HTMLInputElement>) => {
+    const files = (e.target as HTMLInputElement).files;
+    // const files = Array.from(e.target as HTMLInputElement).files
+    if (!files) return;
+    console.log(files[0]);
+    setSize(formatBytes(files[0].size));
+    setCurrFile(files[0].name + ", " + size);
+    setUserFile(files[0]);
+    console.log(userFile);
+  };
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (policyRef.current) {
+      if (!policyRef.current.checked) {
+        enqueueSnackbar(
+          `You are to agree to pepnops' privacy policy
+          and non disclosure agreement.  `,
+          {
+            variant: "error",
+          }
+        );
+      }
+    }
   };
   return (
     <div className={styles.contactForm}>
@@ -82,7 +127,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             {/* <h1>Contact Details</h1> */}
             <div className={styles.formGroup}>
               <label htmlFor="">Full Name:</label>
@@ -137,8 +182,8 @@ const ContactForm = () => {
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="">Attach File:</label>
-              <i className="fas fa-file"></i>
-              No file selected*
+              <i onClick={openFiles} className="fas fa-file"></i>
+              {currFile}
             </div>
             <div className={styles.formGroup}>
               <label
@@ -158,13 +203,20 @@ const ContactForm = () => {
               >
                 By submitting this form I agree to {`pepnops'`} privacy policy
                 and non disclosure agreement.
-                <input type="checkbox" />
+                <input ref={policyRef} type="checkbox" />
                 <span className="checkmark"></span>
               </label>
             </div>
+            <input
+              onChange={(e) => handleFileSelected(e)}
+              type="file"
+              id="file"
+              ref={inputFile}
+              style={{ display: "none" }}
+            />
 
             <div className={styles.formGroup}>
-              <button>Submit</button>
+              <button type="submit">Submit</button>
             </div>
           </form>
         </div>
