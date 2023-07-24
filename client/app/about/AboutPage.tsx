@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "../../components/index.module.css";
 import man from "../../public/images/group-9.jpeg";
-import mac from "../../public/images/about3.png";
+import mac from "../../public/images/abt.png";
 import shake from "../../public/images/about2.png";
 import goals from "../../public/images/about1.png";
 import { useEffect } from "react";
@@ -140,7 +140,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div className={styles.cardss}>
-          {[...Array(8)].map((_x, i) => (
+          {[...Array(6)].map((_x, i) => (
             <div key={i}>
               <div className={styles.img}>
                 <Image
@@ -155,7 +155,7 @@ const AboutPage = () => {
               <div className={styles.teamDetails}>
                 <h3>CLEVER EGUASA</h3>
                 <span>CEO</span>
-                <div className={styles.icons}>
+                {/* <div className={styles.icons}>
                   <a
                     target={`_blank`}
                     rel="noopener noreferrer"
@@ -185,7 +185,7 @@ const AboutPage = () => {
                   >
                     <i className="fa-brands fa-instagram"></i>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

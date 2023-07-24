@@ -428,7 +428,7 @@
   width: 100%;
   height: auto;
   /* background: linear-gradient(90deg, #f1ffff, #66d19b2d); */
-  background-image: url("/images/pepbg.png");
+  background-image: url("/images/about-bg.jpeg");
   background-size: cover;
   background-position: bottom;
   padding: 40px 50px;
@@ -440,7 +440,7 @@
 .aboutSection2 {
   width: 100%;
   height: auto;
-  background-image: url("/images/pepbg.png");
+  background-image: url("/images/about-bg.jpeg");
   background-size: cover;
   background-position: bottom;
   padding: 40px 50px;
@@ -524,9 +524,9 @@
 .ourTeam {
   width: 100%;
   padding: 40px 10px;
-  background-image: url("/images/pepbg.png");
-  background-size: contain;
-  background-position: bottom;
+  /* background-image: url("/images/about-bg.jpeg");
+  background-size: cover;
+  background-position: bottom; */
   padding-bottom: 40px;
 }
 .ourTeam .title p {
@@ -548,18 +548,18 @@
   justify-content: space-between;
   flex-flow: row wrap;
   margin-bottom: 50px;
-  padding: 0 50px;
+  padding: 0 70px;
 }
 .aria {
   flex: 25%;
   margin: 10px 11px;
 }
 .ourTeam .cardss > div {
-  height: 461px;
+  height: 431px;
   flex: 25%;
   min-width: 335px;
   transition: 0.5s;
-  margin: 20px 15px;
+  margin: 20px 18px;
   background-color: white;
   box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
     2.5px 9px 26px 0 rgba(143, 143, 143, 0.1);
@@ -567,9 +567,7 @@
 .ourTeam .cardss > div .img img {
   transition: 0.6s;
 }
-.ourTeam .cardss > div:hover .img img {
-  transform: scale(1.15);
-}
+
 .ourTeam .cardss > div .img {
   position: relative;
   width: 100%;
@@ -687,8 +685,8 @@
 }
 .left button {
   border: 2px solid #00d169;
-  background: none;
-  color: #00d169;
+  background: #00d169;
+  color: #fff;
   padding: 7px;
   margin-bottom: 70px;
   border-radius: 7px;
@@ -774,7 +772,79 @@
   margin: 20px 15px 10px 0;
   cursor: pointer;
 }
+
+/* // ----------------- CAREERS PAGE -----------------------------------------//// */
+.careers {
+  width: 100%;
+  height: auto;
+}
+.careers .careerHero {
+  width: 100%;
+  height: 700px;
+  background-image: url("/images/cons3.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.careerHero .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.careers .centered {
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  z-index: 101;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  padding-top: 90px;
+}
+
+.careers .centered h1 {
+  text-align: center;
+  color: white;
+  font-size: 45px;
+}
+.capt4 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.9;
+  width: 60%;
+  margin: 60px auto;
+  font-weight: lighter;
+}
 @media screen and (max-width: 500px) {
+  .capt4 {
+    /* text-align: justify; */
+    line-height: 1.6;
+    width: 100%;
+    font-size: 16px;
+    margin: 30px auto;
+  }
+  .careers .centered h1 {
+    font-size: 31px;
+  }
+  .careers .centered {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    z-index: 101;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    padding-top: 90px;
+  }
+  .careers .careerHero {
+    background-position: left;
+  }
   .contactForm {
     padding: 40px 10px;
   }

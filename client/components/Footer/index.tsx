@@ -101,8 +101,10 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <i className="fa fa-angle-right"></i>
-            Careers
+            <Link href={"/careers"}>
+              <i className="fa fa-angle-right"></i>
+              Careers
+            </Link>
           </div>
           <div>
             <Link href={"/contact"}>

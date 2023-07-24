@@ -44,6 +44,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     "/solutions/smartx",
     "/solutions/tracker_360",
     "/contact",
+    "/careers",
     "https://pepnops.vercel.app",
     "/solutions" + pathname.slice(8, pathname.length),
   ];
