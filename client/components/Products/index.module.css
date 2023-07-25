@@ -23,20 +23,16 @@
   margin-right: auto;
 }
 .grid {
-  width: 90%;
+  width: 85%;
   height: auto;
   margin: auto;
-  max-width: 1300px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 20px 0;
 }
 .grid > div {
-  min-width: 350px;
-  max-width: 350px;
-  flex: 30%;
-  margin: 20px 5px;
+  width: 350px;
   height: auto;
   padding-bottom: 30px;
   box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
@@ -108,10 +104,9 @@
   border-radius: 5px;
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (max-width: 1200px) {
   .grid {
     justify-content: space-around;
-    width: 95%;
   }
   .grid > div {
     margin: 30px 0;
@@ -122,31 +117,10 @@
     margin: 30px 0;
   }
 }
-@media screen and (max-width: 810px) {
-  .grid {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 760px) {
-  .grid {
-    width: 100%;
-  }
-  .grid > div {
-    width: 280px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .grid > div {
-    max-width: 70%;
-  }
-}
 @media screen and (max-width: 600px) {
   .title h2 {
     text-align: center;
     width: 100%;
-  }
-  .grid {
-    width: 85% !important;
   }
   .title {
     margin: 40px auto;
