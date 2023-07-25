@@ -547,11 +547,11 @@
   font-size: 30px;
 }
 .ourTeam .cardss {
-  width: auto;
+  width: 100%;
   margin-top: 40px;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-flow: row wrap;
   margin-bottom: 50px;
   padding: 0 70px;
@@ -564,6 +564,7 @@
   height: 431px;
   flex: 25%;
   min-width: 335px;
+  max-width: 370px;
   transition: 0.5s;
   margin: 20px 18px;
   background-color: white;

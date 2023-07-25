@@ -189,8 +189,8 @@ const AboutPage = () => {
               </div>
             </div>
           ))}
-          <i className={styles.aria} aria-hidden="true"></i>
-          <i className={styles.aria} aria-hidden="true"></i>
+          {/* <i className={styles.aria} aria-hidden="true"></i>
+          <i className={styles.aria} aria-hidden="true"></i> */}
         </div>
       </div>
     </div>
