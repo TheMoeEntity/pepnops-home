@@ -63,7 +63,6 @@ const About = () => {
           </div>
           <Image
             src={shake}
-        
             alt="card-image"
             fill={true}
             quality={100}
@@ -78,7 +77,6 @@ const About = () => {
           </div>
           <Image
             src={laptop}
-      
             alt="card-image"
             fill={true}
             quality={100}
@@ -93,7 +91,6 @@ const About = () => {
           </div>
           <Image
             src={third}
-         
             alt="card-image"
             fill={true}
             quality={100}
@@ -101,6 +98,8 @@ const About = () => {
             // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
+        {/* <i className={styles.aria} aria-hidden="true"></i> */}
+        {/* <i className={styles.aria} aria-hidden="true"></i> */}
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Products = () => {
   return (
     <div id="solutions" className={styles.products}>
       <div className={styles.title}>
-        <h2>OUR SOLUTIONS</h2>
+        <h2>Our Solutions</h2>
       </div>
       <div className={styles.grid}>
         <div>

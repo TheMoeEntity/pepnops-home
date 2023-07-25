@@ -123,7 +123,7 @@ const SolutionsPage = ({ data }: any) => {
       </div>
       <div className={styles.featured}>
         <div className={styles.key}>
-          <h3>KEY FEATURES</h3>
+          <h3>Key Features</h3>
           <p>{fetchData.KeyFeatures.title}</p>
         </div>
         <div className={styles.cards}>

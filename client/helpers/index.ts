@@ -24,7 +24,7 @@ export class Helpers {
             "These and many more customizable features are available to suit your community management needs.",
           KeyFeatures: {
             title:
-              "Our Smart X solution provides an effective and efficient way to manage your community administrative processes and keep track of guests",
+              "Our Smart X solution provides an effective and efficient way to manage your community administrative processes and keep track of guests.",
             features: [
               {
                 icon: "manage",

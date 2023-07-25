@@ -41,15 +41,21 @@
   margin-right: auto;
 }
 .grid > div {
-  width: 300px;
+  min-width: 300px;
+  max-width: 350px;
+  flex: 30%;
   height: 360px;
   position: relative;
-  margin: 30px 15px;
+  margin: 30px 10px;
   box-shadow: 5px 9px 15px 0 rgba(143, 143, 143, 0.6),
     2.5px 9px 10px 0 rgba(143, 143, 143, 0.6);
   transition: 0.5s;
   transform: translateX(80px);
   opacity: 0;
+}
+.grid > i {
+  flex: 30%;
+  margin: 30px 10px;
 }
 .grid > div.addWidth {
   transform: translateX(0);
@@ -561,8 +567,9 @@
   transition: 0.5s;
   margin: 20px 18px;
   background-color: white;
-  box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
-    2.5px 9px 26px 0 rgba(143, 143, 143, 0.1);
+  /* box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
+    2.5px 9px 26px 0 rgba(143, 143, 143, 0.1); */
+  border-right: 1px solid rgba(0, 0, 0, 0.077);
 }
 .ourTeam .cardss > div .img img {
   transition: 0.6s;
@@ -882,6 +889,16 @@
   border-radius: 5px;
   cursor: pointer;
 }
+@media screen and (max-width: 1050px) {
+  .about .grid {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .about .grid > div {
+    height: 375px;
+  }
+}
 @media screen and (max-width: 500px) {
   .why {
     padding: 60px 10px;
@@ -1128,5 +1145,14 @@
 
   100% {
     transform: translateX(-100vw);
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .about .grid > div {
+    max-width: 100% !important;
+    min-width: 250px;
+    height: 320px;
+    margin: 20px auto !important;
   }
 }
