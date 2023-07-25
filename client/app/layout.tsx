@@ -9,7 +9,7 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PEPNOPS TEAM | Home",
+  title: "Delivering innovative and customized technology solutions | Pepnops",
   description: "PEPNOPS Official homepage",
   icons: [
     {
