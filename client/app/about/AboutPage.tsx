@@ -5,34 +5,18 @@ import man from "../../public/images/group-9.jpeg";
 import mac from "../../public/images/abt.png";
 import shake from "../../public/images/about2.png";
 import goals from "../../public/images/about1.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import james from "../../public/images/James.jpeg";
+import { useAnimation } from "@/helpers/useAnimation";
 
 const AboutPage = () => {
+  const [anim, setAnim] = useState<any>(null);
   useEffect(() => {
-    window.addEventListener("scroll", animateIn);
-    return () => {
-      window.removeEventListener("scroll", animateIn);
-    };
+    setAnim(document.getElementsByClassName("anim"));
   }, []);
 
-  const animateIn = () => {
-    let height = window.innerHeight;
-    //   let widths = grid.current.children;
-    let widths = document.getElementsByClassName("anim");
+  useAnimation(anim, styles.addWidth, false);
 
-    for (let index = 0; index < widths.length; index++) {
-      const element = widths[index];
-      let revealTop = element.getBoundingClientRect().top;
-      let revealpoint = 160;
-      if (revealTop < height - revealpoint) {
-        element.classList.add(styles.addWidth);
-      }
-      //    else {
-      //     element.classList.remove(styles.addWidth);
-      //   }
-    }
-  };
   return (
     <div className={styles.aboutUs}>
       <div className={styles.aboutHero}>

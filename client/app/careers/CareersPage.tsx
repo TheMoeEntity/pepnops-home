@@ -7,7 +7,7 @@ import Link from "next/link";
 const assets2 = [
   {
     icon: innovation,
-    title: "Collaboratio is key!",
+    title: "Collaboration is key!",
     text: "We firmly believe that collaboration leads to the best results. Our team thrives on the collective intelligence and diverse perspectives of our members. By joining us, you will have the opportunity to collaborate with some of the brightest minds in the industry, working together to tackle exciting challenges and deliver outstanding solutions. We foster a culture of open communication, active listening, and mutual respect, ensuring that every voice is heard and valued.",
   },
   {
@@ -78,7 +78,7 @@ const CareersPage = () => {
           <p>Ready to join us? Take the bold step today!</p>
 
           <Link href="/contact" prefetch={false}>
-            <button>GET IN TOUCH</button>
+            <button>APPLY NOW</button>
           </Link>
         </div>
       </div>

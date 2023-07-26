@@ -1,111 +1,24 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "../../components/index.module.css";
 import styles2 from "./consulting.module.css";
-import manage from "../../public/images/manage.png";
-import payment from "../../public/images/payment.png";
-import push from "../../public/images/push.png";
-import reporting from "../../public/images/reporting.png";
-import sos from "../../public/images/sos.png";
-import innovation from "../../public/images/innovation.png";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useAnimation } from "@/helpers/useAnimation";
+import { assets2, ServicesAssets } from "@/helpers";
 
 const Consulting = () => {
   const container = useRef<HTMLDivElement | null>(null);
   const grid = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
-  useEffect(() => {
-    window.addEventListener("scroll", animateIn);
-    return () => {
-      window.removeEventListener("scroll", animateIn);
-    };
-  }, []);
 
-  const animateIn = () => {
-    let width = container.current;
-    let height = window.innerHeight;
-    if (width) {
-      let revealpoint = 120;
-      let revealTop = width.getBoundingClientRect().top;
-      if (revealTop < height - revealpoint) {
-        width.classList.add(styles2.addWidth);
-      }
-    }
+  useAnimation(grid, styles2.addWidth, true, container);
 
-    if (grid.current) {
-      let widths = grid.current.children;
-      for (let index = 0; index < widths.length; index++) {
-        const element = widths[index];
-        let revealTop = element.getBoundingClientRect().top;
-        let revealpoint = 120;
-        if (revealTop < height - revealpoint) {
-          element.classList.add(styles2.addWidth);
-        } else {
-          element.classList.remove(styles2.addWidth);
-        }
-      }
-    }
-  };
+  const [assets, _setAssets] =
+    useState<{ text: string; title: string; icon: StaticImageData }[]>(
+      ServicesAssets
+    );
 
-  const [assets, _setAssets] = useState<
-    { text: string; title: string; icon: any }[]
-  >([
-    {
-      icon: reporting,
-      title: "SOFTWARE ASSESSMENT",
-      text: "We offer cutting-edge software analysis which involves identifying architectural gaps within your existing software systems, and proposing scalable, maintainable, and efficient technological solutions that align with the long-term objectives.",
-    },
-    {
-      icon: sos,
-      title: "SOFTWARE DEVELOPMENT",
-      text: "Our expert team partners with businesses to deliver customized software solutions that drive innovation, efficiency, and growth. Our software development consulting services encompass a wide range of expertise. From initial project planning and requirement gathering to design, coding, testing, and deployment, we provide comprehensive consulting services throughout the software development lifecycle.",
-    },
-    {
-      icon: payment,
-      title: "WHITE-LABEL SERVICE",
-      text: "We work with clients to design and develop end-to-end products that are ready for sale and execution. Our white-label software development service covers a wide range of industries and domains and is also open to businesses seeking to deploy some of our solutions as a third party. T&C Apply.",
-    },
-    {
-      icon: push,
-      title: "SYSTEM INTEGRATION",
-      text: `We facilitate the integration of different software systems, databases, and APIs to optimize workflows, improve efficiency, and enhance collaboration for businesses. We understand the importance of data security and privacy. We adhere to industry standards and best practices to safeguard your sensitive information and comply with regulatory requirements`,
-    },
-    {
-      icon: push,
-      title: "UI/UX DESIGN",
-      text: `We provide expertise in designing visually appealing and user-friendly interfaces to enhance user experience. Whether it's web, mobile, or desktop applications, we ensure that your digital product provides a consistent and optimized experience across all devices, enhancing user satisfaction and engagement. We also create wireframes, prototypes, and design systems that align with branding guidelines and best practices.`,
-    },
-
-    {
-      icon: push,
-      title: "PERFORMANCE OPTIMIZATION",
-      text: `We provide software optimization services aimed at enhancing software performance. We offer code optimization, database querying, and server configuration for optimal software performance and smooth user experience.`,
-    },
-    {
-      icon: push,
-      title: "SYSTEM MODERNIZATION",
-      text: `We help businesses modernize and upgrade their outdated software systems. Our Legacy modernization service ranges across software reengineering, re-platforming, or building of new systems based on business requirements. We also facilitate data migration, integration with modern technologies, and knowledge transfer to go with the improvements.`,
-    },
-  ]);
-
-  const assets2 = [
-    {
-      icon: innovation,
-      title: "INNOVATION",
-      text: "We are a forward thinking company driven by a passion for innovation. We pride ourselves on offering creative and advanced solutions to enable organizations stay ahead of the curve.",
-    },
-    {
-      icon: innovation,
-      title: "COLLABORATION",
-      text: "We believe in forging strong partnerships with our clients. Our collaborative process ensures that your insight and feeble are actively incooperated throughout the project.",
-    },
-    {
-      icon: innovation,
-      title: "EXCELLENCE",
-      text: "Our unwavering dedication to excellence shines through every of our projects. We ensure that every solution we provide is of the highest industry standard and aligns with client's vision.",
-    },
-  ];
   return (
     <div className={styles.consulting}>
       <div className={styles.itHero}>
