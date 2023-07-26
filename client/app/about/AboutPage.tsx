@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "../../components/index.module.css";
-import man from "../../public/images/group-9.jpeg";
+import man from "../../public/images/group-9_1.webp";
 import mac from "../../public/images/abt.png";
 import shake from "../../public/images/about2.png";
 import goals from "../../public/images/about1.png";
