@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
 import React, { FormEvent } from "react";
 import { ChangeEvent, useRef, useState } from "react";
 import styles from "../../components/index.module.css";
 import { useSnackbar } from "notistack";
+import axios from "axios";
 
 const ContactForm = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -17,12 +17,20 @@ const ContactForm = () => {
     setSelectedOption(event.target.value);
   };
   const inputFile = useRef<HTMLInputElement | null>(null);
+  const [status, setStatus] = useState("submit");
   const [currFile, setCurrFile] = useState<string>("No file selected*");
   const [size, setSize] = useState("2MB");
   const [userFile, setUserFile] = useState<File | null>(null);
   const openFiles = () => {
     if (inputFile.current) inputFile.current.click();
   };
+  const toBase64 = (file: File) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+    });
   function formatBytes(bytes: number, decimals = 2) {
     if (!+bytes) return "0 Bytes";
 
@@ -34,18 +42,97 @@ const ContactForm = () => {
 
     return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
   }
-  const handleFileSelected = (e: ChangeEvent<HTMLInputElement>) => {
+
+  const handleFileSelected = async (e: ChangeEvent<HTMLInputElement>) => {
     const files = (e.target as HTMLInputElement).files;
     // const files = Array.from(e.target as HTMLInputElement).files
     if (!files) return;
-    console.log(files[0]);
+    const fileType = files[0].type;
+    console.log(fileType);
+    if (fileType !== "application/pdf") {
+      enqueueSnackbar("File type not supported. Kindly upload a valid pdf", {
+        variant: "error",
+      });
+      return;
+    }
     setSize(formatBytes(files[0].size));
     setCurrFile(files[0].name + ", " + size);
     setUserFile(files[0]);
-    console.log(userFile);
   };
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    let results: any;
+    if (userFile) {
+      try {
+        results = await toBase64(userFile);
+      } catch (error) {
+        enqueueSnackbar("There was an error parsing file: " + error, {
+          variant: "error",
+        });
+        return;
+      }
+    }
+    const data = {
+      fullName: (
+        e.target[
+          0 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      email: (
+        e.target[
+          1 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      phone: (
+        e.target[
+          2 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      choise: (
+        e.target[
+          3 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      budget: (
+        e.target[
+          4 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      message: (
+        e.target[
+          5 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      file: results,
+    };
+
+    if (data.fullName === "") {
+      enqueueSnackbar("Full name cannot be empty", {
+        variant: "error",
+      });
+      return;
+    } else if (data.budget == "--Choose--" || data.choise == "--Choose--") {
+      enqueueSnackbar("Select a valid budget or choice", {
+        variant: "error",
+      });
+      return;
+    } else if (data.phone === "") {
+      enqueueSnackbar("Specify a phone number we can reach you with", {
+        variant: "error",
+      });
+      return;
+    } else if (data.message === "" || data.message.length < 10) {
+      enqueueSnackbar("Message cannot be empty or short", {
+        variant: "error",
+      });
+      return;
+    } else if (currFile === "No file selected*") {
+      enqueueSnackbar("Please upload a valid PDF", {
+        variant: "error",
+      });
+      return;
+    }
     if (policyRef.current) {
       if (!policyRef.current.checked) {
         enqueueSnackbar(
@@ -55,8 +142,36 @@ const ContactForm = () => {
             variant: "error",
           }
         );
+        return;
       }
     }
+    setStatus("Sending....");
+    try {
+      const url = "/api/contact";
+      const res = await axios.post(url, data);
+
+      res.status === 200 &&
+        enqueueSnackbar("Message successfully sent", {
+          variant: "success",
+        });
+      console.log(res.status);
+      console.log(res);
+      setStatus("Sent successfully");
+      setTimeout(() => {
+        const resetForm = e.target as HTMLFormElement;
+        resetForm.reset();
+      }, 3000);
+    } catch (error) {
+      setStatus("...Error sending message");
+      enqueueSnackbar(
+        "There was an error sending message, try again: " + error,
+        {
+          variant: "error",
+        }
+      );
+      console.log(error);
+    }
+    setStatus("Submit");
   };
   return (
     <div className={styles.contactForm}>
@@ -135,7 +250,7 @@ const ContactForm = () => {
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="">Email:</label>
-              <input type="text" name="" id="" />
+              <input type="text" name="" id="" required />
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="">Phone:</label>
@@ -216,7 +331,7 @@ const ContactForm = () => {
             />
 
             <div className={styles.formGroup}>
-              <button type="submit">Submit</button>
+              <button type="submit">{status}</button>
             </div>
           </form>
         </div>
