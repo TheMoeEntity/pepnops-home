@@ -17,7 +17,7 @@ const ContactForm = () => {
     setSelectedOption(event.target.value);
   };
   const inputFile = useRef<HTMLInputElement | null>(null);
-  const [status, setStatus] = useState("submit");
+  const [status, setStatus] = useState("Submit");
   const [currFile, setCurrFile] = useState<string>("No file selected*");
   const [size, setSize] = useState("2MB");
   const [userFile, setUserFile] = useState<File | null>(null);

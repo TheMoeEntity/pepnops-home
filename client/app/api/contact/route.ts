@@ -17,7 +17,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   });
   let mailData = {
     from: "PEPNOPS Contact form",
-    to: "mosesnwigberi@gmail.com",
+    to: "pepnops@gmail.com",
     attachments: [
       {
         filename: "Resume.pdf",
