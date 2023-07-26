@@ -3,6 +3,7 @@ import styles from "../../components/index.module.css";
 import Image from "next/image";
 import innovation from "../../public/images/innovation.png";
 import Link from "next/link";
+import TypeEffect from "./TypeEffect";
 
 const assets2 = [
   {
@@ -28,7 +29,9 @@ const CareersPage = () => {
       <div className={styles.careerHero}>
         <div className={styles.overlay}></div>
         <div className={styles.centered}>
-          <h1>People and Opinions</h1>
+          <h1>
+            <TypeEffect />
+          </h1>
           <p className={styles.capt4}>
             At Pepnops, we believe that people and their opinions matter. We are
             passionate about creating a collaborative and inclusive work

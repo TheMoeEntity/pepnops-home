@@ -889,6 +889,9 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.typeStyles {
+  color: #045a2f;
+}
 @media screen and (max-width: 1050px) {
   .about .grid {
     justify-content: center;
