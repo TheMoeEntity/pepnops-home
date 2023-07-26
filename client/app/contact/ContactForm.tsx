@@ -160,6 +160,8 @@ const ContactForm = () => {
       setTimeout(() => {
         const resetForm = e.target as HTMLFormElement;
         resetForm.reset();
+        setUserFile(null);
+        setCurrFile("No file selected*");
       }, 3000);
     } catch (error) {
       setStatus("...Error sending message");
