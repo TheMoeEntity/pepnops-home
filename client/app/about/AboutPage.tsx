@@ -38,7 +38,7 @@ const AboutPage = () => {
       </div>
       <div className={styles.aboutSection}>
         <div className="anim">
-          <h2>Hi,{` we're `}PEPNOPS Inc.</h2>
+          <h2>Hi,{` we're `}Pepnops Inc.</h2>
           <p>
             Pepnops Inc. is a leading IT solutions company committed to
             delivering innovative and customized technology solutions across

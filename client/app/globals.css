@@ -135,6 +135,9 @@ img {
   transition: 0.4s;
   z-index: 1000;
 }
+.green {
+  color: #00d169;
+}
 .scrollTop i {
   color: white;
   font-size: 25px;

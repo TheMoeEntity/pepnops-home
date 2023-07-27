@@ -6,13 +6,16 @@ import logo from "../../public/images/footer2.png";
 import icon1 from "../../public/images/10.png";
 import icon2 from "../../public/images/11.png";
 import icon3 from "../../public/images/12.png";
+import { Router } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <div className={styles.footer}>
       <div className={styles.grid}>
         <div>
-          <div className={styles.logo}>
+          <div onClick={() => router.push("/")} className={styles.logo}>
             <Image
               src={logo}
               alt="card-image"
@@ -22,10 +25,6 @@ const Footer = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          {/* <p>
-            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do
-            eiusmod tempor in cididunt ut labore.
-          </p> */}
         </div>
         <div>
           <h2>CONTACT INFO</h2>
