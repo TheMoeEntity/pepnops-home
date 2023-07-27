@@ -2,8 +2,8 @@
 import Image from "next/image";
 import styles from "../../../components/index.module.css";
 import worker from "../../../public/images/smartx.png";
-import dashboard from "../../../public/images/dashboard.png";
-import phone from "../../../public/images/phone2.png";
+import dashboard from "../../../public/images/old.jpg";
+import phone from "../../../public/images/tilted.png";
 import manage from "../../../public/images/manage.png";
 import { motion } from "framer-motion";
 import payment from "../../../public/images/payment.png";
@@ -103,7 +103,7 @@ const SolutionsPage = ({ data }: any) => {
               fill
               quality={100}
               priority={true}
-              sizes="(max-width: 1523px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 6912px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         )}
@@ -162,7 +162,7 @@ const SolutionsPage = ({ data }: any) => {
               fill
               quality={100}
               priority={true}
-              sizes="(max-width: 597px) 100vw, (max-width: 100%) 50vw, 33vw"
+              sizes="(max-width: 1080px) 100vw, (max-width: 100%) 50vw, 33vw"
             />
           </div>
         )}

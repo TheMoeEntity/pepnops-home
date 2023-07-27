@@ -16,6 +16,23 @@ export type fetchdata = {
     features: { title: string; icon: string; text: string }[];
   };
 };
+export const assets8 = [
+  {
+    icon: innovation,
+    title: "Collaboration is key!",
+    text: "We firmly believe that collaboration leads to the best results. Our team thrives on the collective intelligence and diverse perspectives of our members. By joining us, you will have the opportunity to collaborate with some of the brightest minds in the industry, working together to tackle exciting challenges and deliver outstanding solutions. We foster a culture of open communication, active listening, and mutual respect, ensuring that every voice is heard and valued.",
+  },
+  {
+    icon: innovation,
+    title: "Driven by excellence!",
+    text: "Excellence is embedded in our DNA. We strive for the highest standards in everything we do, from the quality of our products and services to the user experience of our solutions. Joining our organization means joining a group of dedicated professionals who are passionate about delivering exceptional results. We provide a supportive and challenging environment that encourages continuous learning and growth, enabling you to sharpen your skills and achieve excellence in your work.",
+  },
+  {
+    icon: innovation,
+    title: "We love to innovate!",
+    text: "innovation is at the heart of everything we do. We believe in pushing boundaries, exploring new technologies, and finding creative solutions to complex problems. Joining our team means you'll be part of a dynamic and forward-thinking organization that encourages and rewards innovation. We provide a supportive environment where you can bring your ideas to life and make a significant impact in the world of software development.",
+  },
+];
 export const assets2: {
   icon: StaticImageData;
   title: string;
