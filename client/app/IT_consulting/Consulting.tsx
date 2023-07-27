@@ -78,7 +78,7 @@ const Consulting = () => {
         </div>
       </div>
       <div className={styles.chooseUs}>
-        <h2>Why PEPNOPS?</h2>
+        <h2>Why Pepnops?</h2>
         <h3>
           We are a company committed to excellence. Our high level of
           professionalism is reflected in our cutting-edge technologies and
