@@ -247,7 +247,7 @@
   height: 670.2px;
   max-width: 100%;
   z-index: 102;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   overflow: hidden;
   -webkit-filter: drop-shadow(5px 9px 35px rgba(143, 143, 143, 0.2));
   filter: drop-shadow(5px 9px 35px rgba(143, 143, 143, 0.2));
