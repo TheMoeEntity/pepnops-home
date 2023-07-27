@@ -1199,6 +1199,11 @@
     transform: translateX(-100vw);
   }
 }
+@media screen and (max-width: 380px) {
+  .whyChoose > div:nth-child(1) {
+    height: 200px;
+  }
+}
 
 @media screen and (max-width: 340px) {
   .about .grid > div {
