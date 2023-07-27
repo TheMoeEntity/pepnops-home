@@ -67,7 +67,7 @@ const CareersPage = () => {
                 <strong>{x.title}</strong>
               </h2>
               <div>
-                <p style={{ fontSize: "12px" }}>{x.text}</p>
+                <p style={{ fontSize: "12px", height: "300px" }}>{x.text}</p>
               </div>
             </div>
           ))}

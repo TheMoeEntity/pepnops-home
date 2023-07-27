@@ -325,7 +325,7 @@
 }
 .cards > div {
   height: auto;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   flex: 40%;
   margin: 20px 25px;
   background-color: #010d14;
@@ -338,10 +338,14 @@
 }
 .cardDiv {
   flex: 20% !important;
-  margin: 20px 10px !important;
+  margin: 0px 10px !important;
+  display: flex !important;
+  flex-flow: column wrap !important;
+  justify-content: space-between !important;
 }
+
 .cards > div > div {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 .cards > div > div p {
   font-size: 15px;
@@ -956,8 +960,19 @@
   .whyChoose > div p {
     text-align: justify;
   }
+  .careers .cards {
+    width: 100%;
+  }
   .why .cards {
     flex-flow: column wrap;
+  }
+  .why .cards > div {
+    background-color: transparent;
+    color: inherit;
+    border-bottom: 1px solid #d3d5d674;
+    transform: translateX(80px);
+    opacity: 0;
+    transition: 0.4s ease;
   }
   .why > p {
     width: 97%;

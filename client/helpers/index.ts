@@ -3,7 +3,12 @@ import reporting from "./../public/images/reporting.png";
 import sos from "./../public/images/sos.png";
 import payment from "./../public/images/payment.png";
 import push from "./../public/images/push.png";
-import innovation from "./../public/images/innovation.png";
+import innovation from "./../public/images/innovation2.png";
+import excellence2 from "./../public/images/innovation.png";
+import collaboration from "./../public/images/collaboration.png";
+import excellence from "./../public/images/excellence.png";
+import collaborate from "./../public/images/collaborate.png";
+import innovate from "./../public/images/innovate.png";
 
 export type fetchdata = {
   title: string;
@@ -16,23 +21,24 @@ export type fetchdata = {
     features: { title: string; icon: string; text: string }[];
   };
 };
-export const assets8 = [
-  {
-    icon: innovation,
-    title: "Collaboration is key!",
-    text: "We firmly believe that collaboration leads to the best results. Our team thrives on the collective intelligence and diverse perspectives of our members. By joining us, you will have the opportunity to collaborate with some of the brightest minds in the industry, working together to tackle exciting challenges and deliver outstanding solutions. We foster a culture of open communication, active listening, and mutual respect, ensuring that every voice is heard and valued.",
-  },
-  {
-    icon: innovation,
-    title: "Driven by excellence!",
-    text: "Excellence is embedded in our DNA. We strive for the highest standards in everything we do, from the quality of our products and services to the user experience of our solutions. Joining our organization means joining a group of dedicated professionals who are passionate about delivering exceptional results. We provide a supportive and challenging environment that encourages continuous learning and growth, enabling you to sharpen your skills and achieve excellence in your work.",
-  },
-  {
-    icon: innovation,
-    title: "We love to innovate!",
-    text: "innovation is at the heart of everything we do. We believe in pushing boundaries, exploring new technologies, and finding creative solutions to complex problems. Joining our team means you'll be part of a dynamic and forward-thinking organization that encourages and rewards innovation. We provide a supportive environment where you can bring your ideas to life and make a significant impact in the world of software development.",
-  },
-];
+export const assets8: { icon: StaticImageData; title: string; text: string }[] =
+  [
+    {
+      icon: innovate,
+      title: "We love to innovate!",
+      text: "innovation is at the heart of everything we do. We believe in pushing boundaries, exploring new technologies, and finding creative solutions to complex problems. Joining our team means you'll be part of a dynamic and forward-thinking organization that encourages and rewards innovation. We provide a supportive environment where you can bring your ideas to life and make a significant impact in the world of software development.",
+    },
+    {
+      icon: collaborate,
+      title: "Collaboration is key!",
+      text: "We firmly believe that collaboration leads to the best results. Our team thrives on the collective intelligence and diverse perspectives of our members. By joining us, you will have the opportunity to collaborate with some of the brightest minds in the industry, working together to tackle exciting challenges and deliver outstanding solutions. We foster a culture of open communication, active listening, and mutual respect, ensuring that every voice is heard and valued.",
+    },
+    {
+      icon: excellence,
+      title: "Driven by excellence!",
+      text: "Excellence is embedded in our DNA. We strive for the highest standards in everything we do, from the quality of our products and services to the user experience of our solutions. Joining our organization means joining a group of dedicated professionals who are passionate about delivering exceptional results. We provide a supportive and challenging environment that encourages continuous learning and growth, enabling you to sharpen your skills and achieve excellence in your work.",
+    },
+  ];
 export const assets2: {
   icon: StaticImageData;
   title: string;
@@ -44,12 +50,12 @@ export const assets2: {
     text: "We are a forward thinking company driven by a passion for innovation. We pride ourselves on offering creative and advanced solutions to enable organizations stay ahead of the curve.",
   },
   {
-    icon: innovation,
+    icon: collaboration,
     title: "COLLABORATION",
     text: "We believe in forging strong partnerships with our clients. Our collaborative process ensures that your insight and feeble are actively incooperated throughout the project.",
   },
   {
-    icon: innovation,
+    icon: excellence2,
     title: "EXCELLENCE",
     text: "Our unwavering dedication to excellence shines through every of our projects. We ensure that every solution we provide is of the highest industry standard and aligns with client's vision.",
   },
@@ -94,6 +100,16 @@ export const ServicesAssets: {
     icon: push,
     title: "SYSTEM MODERNIZATION",
     text: `We help businesses modernize and upgrade their outdated software systems. Our Legacy modernization service ranges across software reengineering, re-platforming, or building of new systems based on business requirements. We also facilitate data migration, integration with modern technologies, and knowledge transfer to go with the improvements.`,
+  },
+  {
+    icon: push,
+    title: "MOBILE DEVELOPMENT",
+    text: `We offer top-tier mobile app development services for established companies and startups. From conceptualizing your app idea to launching it on the App Store and Google Play Store, we guide you through every step of the mobile app development process. We also take into account important aspects like scalability, security, and performance to deliver a top-notch mobile solution that not only meets your current needs but also accommodates future growth.`,
+  },
+  {
+    icon: push,
+    title: "WEB DEVELOPMENT",
+    text: `We specialize in creating visually stunning, user-friendly, and highly functional websites. Whether you need a simple informational website, a sophisticated e-commerce platform, or a complex web application, we have the skillset and experience to deliver outstanding results. Our holistic approach to web design also ensures that your website is responsive and adapts perfectly across different devices and screen sizes, and is search engine optimized to attract organic traffic and rank well on search engine results`,
   },
 ];
 export class Helpers {
