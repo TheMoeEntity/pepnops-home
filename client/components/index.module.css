@@ -950,6 +950,9 @@
   .whyChoose > div {
     margin: 40px 20px;
   }
+  .whyChoose > div:nth-child(1) {
+    height: 266.8px;
+  }
   .whyChoose > div p {
     text-align: justify;
   }
