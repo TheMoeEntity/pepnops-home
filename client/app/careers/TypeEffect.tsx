@@ -6,7 +6,7 @@ const TypeEffect = () => {
   return (
     <Typewriter
       options={{
-        strings: ["People", "And", "Opinions."],
+        strings: ["People", "And", "Opinions.", "PEPNOPS"],
         autoStart: true,
         loop: true,
         cursorClassName: classname,

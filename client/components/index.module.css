@@ -788,10 +788,11 @@
 }
 .careers .careerHero {
   width: 100%;
-  height: 700px;
+  height: 450px;
   background-image: url("/images/cons3_1.webp");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: top;
   position: relative;
 }
 .careerHero .overlay {
@@ -809,10 +810,12 @@
   height: 90%;
   position: absolute;
   z-index: 101;
-  top: 90%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -90%);
-  padding-top: 90px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .careers .centered h1 {
@@ -871,6 +874,7 @@
 .why .cards > div p {
   color: inherit;
   text-align: left;
+  line-height: 1.6;
 }
 .call {
   width: 100%;
@@ -901,6 +905,31 @@
 .typeStyles {
   color: #00d169;
 }
+.whyChoose {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 40px auto auto auto;
+}
+.whyChoose > div {
+  position: relative;
+  flex: 40%;
+  margin: 20px 30px;
+  height: auto;
+}
+.whyChoose > div:nth-child(1) {
+  height: 300.15px;
+  width: 450px;
+  box-shadow: 5px 9px 15px 0 rgba(143, 143, 143, 0.6),
+    2.5px 9px 10px 0 rgba(143, 143, 143, 0.6);
+}
+.whyChoose > div:nth-child(2) h2 {
+  color: #00d169;
+}
+.whyChoose > div:nth-child(2) p {
+  padding-top: 30px;
+}
 @media screen and (max-width: 1050px) {
   .about .grid {
     justify-content: center;
@@ -914,6 +943,15 @@
 @media screen and (max-width: 550px) {
   .why {
     padding: 60px 10px;
+  }
+  .whyChoose {
+    width: 100%;
+  }
+  .whyChoose > div {
+    margin: 40px 20px;
+  }
+  .whyChoose > div p {
+    text-align: justify;
   }
   .why .cards {
     flex-flow: column wrap;
@@ -932,20 +970,17 @@
     margin: 30px auto;
   }
   .careers .centered h1 {
-    font-size: 31px;
+    font-size: 40px;
   }
   .careers .centered {
     width: 80%;
     height: 90%;
     position: absolute;
     z-index: 101;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    padding-top: 90px;
   }
   .careers .careerHero {
-    background-position: left;
+    background-position: top;
+    height: 350px;
   }
   .contactForm {
     padding: 40px 10px;
