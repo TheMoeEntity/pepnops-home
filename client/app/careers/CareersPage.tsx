@@ -19,6 +19,7 @@ const CareersPage = () => {
           src={man}
           alt="hero-image"
           fill={true}
+          style={{ backgroundPosition: "left", backgroundSize: "cover" }}
           quality={100}
           priority={true}
           sizes="(max-width: 1920px) 100vw, (max-width: 1920px) 50vw, 33vw"
