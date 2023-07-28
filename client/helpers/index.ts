@@ -3,6 +3,8 @@ import reporting from "./../public/images/reporting.png";
 import sos from "./../public/images/sos.png";
 import payment from "./../public/images/payment.png";
 import push from "./../public/images/push.png";
+import guide from "./../public/images/guide.png";
+import manage from "./../public/images/manage.png";
 import innovation from "./../public/images/innovation2.png";
 import excellence2 from "./../public/images/innovation.png";
 import collaboration from "./../public/images/collaboration.png";
@@ -25,6 +27,38 @@ export type fetchdata = {
     features: { title: string; icon: string; text: string }[];
   };
 };
+export const assets10 = [
+  {
+    icon: manage,
+    title: "MANAGE VISITORS",
+    text: "This feature allows resident to create instant and scheduled visits for their guests. Residents can also set the duration for one-off and recurring visits.",
+  },
+  {
+    icon: guide,
+    title: "COMMUNITY GUIDE",
+    text: "Residents can explore notable locations in the community. This features helps new residents easily locate places within the community.",
+  },
+  {
+    icon: reporting,
+    title: "REPORTING",
+    text: "Easily access the records for previous visits and that of guests withing your estate, offices, service apartments, etc at every point in time.",
+  },
+  {
+    icon: sos,
+    title: "SOS",
+    text: "Residents can easily report an emergency and get help just by the Click of a button.",
+  },
+  {
+    icon: payment,
+    title: "PAYMENT",
+    text: "Easily automate the collection of payments. Our Smart X solution also helps with proper invoicing and bookkeeping.",
+  },
+  {
+    icon: push,
+    title: "PUSH NOTIFICATIONS",
+    text: `Share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
+  },
+];
 export const assets8: { icon: StaticImageData; title: string; text: string }[] =
   [
     {

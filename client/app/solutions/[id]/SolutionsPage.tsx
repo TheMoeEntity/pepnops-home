@@ -17,45 +17,13 @@ import safety from "../../../public/images/safety.png";
 import scheduling from "../../../public/images/scheduling.png";
 import security from "../../../public/images/security.png";
 import { useEffect, useState } from "react";
-import { fetchdata } from "@/helpers";
+import { assets10, fetchdata } from "@/helpers";
 import { useRouter } from "next/navigation";
 const SolutionsPage = ({ data }: any) => {
   const [fetchData] = useState<fetchdata>(data);
   const router = useRouter();
-  const [assets, setAssets] = useState<
-    { text: string; title: string; icon: any }[]
-  >([
-    {
-      icon: manage,
-      title: "MANAGE VISITORS",
-      text: "This feature allows resident to create instant and scheduled visits for their guests. Residents can also set the duration for one-off and recurring visits.",
-    },
-    {
-      icon: guide,
-      title: "COMMUNITY GUIDE",
-      text: "Residents can explore notable locations in the community. This features helps new residents easily locate places within the community.",
-    },
-    {
-      icon: reporting,
-      title: "REPORTING",
-      text: "Easily access the records for previous visits and that of guests withing your estate, offices, service apartments, etc at every point in time.",
-    },
-    {
-      icon: sos,
-      title: "SOS",
-      text: "Residents can easily report an emergency and get help just by the Click of a button.",
-    },
-    {
-      icon: payment,
-      title: "PAYMENT",
-      text: "Easily automate the collection of payments. Our Smart X solution also helps with proper invoicing and bookkeeping.",
-    },
-    {
-      icon: push,
-      title: "PUSH NOTIFICATIONS",
-      text: `Share information with residents as clickable pop-up messages on their devices. That way residents don't get to miss out on vital information.`,
-    },
-  ]);
+  const [assets, setAssets] =
+    useState<{ text: string; title: string; icon: any }[]>(assets10);
   const icons = [gps, fencing, reporting, scheduling, safety, security];
 
   useEffect(() => {
@@ -78,11 +46,7 @@ const SolutionsPage = ({ data }: any) => {
         <div className={styles.centered}>
           <h2 style={{ visibility: "hidden" }}>Solutions</h2>
           <h1>{fetchData.title}</h1>
-          <h2>
-            {/* Efficiently manage your processes and keep track of visitors <br />{" "}
-            within your community */}
-            {fetchData.capt1}
-          </h2>
+          <h2>{fetchData.capt1}</h2>
         </div>
         <Image
           src={fetchData.title === "Smart X" ? worker : motor}
