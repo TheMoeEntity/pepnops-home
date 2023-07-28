@@ -1,6 +1,6 @@
 "use client";
 import styles from "./index.module.css";
-import icon2 from "../../public/images/landing3.webp";
+import icon2 from "../../public/images/landingHero.jpg";
 import Image from "next/image";
 
 const Hero = () => {
