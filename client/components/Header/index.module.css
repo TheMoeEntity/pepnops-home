@@ -126,7 +126,7 @@
     margin-left: 15px;
   }
 }
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 890px) {
   .bars {
     display: block;
   }
@@ -137,5 +137,18 @@
 @media screen and (max-width: 500px) {
   .header {
     padding: 0 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .logo {
+    width: calc(0.82 * 294.75px);
+    height: calc(0.82 * 55px);
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .logo {
+    width: calc(0.7 * 294.75px);
+    height: calc(0.7 * 55px);
   }
 }

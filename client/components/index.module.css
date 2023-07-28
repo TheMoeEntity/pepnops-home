@@ -936,9 +936,18 @@
 .whyChoose > div:nth-child(2) p {
   padding-top: 30px;
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1060px) {
   .about .grid {
     justify-content: center;
+  }
+  .contactForm {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contactForm .form {
+    flex-flow: column wrap;
   }
 }
 @media screen and (max-width: 680px) {
@@ -1222,8 +1231,44 @@
     height: 200px;
   }
 }
+@media screen and (max-width: 360px) {
+  .contactForm {
+    padding: 40px 5px;
+  }
+  .right {
+    max-width: 100%;
+  }
+  .right form label {
+    font-size: small;
+  }
+}
 
 @media screen and (max-width: 340px) {
+  .left ul li {
+    font-size: 10px;
+  }
+
+  .left p {
+    font-size: 10px;
+    padding-right: 50px;
+  }
+  .left > div {
+    font-size: 10px;
+  }
+  .right form {
+    width: 100%;
+    font-size: small;
+  }
+  .right {
+    flex: 100%;
+    padding: 40px 15px;
+  }
+  .maps {
+    width: calc(0.88 * 328px);
+    max-width: 95%;
+    height: calc(0.88 * 169.5px);
+  }
+
   .about .grid > div {
     max-width: 100% !important;
     min-width: 250px;
@@ -1245,5 +1290,37 @@
   }
   100% {
     transform: rotate(360deg) scale(1);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .left ul li {
+    font-size: 10px;
+  }
+
+  .left p {
+    font-size: 10px;
+    padding-right: 30px;
+  }
+
+  .right form {
+    width: 100%;
+    font-size: smaller;
+  }
+  .right {
+    flex: 100%;
+    padding: 40px 15px;
+  }
+  .maps {
+    width: calc(0.8 * 328px);
+    max-width: 95%;
+    height: calc(0.8 * 169.5px);
+  }
+}
+@media screen and (max-width: 280px) {
+  .maps {
+    width: calc(0.7 * 328px);
+    max-width: 95%;
+    height: calc(0.7 * 169.5px);
   }
 }
