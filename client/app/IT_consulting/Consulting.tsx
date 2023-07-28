@@ -56,23 +56,10 @@ const Consulting = () => {
               <div className={styles2.overlay}>
                 <div>READ MORE</div>
               </div>
-              {/* <div className={styles2.topIcon}>
-                <Image
-                  src={payment}
-                  alt="card-image"
-                  fill={true}
-                  quality={100}
-                  priority={true}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div> */}
               <div>
                 <h4>{x.title}</h4>
               </div>
               <div className={styles2.detail}>{x.text}</div>
-              {/* <div className={styles2.learn}>
-                LEARN MORE <i>&#10230;</i>
-              </div> */}
             </div>
           ))}
         </div>
@@ -84,9 +71,13 @@ const Consulting = () => {
           professionalism is reflected in our cutting-edge technologies and
           strategic solutions designed to unlock your full potential.
         </h3>
-        <div className={styles.cards}>
+        <div className={`${styles2.cards11}`}>
           {assets2.map((x, i) => (
-            <div className={styles.cardDiv} key={i}>
+            <div
+              style={{ maxWidth: "356.27px" }}
+              className={`${styles2.cardDiv11}`}
+              key={i}
+            >
               <div className={styles.icons}>
                 <Image
                   src={x.icon}
