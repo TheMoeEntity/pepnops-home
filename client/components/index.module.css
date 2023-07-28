@@ -303,10 +303,8 @@
 }
 
 .solutions .featured .phone {
-  width: 323px;
-  height: 643px;
-  height: 593px;
-  width: 298.5px;
+  width: calc(0.3 * 1080px);
+  height: calc(0.3 * 1920px);
   position: absolute;
   right: 15px;
   top: -130px;
@@ -1071,9 +1069,10 @@
     height: 450px;
   }
   .solutions .featured .phone {
-    width: 129.2px;
-    height: 257.2px;
-    top: -90px;
+    width: calc(0.15 * 1080px);
+    height: calc(0.15 * 1920px);
+    top: -110px;
+    right: 0px;
     animation: bounce2 2.5s ease infinite;
   }
   .solutions .key {

@@ -1,34 +1,21 @@
 import { Helpers } from "@/helpers";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import dynamic from "next/dynamic";
+import { Props } from "@/helpers";
 const Sponsors = dynamic(() => import("./SolutionsPage"), {
   suspense: true,
 });
-import { redirect, useParams } from "next/navigation";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "PEPNOPS TEAM | Solutions",
-  description: "PEPNOPS Team. Our solutions",
-  icons: [
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "32x32",
-      url: "/favicon-32x32.png",
-    },
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "16x16",
-      url: "/favicon-16x16.png",
-    },
-    {
-      rel: "apple-touch-icon",
-      sizes: "180x180",
-      url: "/apple-touch-icon.png",
-    },
-  ],
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = params.id;
+  const product = await Helpers.FetchData(id);
+
+  return {
+    title: product?.title + " | Community management software",
+    description: "PEPNOPS Team. Our software solutions",
+  };
+}
 
 const Solutions = async ({ params }: any) => {
   const data = await Helpers.FetchData(params.id);
@@ -36,7 +23,7 @@ const Solutions = async ({ params }: any) => {
   if (!data) {
     redirect("/not-found.tsx");
   }
-  return <Sponsors data={data} />
+  return <Sponsors data={data} />;
 };
 
 export default Solutions;

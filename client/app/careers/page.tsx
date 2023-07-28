@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { CareersPage } from "./CareersPage";
 
 export const metadata: Metadata = {
-  title: "PEPNOPS TEAM | Careers",
+  title: "Join our community | Pepnops",
   description: "PEPNOPS Team. Careers at PEPNOPS",
   icons: [
     {

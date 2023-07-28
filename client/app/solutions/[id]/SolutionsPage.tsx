@@ -2,10 +2,9 @@
 import Image from "next/image";
 import styles from "../../../components/index.module.css";
 import worker from "../../../public/images/smartx.png";
-import dashboard from "../../../public/images/old.jpg";
-import phone from "../../../public/images/tilted.png";
+import dashboard from "../../../public/images/smartXAdmin.jpg";
+import phone from "../../../public/images/smartXPhone.png";
 import manage from "../../../public/images/manage.png";
-import { motion } from "framer-motion";
 import payment from "../../../public/images/payment.png";
 import push from "../../../public/images/push.png";
 import reporting from "../../../public/images/reporting.png";
@@ -21,7 +20,7 @@ import { useEffect, useState } from "react";
 import { fetchdata } from "@/helpers";
 import { useRouter } from "next/navigation";
 const SolutionsPage = ({ data }: any) => {
-  const [fetchData, setFetch] = useState<fetchdata>(data);
+  const [fetchData] = useState<fetchdata>(data);
   const router = useRouter();
   const [assets, setAssets] = useState<
     { text: string; title: string; icon: any }[]

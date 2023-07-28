@@ -5,7 +5,7 @@ const AboutPage = dynamic(() => import("./AboutPage"), {
   suspense: true,
 });
 export const metadata: Metadata = {
-  title: "PEPNOPS TEAM | Who we are",
+  title: "Pepnops | who we are",
   description: "PEPNOPS about page. Meet the team",
   icons: [
     {

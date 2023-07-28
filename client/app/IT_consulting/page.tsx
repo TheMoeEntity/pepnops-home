@@ -6,7 +6,7 @@ const Consulting = dynamic(() => import("./Consulting"), {
 });
 
 export const metadata: Metadata = {
-  title: "PEPNOPS TEAM | IT Consulting solutions",
+  title: "Partnering for progress | Pepnops",
   description: "PEPNOPS IT Consulting and services we offer",
   icons: [
     {

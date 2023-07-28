@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 
 const ContactForm = dynamic(() => import("./ContactForm"));
 export const metadata: Metadata = {
-  title: "PEPNOPS TEAM | Contact us",
+  title: "Pepnops | contact us",
   description: "PEPNOPS Team. Let's talk, get in touch",
   icons: [
     {
