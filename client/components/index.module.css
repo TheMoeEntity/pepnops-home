@@ -936,7 +936,25 @@
 .whyChoose > div:nth-child(2) p {
   padding-top: 30px;
 }
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1200px) {
+  .careers .cards {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1063px) {
+  .cards > div {
+    height: auto;
+    padding-bottom: 0px;
+    flex: 40%;
+    margin: 20px 25px;
+    background-color: #010d14;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+  }
   .about .grid {
     justify-content: center;
   }
@@ -944,29 +962,121 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+  .whyChoose {
+    width: 100%;
+  }
+  .whyChoose > div {
+    position: relative;
+    flex: 40%;
+    margin: 20px 30px;
+    height: auto;
+  }
+  .whyChoose > div:nth-child(1) {
+    height: calc(0.9 * 300.15px);
+    width: calc(0.9 * 450px);
+    margin-left: 0;
+  }
+  .whyChoose > div:nth-child(2) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  .cards {
+    justify-content: center;
+  }
+  .careers .cards > div {
+    flex: 44% !important;
+    max-width: 422px;
+  }
+  .careers .cards > div:first-child {
+    margin-left: 0 !important;
+  }
+  .careers .cards > div:nth-child(2) {
+    margin-right: 0 !important;
+  }
+
+  .careers .cards > div p {
+    height: 240px !important;
+  }
 }
 @media screen and (max-width: 850px) {
   .contactForm .form {
     flex-flow: column wrap;
+  }
+  .whyChoose > div:nth-child(1) {
+    height: calc(0.78 * 300.15px);
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 830px) {
+  .whyChoose > div:nth-child(1) {
+    flex: calc(0.5 * 1000px);
+    width: calc(0.5 * 1000px);
+    height: calc(0.5 * 667px);
+  }
+  .whyChoose > div {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .why {
+    border-image: none;
+  }
+  .cards {
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .careers .cards > div {
+    flex: 44% !important;
+    max-width: 80%;
+  }
+  .careers .cards > div:first-child {
+    margin-left: 0 !important;
+  }
+  .careers .cards > div:nth-child(2) {
+    margin-right: 0 !important;
+  }
+
+  .careers .cards > div p {
+    height: 240px !important;
+    text-align: justify;
   }
 }
 @media screen and (max-width: 680px) {
   .about .grid > div {
     height: 375px;
   }
+  .whyChoose > div:nth-child(1) {
+    flex: calc(0.4 * 1000px);
+    width: calc(0.4 * 1000px);
+    height: calc(0.4 * 667px);
+  }
+  .whyChoose > div {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 90%;
+  }
 }
 @media screen and (max-width: 550px) {
+  .careers .cards > div {
+    flex: 44% !important;
+    max-width: 100%;
+  }
   .why {
     padding: 60px 10px;
   }
-  .whyChoose {
-    width: 100%;
-  }
   .whyChoose > div {
-    margin: 40px 20px;
+    margin: 40px 0px;
+  }
+  .why > h2 {
+    font-size: 35px;
+    text-align: center;
   }
   .whyChoose > div:nth-child(1) {
-    height: 266.8px;
+    height: calc(0.33 * 667px);
   }
   .whyChoose > div p {
     text-align: justify;
@@ -980,7 +1090,6 @@
   .why .cards > div {
     background-color: transparent;
     color: inherit;
-    border-bottom: 1px solid #d3d5d674;
     transform: translateX(80px);
     opacity: 0;
     transition: 0.4s ease;
@@ -1009,7 +1118,7 @@
   }
   .careers .careerHero {
     background-position: top;
-    height: 350px;
+    height: 300px;
   }
   .contactForm {
     padding: 40px 10px;
@@ -1169,6 +1278,18 @@
   .sponsors .title p {
     font-size: 16px;
   }
+  .call {
+    width: 100%;
+    margin: 70px auto;
+    margin-bottom: 30px;
+    width: fit-content;
+    text-align: center;
+  }
+  .call h2 {
+    font-size: 35px;
+    width: 85%;
+    margin: 40px auto 40px auto;
+  }
 }
 @media screen and (max-width: 420px) {
   .grid > div:first-child .capt {
@@ -1230,6 +1351,13 @@
   .whyChoose > div:nth-child(1) {
     height: 200px;
   }
+  .call h2 {
+    font-size: 30px;
+    width: 90%;
+  }
+  .call p {
+    font-size: small;
+  }
 }
 @media screen and (max-width: 360px) {
   .contactForm {
@@ -1238,8 +1366,15 @@
   .right {
     max-width: 100%;
   }
+  .call h2 {
+    font-size: 30px;
+    width: 100%;
+  }
   .right form label {
     font-size: small;
+  }
+  .whyChoose > div:nth-child(1) {
+    height: calc(0.29 * 667px);
   }
 }
 
@@ -1297,6 +1432,9 @@
   .left ul li {
     font-size: 10px;
   }
+  .whyChoose > div:nth-child(1) {
+    height: calc(0.24 * 667px);
+  }
 
   .left p {
     font-size: 10px;
@@ -1318,6 +1456,10 @@
   }
 }
 @media screen and (max-width: 280px) {
+  .careers h2 {
+    font-size: 20px !important;
+    text-align: center;
+  }
   .maps {
     width: calc(0.7 * 328px);
     max-width: 95%;
