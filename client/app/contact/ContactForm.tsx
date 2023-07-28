@@ -19,7 +19,7 @@ const ContactForm = () => {
   const inputFile = useRef<HTMLInputElement | null>(null);
   const [status, setStatus] = useState("Submit");
   const [currFile, setCurrFile] = useState<string>("No file selected*");
-  const [size, setSize] = useState("2MB");
+  const [size, setSize] = useState("");
   const [userFile, setUserFile] = useState<File | null>(null);
   const openFiles = () => {
     if (inputFile.current) inputFile.current.click();
@@ -56,7 +56,16 @@ const ContactForm = () => {
       return;
     }
     setSize(formatBytes(files[0].size));
-    setCurrFile(files[0].name + ", " + size);
+    const index = size.indexOf("M") | size.indexOf("K") | size.indexOf("G");
+    const fileSize = size.slice(0, index - 1).trim();
+    console.log(fileSize);
+    // if (fileSize > 2) {
+    //   enqueueSnackbar("max file size is 2MB", {
+    //     variant: "error",
+    //   });
+    //   return;
+    // }
+    setCurrFile(files[0].name + `, ${size}`);
     setUserFile(files[0]);
   };
 
@@ -192,9 +201,9 @@ const ContactForm = () => {
                 <a
                   target={`_blank`}
                   rel="noopener noreferrer"
-                  href="https://wa.me/+2348119264151"
+                  href="https://wa.me/+2349169126429"
                 >
-                  +234 811 926 4151
+                  (+234) 916 912 6429
                 </a>
               </li>
               <li>
@@ -213,7 +222,7 @@ const ContactForm = () => {
             <p>
               For general enquiries and to speak directly with an expert kindly
               reach us via:
-            </p>{" "}
+            </p>
             <button>
               <a
                 target={`_blank`}

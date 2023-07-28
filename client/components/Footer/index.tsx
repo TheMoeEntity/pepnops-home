@@ -6,7 +6,6 @@ import logo from "../../public/images/footer2.png";
 import icon1 from "../../public/images/10.png";
 import icon2 from "../../public/images/11.png";
 import icon3 from "../../public/images/12.png";
-import { Router } from "next/router";
 import { useRouter } from "next/navigation";
 
 const Footer = () => {
@@ -39,7 +38,7 @@ const Footer = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div>(+234) 807 548 9362</div>
+            <div>(+234) 916 912 6429</div>
           </div>
 
           <div>
