@@ -342,7 +342,15 @@ const ContactForm = () => {
             />
 
             <div className={styles.formGroup}>
-              <button type="submit">{status}</button>
+              <button type="submit">
+                {status !== "Submit" && (
+                  <i
+                    className={`fa fa-spinner ${styles.spinning}`}
+                    aria-hidden="true"
+                  ></i>
+                )}
+                {status}
+              </button>
             </div>
           </form>
         </div>

@@ -77,9 +77,15 @@ const CareersPage = () => {
           <h2>Join our community and Help define it.</h2>
           <p>Ready to join us? Take the bold step today!</p>
 
-          <Link href="/contact" prefetch={false}>
-            <button>APPLY NOW</button>
-          </Link>
+          <button>
+            <a
+              target={`_blank`}
+              rel="noopener noreferrer"
+              href="mailto:career@pepnops.com"
+            >
+              APPLY NOW
+            </a>
+          </button>
         </div>
       </div>
     </div>
