@@ -49,12 +49,12 @@ const ContactForm = () => {
     if (!files) return;
     const fileType = files[0].type;
     console.log(fileType);
-    // if (fileType !== "application/pdf") {
-    //   enqueueSnackbar("File type not supported. Kindly upload a valid pdf", {
-    //     variant: "error",
-    //   });
-    //   return;
-    // }
+    if (fileType !== "application/pdf") {
+      enqueueSnackbar("File type not supported. Kindly upload a valid pdf", {
+        variant: "error",
+      });
+      return;
+    }
     setSize(formatBytes(files[0].size));
     setCurrFile(files[0].name + ", " + size);
     setUserFile(files[0]);
