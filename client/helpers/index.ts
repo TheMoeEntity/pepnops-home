@@ -11,7 +11,14 @@ import collaboration from "./../public/images/collaboration.png";
 import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
 import innovate from "./../public/images/innovate.png";
-
+export type replacements = {
+  name: string;
+  message: string;
+  phone: string;
+  budget: string;
+  choise: string;
+  email: string;
+};
 export type Props = {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };
