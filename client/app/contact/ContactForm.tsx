@@ -188,6 +188,7 @@ const ContactForm = () => {
         resetForm.reset();
         setUserFile(null);
         setCurrFile("No file selected*");
+        setVal("");
       }, 3000);
     } catch (error) {
       setStatus("...Error sending message");
