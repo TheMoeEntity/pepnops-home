@@ -18,6 +18,7 @@ export type replacements = {
   budget: string;
   choice: string;
   email: string;
+  greeting?: string;
 };
 export type Props = {
   params: { id: string };
@@ -159,6 +160,18 @@ export const ServicesAssets: {
 ];
 export class Helpers {
   static isBrowser = () => typeof window !== "undefined";
+  static setGreeting = (): string => {
+    const hour = new Date().getHours();
+
+    let timeCheck =
+      hour < 12
+        ? "Good Morning"
+        : hour < 18
+        ? "Good Afternoon"
+        : "Good Evening";
+
+    return timeCheck;
+  };
   static FetchData = async (id: string) => {
     switch (id) {
       case "smartx":

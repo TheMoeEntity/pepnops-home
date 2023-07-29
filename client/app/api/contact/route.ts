@@ -1,5 +1,5 @@
 // require("dotenv").config();
-import { replacements } from "@/helpers";
+import { Helpers, replacements } from "@/helpers";
 import { createHTMLToSend } from "@/helpers/mail";
 import { NextRequest, NextResponse } from "next/server";
 import path from "path";
@@ -18,17 +18,15 @@ export async function POST(req: NextRequest, res: NextResponse) {
     },
     secure: true,
   });
-  const emailPath = path.resolve(
-    "app/api/contact/Email-template",
-    "ticket.html"
-  );
+  const emailPath = path.resolve("app/api/contact/Email-template", "mail.html");
   const replacements: replacements = {
     name: fullName,
     message,
     phone,
     email,
     budget,
-    choice:choise
+    greeting: Helpers.setGreeting(),
+    choice: choise,
   };
   let htmlToSend = createHTMLToSend(emailPath, replacements);
   let mailData = {
@@ -43,13 +41,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
     subject: `New message from ${fullName} in the PEPNOPS Contact form`,
     html: htmlToSend,
     text: message + "| Sent from: " + email,
-    // html: `<div>
-    //             ${message}
-    //             </div><p>Sent from: ${email} <br />
-    //             Sender's phone: ${phone} <br />
-    //             Sender's choice: ${choise} <br />
-    //             Sender's budget: ${budget}
-    //             `,
   };
 
   await new Promise((resolve, reject) => {
