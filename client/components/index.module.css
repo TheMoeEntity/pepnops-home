@@ -1064,6 +1064,9 @@
   }
 }
 @media screen and (max-width: 550px) {
+  .right {
+    max-width: 100%;
+  }
   .careers .cards > div {
     flex: 44% !important;
     max-width: 100%;
@@ -1367,9 +1370,7 @@
   .contactForm {
     padding: 40px 5px;
   }
-  .right {
-    max-width: 100%;
-  }
+
   .call h2 {
     font-size: 30px;
     width: 100%;
