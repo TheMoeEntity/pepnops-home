@@ -28,7 +28,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     phone,
     email,
     budget,
-    choise,
+    choice:choise
   };
   let htmlToSend = createHTMLToSend(emailPath, replacements);
   let mailData = {
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         path: file,
       },
     ],
-    subject: `You have a new message from ${fullName} in the PEPNOPS Contact form`,
+    subject: `New message from ${fullName} in the PEPNOPS Contact form`,
     html: htmlToSend,
     text: message + "| Sent from: " + email,
     // html: `<div>

@@ -33,10 +33,14 @@
       role="presentation"
       style="
         width: 602px;
+        max-width: 95%;
+        margin: 20px auto;
         border-collapse: collapse;
         background-color: white;
         border-spacing: 0;
         text-align: left;
+        box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
+          2.5px 9px 26px 0 rgba(143, 143, 143, 0.1);
       "
     >
       <tr>
@@ -44,12 +48,13 @@
           style="
             padding: 0px 20px;
             height: 1.5rem;
-            background-color: #00d169;
+            background-color: #153643;
             text-align: center;
             color: white;
           "
         >
           <h2>Pepnops Inc</h2>
+          <p style="font-weight: lighter; font-style: italic; font-size: small;">Delivering innovative and customized technology solutions </p>
         </td>
       </tr>
       <tr>
@@ -75,10 +80,13 @@
                   style="
                     font-size: 18px;
                     margin: 0 0 20px 0;
+                    text-align: center;
                     font-family: Arial, sans-serif;
+                    padding-bottom: 30px;
+                    border-bottom: 1px solid #15364348;
                   "
                 >
-                  Message from {{name}},
+                  You have a new message from {{name}},
                 </h1>
                 <p
                   style="
@@ -117,12 +125,25 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 0 30px 20px 30px; font-weight: 500">
+        <td style="padding: 0 30px 80px 30px; font-weight: 500">
           <a
             href="https://pepnops.vercel.app"
             style="text-decoration: underline; color: #00d169"
             >www.pepnops.vercel.app</a
           >
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="
+            padding: 0px 10px;
+            height: 1.5rem;
+            background-color: #153643;
+            text-align: center;
+            color: white;
+          "
+        >
+          <p>© 2023 Pepnops Inc. </p>
         </td>
       </tr>
     </table>

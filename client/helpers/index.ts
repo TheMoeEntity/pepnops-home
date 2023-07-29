@@ -16,7 +16,7 @@ export type replacements = {
   message: string;
   phone: string;
   budget: string;
-  choise: string;
+  choice: string;
   email: string;
 };
 export type Props = {
