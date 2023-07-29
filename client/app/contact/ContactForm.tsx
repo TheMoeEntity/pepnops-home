@@ -152,12 +152,13 @@ const ContactForm = () => {
         variant: "error",
       });
       return;
-    } else if (currFile === "No file selected*") {
-      enqueueSnackbar("Please upload a valid PDF", {
+    } else if (currFile === "No file selected*" || !userFile) {
+      enqueueSnackbar("Please upload a valid PDF!", {
         variant: "error",
       });
       return;
     }
+
     if (policyRef.current) {
       if (!policyRef.current.checked) {
         enqueueSnackbar(
