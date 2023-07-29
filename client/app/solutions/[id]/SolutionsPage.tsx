@@ -4,12 +4,7 @@ import styles from "../../../components/index.module.css";
 import worker from "../../../public/images/smartx.png";
 import dashboard from "../../../public/images/smartXAdmin.jpg";
 import phone from "../../../public/images/smartXPhone.png";
-import manage from "../../../public/images/manage.png";
-import payment from "../../../public/images/payment.png";
-import push from "../../../public/images/push.png";
 import reporting from "../../../public/images/reporting.png";
-import sos from "../../../public/images/sos.png";
-import guide from "../../../public/images/guide.png";
 import motor from "../../../public/images/tracker260.jpg";
 import fencing from "../../../public/images/fencing.png";
 import gps from "../../../public/images/gps.png";
@@ -97,6 +92,7 @@ const SolutionsPage = ({ data }: any) => {
                   src={x.icon}
                   alt="card-image"
                   fill={true}
+                  style={{ objectFit: "contain" }}
                   quality={100}
                   priority={true}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
