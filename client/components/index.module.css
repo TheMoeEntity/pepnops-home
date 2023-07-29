@@ -367,9 +367,6 @@
 .aboutHero {
   width: 100%;
   height: 553px;
-  /* background-image: url("/images/group-9.jpeg");
-  background-size: cover;
-  background-position: center; */
   position: relative;
 }
 
@@ -671,6 +668,7 @@
     2.5px 9px 40px 0 rgba(143, 143, 143, 0.25);
   display: flex;
   flex-flow: row wrap;
+  transition: 0.5s;
 }
 
 .left {
@@ -943,12 +941,34 @@
 .whyChoose > div:nth-child(2) p {
   padding-top: 30px;
 }
+@media screen and (max-width: 1273px) {
+  .careers .cards {
+    width: 100%;
+  }
+  .ourTeam .cardss {
+    padding: 0 10px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .careers .cards {
     width: 100%;
   }
+  .ourTeam .cardss {
+    padding: 0 0px;
+  }
+  .ourTeam .cardss > div {
+    flex: 10%;
+    min-width: 335px;
+    max-width: 370px;
+    margin: 20px 5px;
+  }
 }
 @media screen and (max-width: 1063px) {
+  .aboutSection > div:nth-child(2),
+  .aboutSection2 > div:nth-child(1) {
+    height: calc(0.8 * 390px);
+    width: calc(0.8 * 100%);
+  }
   .cards > div {
     height: auto;
     padding-bottom: 0px;
@@ -988,6 +1008,17 @@
   }
 }
 @media screen and (max-width: 980px) {
+  .aboutSection,
+  .aboutSection2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .aboutSection > div:nth-child(2),
+  .aboutSection2 > div:nth-child(1) {
+    height: calc(0.7 * 390px);
+    width: calc(0.7 * 100%);
+    min-width: 339px;
+  }
   .cards {
     justify-content: center;
   }
@@ -1006,7 +1037,26 @@
     height: 240px !important;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 852px) {
+  .aboutSection,
+  .aboutSection2 {
+    align-items: center;
+    width: 80%;
+    max-width: 95%;
+    margin: auto;
+  }
+  .aboutSection2 > div:nth-child(1) {
+    order: 2;
+  }
+  .aboutSection > div,
+  .aboutSection2 > div {
+    margin-top: 40px;
+  }
+  .aboutSection > div:nth-child(2),
+  .aboutSection2 > div:nth-child(1) {
+    height: calc(0.8 * 390px);
+  }
+
   .contactForm .form {
     flex-flow: column wrap;
   }
@@ -1034,6 +1084,10 @@
   .why {
     border-image: none;
   }
+  .aboutSection,
+  .aboutSection2 {
+    width: 85%;
+  }
   .cards {
     justify-content: center;
     flex-flow: column wrap;
@@ -1059,6 +1113,10 @@
   .about .grid > div {
     height: 375px;
   }
+  .aboutSection,
+  .aboutSection2 {
+    width: 90%;
+  }
   .whyChoose > div:nth-child(1) {
     flex: calc(0.4 * 1000px);
     width: calc(0.4 * 1000px);
@@ -1068,6 +1126,12 @@
     margin-right: 0;
     margin-left: 0;
     max-width: 90%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .aboutSection,
+  .aboutSection2 {
+    width: 100%;
   }
 }
 @media screen and (max-width: 550px) {
@@ -1182,7 +1246,7 @@
   }
   .aboutSection,
   .aboutSection2 {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
   .aboutSection > div,
   .aboutSection2 > div {
@@ -1196,7 +1260,6 @@
   .aboutSection2 > div:nth-child(1) {
     width: 100%;
     height: 250px;
-    order: 2;
   }
   .cards {
     width: 95%;
@@ -1471,6 +1534,10 @@
   .careers h2 {
     font-size: 20px !important;
     text-align: center;
+  }
+  .aboutSection h2,
+  .aboutSection2 h2 {
+    text-align: left !important;
   }
   .maps {
     width: calc(0.7 * 328px);

@@ -139,42 +139,9 @@ const AboutPage = () => {
               <div className={styles.teamDetails}>
                 <h3>CLEVER EGUASA</h3>
                 <span>CEO</span>
-                {/* <div className={styles.icons}>
-                  <a
-                    target={`_blank`}
-                    rel="noopener noreferrer"
-                    href="https://web.facebook.com/Moses.Nwigberi/"
-                  >
-                    <i className="fa-brands fa-facebook"></i>
-                  </a>
-                  <a
-                    target={`_blank`}
-                    rel="noopener noreferrer"
-                    href="https://twitter.com/pepnops"
-                  >
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-
-                  <a
-                    target={`_blank`}
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/company/pepnops/"
-                  >
-                    <i className="fa-brands fa-linkedin"></i>
-                  </a>
-                  <a
-                    target={`_blank`}
-                    rel="noopener noreferrer"
-                    href="https://instagram.com/pepnops"
-                  >
-                    <i className="fa-brands fa-instagram"></i>
-                  </a>
-                </div> */}
               </div>
             </div>
           ))}
-          {/* <i className={styles.aria} aria-hidden="true"></i>
-          <i className={styles.aria} aria-hidden="true"></i> */}
         </div>
       </div>
     </div>
