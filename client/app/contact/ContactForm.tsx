@@ -1,5 +1,5 @@
 "use client";
-import React, { FormEvent } from "react";
+import React, { FormEvent, useEffect } from "react";
 import { ChangeEvent, useRef, useState } from "react";
 import styles from "../../components/index.module.css";
 import { useSnackbar } from "notistack";
@@ -7,6 +7,18 @@ import axios from "axios";
 
 const ContactForm = () => {
   const { enqueueSnackbar } = useSnackbar();
+  const [val, setVal] = useState("");
+  const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
+
+  const resizeTextArea = () => {
+    if (textAreaRef.current) {
+      textAreaRef.current.style.height = "auto";
+      textAreaRef.current.style.height =
+        textAreaRef.current.scrollHeight + "px";
+    }
+  };
+
+  useEffect(resizeTextArea, [val]);
   const policyRef = useRef<HTMLInputElement | null>(null);
   const [selectedOption, setSelectedOption] =
     useState<String>("Frontend Developer");
@@ -55,19 +67,27 @@ const ContactForm = () => {
       });
       return;
     }
+
+    const sizes = parseFloat(String(files[0].size / (1024 * 1024))).toFixed(2);
+    console.log(sizes);
     setSize(formatBytes(files[0].size));
-    const index = size.indexOf("M") | size.indexOf("K") | size.indexOf("G");
-    const fileSize = size.slice(0, index - 1).trim();
-    console.log(fileSize);
-    // if (fileSize > 2) {
-    //   enqueueSnackbar("max file size is 2MB", {
-    //     variant: "error",
-    //   });
-    //   return;
-    // }
     setCurrFile(files[0].name + `, ${size}`);
+    if (Number(sizes) > 2) {
+      enqueueSnackbar("Max file size is 2MB", {
+        variant: "error",
+      });
+      return;
+    }
+
     setUserFile(files[0]);
   };
+
+  useEffect(() => {
+    if (currFile !== "No file selected*") {
+      const isFile = !userFile ? "Selected file size:" : `${userFile.name}, `;
+      setCurrFile(isFile + ` ${size}`);
+    }
+  }, [size]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -108,15 +128,11 @@ const ContactForm = () => {
           4 as unknown as keyof typeof e.target
         ] as unknown as HTMLInputElement
       ).value,
-      message: (
-        e.target[
-          5 as unknown as keyof typeof e.target
-        ] as unknown as HTMLInputElement
-      ).value,
+      message: val,
       file: results,
     };
 
-    if (data.fullName === "") {
+    if (data.fullName.trim() === "") {
       enqueueSnackbar("Full name cannot be empty", {
         variant: "error",
       });
@@ -299,11 +315,15 @@ const ContactForm = () => {
             </div>
             <div className={styles.formGroup}>
               <textarea
+                className={styles.textArea}
                 placeholder="Message"
                 name=""
                 id=""
                 cols={10}
-                rows={3}
+                ref={textAreaRef}
+                value={val}
+                onChange={(e) => setVal(e.target.value)}
+                rows={1}
               ></textarea>
             </div>
             <div className={styles.formGroup}>

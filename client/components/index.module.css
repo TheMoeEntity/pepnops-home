@@ -651,6 +651,13 @@
   margin: 20px auto;
 }
 /* ////------------------------- CONTACT FORM ------------ //////// */
+.textArea::-webkit-scrollbar,
+.textArea::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.textArea::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
 .contactForm {
   width: 100%;
   height: auto;
