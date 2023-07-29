@@ -130,7 +130,7 @@
   height: auto;
   margin-top: 15px;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   /* animation: slide 10s infinite linear; */
 }

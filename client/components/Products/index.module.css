@@ -23,17 +23,19 @@
   margin-right: auto;
 }
 .grid {
-  width: 85%;
+  width: 100%;
   height: auto;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 0;
 }
 .grid > div {
   width: 350px;
+  min-width: 350px;
   height: auto;
+  margin: 20px 10px;
   padding-bottom: 30px;
   box-shadow: 5px 9px 35px 0 rgba(143, 143, 143, 0.2),
     2.5px 9px 26px 0 rgba(143, 143, 143, 0.1);
@@ -76,10 +78,6 @@
 }
 
 @media screen and (min-width: 1500px) {
-  .grid > div {
-    width: 450px;
-    height: 500px;
-  }
   .grid > div .img {
     height: 220px;
   }
@@ -104,17 +102,13 @@
   border-radius: 5px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 740px) and (min-width: 550px) {
   .grid {
-    justify-content: space-around;
+    width: 75%;
   }
   .grid > div {
-    margin: 30px 0;
-  }
-}
-@media screen and (max-width: 900px) {
-  .grid > div {
-    margin: 30px 0;
+    width: 95%;
+    height: 540px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -126,10 +120,20 @@
     margin: 40px auto;
     margin-bottom: 0px;
   }
-  .grid > div {
-    margin: 30px 0;
-  }
+}
+@media screen and (max-width: 420px) {
   .grid > div .img {
-    height: 180px;
+    height: calc(0.9 * 220px);
+  }
+}
+@media screen and (max-width: 320px) {
+  .grid > div .img {
+    height: calc(0.8 * 220px);
+  }
+  .grid > div {
+    min-width: 95%;
+  }
+  .grid {
+    width: 100% !important;
   }
 }
