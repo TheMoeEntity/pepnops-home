@@ -34,7 +34,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     to: "mosesnwigberi@gmail.com",
     attachments: [
       {
-        filename: "Resume.pdf",
+        filename: "attachment",
         path: file,
       },
     ],

@@ -61,10 +61,19 @@ const ContactForm = () => {
     if (!files) return;
     const fileType = files[0].type;
     console.log(fileType);
-    if (fileType !== "application/pdf") {
-      enqueueSnackbar("File type not supported. Kindly upload a valid pdf", {
-        variant: "error",
-      });
+    const acceptedFileTypes: string[] = [
+      "application/pdf",
+      "image/png",
+      "image/jpeg",
+      "image/png",
+    ];
+    if (!acceptedFileTypes.includes(fileType)) {
+      enqueueSnackbar(
+        "File type not supported. Kindly upload a valid pdf, jpeg or jpg",
+        {
+          variant: "error",
+        }
+      );
       return;
     }
 
@@ -130,6 +139,7 @@ const ContactForm = () => {
       ).value,
       message: val,
       file: results,
+      filename: userFile?.name,
     };
 
     if (data.fullName.trim() === "") {
@@ -153,7 +163,7 @@ const ContactForm = () => {
       });
       return;
     } else if (currFile === "No file selected*" || !userFile) {
-      enqueueSnackbar("Please upload a valid PDF!", {
+      enqueueSnackbar("Please upload a valid document!", {
         variant: "error",
       });
       return;
