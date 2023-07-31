@@ -8,6 +8,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office"
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="x-apple-disable-message-reformatting" />
+    <script src="https://kit.fontawesome.com/4ef8c63dd7.js"></script>
     <title>Pepnops contact form</title>
     <style>
       /* -------------------------------------
@@ -258,12 +259,11 @@ xmlns:o="urn:schemas-microsoft-com:office:office"
           font-size: 28px !important;
           margin-bottom: 10px !important; 
         }
-        table.body p,
+        table.body,
         table.body ul,
         table.body ol,
         table.body td,
-        table.body span,
-        table.body a {
+        table.body {
           font-size: 16px !important; 
         }
         table.body .wrapper,
@@ -358,7 +358,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office"
                     <tr>
                       <td>
                         <p><h3 style="font-weight: bold; text-align: center;">{{greeting}}, you have a new message from {{name}}</h3></p>
-                        <p style="text-align:justify;">{{message}}</p> <br>
+                        <p style="text-align:justify; font-size: 11.5px;">{{message }}</p> <br>
                         <p
                         style="
                           margin: 0 0 0 0;
@@ -367,11 +367,11 @@ xmlns:o="urn:schemas-microsoft-com:office:office"
                           font-family: Arial, sans-serif;
                         "
                       >
-                        <b style="font-weight: 700">budget: </b> {{budget}} <br />
-                        <b style="font-weight: 700">choice: </b> {{choice}} <br />
-                        <b style="font-weight: 700">email: </b> {{email}}
+                        <span style="font-weight: 700">Budget: </span> {{budget}} <br />
+                        <span style="font-weight: 700">Choice: </span> {{choice}} <br />
+                        <span style="font-weight: 700">Email: </span> {{email}}
                         <br />
-                        <b style="font-weight: 700">phone: </b> {{phone}}
+                        <span style="font-weight: 700">Phone: </span> {{phone}}
                         <br />
                       </p>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
@@ -381,10 +381,17 @@ xmlns:o="urn:schemas-microsoft-com:office:office"
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="mailto:{{email}}" target="_blank" style="background-color: #1DA1F2; border: none;">Send Message</a> </td>
+                                      <td> <a href="mailto:{{email}}" target="_blank" style="background-color: #1DA1F2; border: none;"> <i style="margin-right: 10px" class="fa-solid fa-envelope"></i> Send Mail</a>
+                                        </td>
                                     </tr>
+                                  
                                   </tbody>
                                 </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="https://wa.me/{{phone}}" target="_blank" style="text-align: center; background-color: #00d169;  border: none;"> <i style="margin-right: 10px" class="fa-solid fa-paper-plane"></i> Whatsapp</a> 
                               </td>
                             </tr>
                           </tbody>
