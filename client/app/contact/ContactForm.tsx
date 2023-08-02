@@ -4,6 +4,7 @@ import { ChangeEvent, useRef, useState } from "react";
 import styles from "../../components/index.module.css";
 import { useSnackbar } from "notistack";
 import axios from "axios";
+import { Helpers } from "@/helpers";
 
 const ContactForm = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -36,60 +37,6 @@ const ContactForm = () => {
   const openFiles = () => {
     if (inputFile.current) inputFile.current.click();
   };
-  const toBase64 = (file: File) =>
-    new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = reject;
-    });
-  function formatBytes(bytes: number, decimals = 2) {
-    if (!+bytes) return "0 Bytes";
-
-    const k = 1024;
-    const dm = decimals < 0 ? 0 : decimals;
-    const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
-
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-
-    return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
-  }
-
-  const handleFileSelected = async (e: ChangeEvent<HTMLInputElement>) => {
-    const files = (e.target as HTMLInputElement).files;
-    // const files = Array.from(e.target as HTMLInputElement).files
-    if (!files) return;
-    const fileType = files[0].type;
-    console.log(fileType);
-    const acceptedFileTypes: string[] = [
-      "application/pdf",
-      "image/png",
-      "image/jpeg",
-      "image/png",
-    ];
-    if (!acceptedFileTypes.includes(fileType)) {
-      enqueueSnackbar(
-        "File type not supported. Kindly upload a valid pdf, jpeg or jpg",
-        {
-          variant: "error",
-        }
-      );
-      return;
-    }
-
-    const sizes = parseFloat(String(files[0].size / (1024 * 1024))).toFixed(2);
-    console.log(sizes);
-    setSize(formatBytes(files[0].size));
-    setCurrFile(files[0].name + `, ${size}`);
-    if (Number(sizes) > 2) {
-      enqueueSnackbar("Max file size is 2MB", {
-        variant: "error",
-      });
-      return;
-    }
-
-    setUserFile(files[0]);
-  };
 
   useEffect(() => {
     if (currFile !== "No file selected*") {
@@ -98,120 +45,6 @@ const ContactForm = () => {
     }
   }, [size]);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    let results: any;
-    if (userFile) {
-      try {
-        results = await toBase64(userFile);
-      } catch (error) {
-        enqueueSnackbar("There was an error parsing file: " + error, {
-          variant: "error",
-        });
-        return;
-      }
-    }
-    const data = {
-      fullName: (
-        e.target[
-          0 as unknown as keyof typeof e.target
-        ] as unknown as HTMLInputElement
-      ).value,
-      email: (
-        e.target[
-          1 as unknown as keyof typeof e.target
-        ] as unknown as HTMLInputElement
-      ).value,
-      phone: (
-        e.target[
-          2 as unknown as keyof typeof e.target
-        ] as unknown as HTMLInputElement
-      ).value,
-      choise: (
-        e.target[
-          3 as unknown as keyof typeof e.target
-        ] as unknown as HTMLInputElement
-      ).value,
-      budget: (
-        e.target[
-          4 as unknown as keyof typeof e.target
-        ] as unknown as HTMLInputElement
-      ).value,
-      message: val,
-      file: results,
-      filename: userFile?.name,
-    };
-
-    if (data.fullName.trim() === "") {
-      enqueueSnackbar("Full name cannot be empty", {
-        variant: "error",
-      });
-      return;
-    } else if (data.budget == "--Choose--" || data.choise == "--Choose--") {
-      enqueueSnackbar("Select a valid budget or choice", {
-        variant: "error",
-      });
-      return;
-    } else if (data.phone === "") {
-      enqueueSnackbar("Specify a phone number we can reach you with", {
-        variant: "error",
-      });
-      return;
-    } else if (data.message === "" || data.message.length < 10) {
-      enqueueSnackbar("Message cannot be empty or short", {
-        variant: "error",
-      });
-      return;
-    } else if (currFile === "No file selected*" || !userFile) {
-      enqueueSnackbar("Please upload a valid document!", {
-        variant: "error",
-      });
-      return;
-    }
-
-    if (policyRef.current) {
-      if (!policyRef.current.checked) {
-        enqueueSnackbar(
-          `You are to agree to pepnops' privacy policy
-          and non disclosure agreement.  `,
-          {
-            variant: "error",
-          }
-        );
-        return;
-      }
-    }
-    setStatus("Sending....");
-    try {
-      const url = "/api/contact";
-      const res = await axios.post(url, data);
-
-      res.status === 200 &&
-        enqueueSnackbar("Message successfully sent", {
-          variant: "success",
-        });
-      console.log(res.status);
-      console.log(res);
-      setStatus("Sent successfully");
-      setTimeout(() => {
-        const resetForm = e.target as HTMLFormElement;
-        resetForm.reset();
-        setUserFile(null);
-        setCurrFile("No file selected*");
-        setVal("");
-      }, 3000);
-    } catch (error) {
-      setStatus("...Error sending message");
-      enqueueSnackbar(
-        "There was an error sending message, try again: " + error,
-        {
-          variant: "error",
-        }
-      );
-      console.log(error);
-    }
-    setStatus("Submit");
-  };
   return (
     <div className={styles.contactForm}>
       <div className={styles.form}>
@@ -281,7 +114,22 @@ const ContactForm = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={(e) =>
+              Helpers.handleSubmit(
+                setStatus,
+                setUserFile,
+                setVal,
+                setCurrFile,
+                policyRef,
+                currFile,
+                val,
+                e,
+                userFile,
+                enqueueSnackbar
+              )
+            }
+          >
             {/* <h1>Contact Details</h1> */}
             <div className={styles.formGroup}>
               <label htmlFor="">Full Name:</label>
@@ -366,7 +214,16 @@ const ContactForm = () => {
               </label>
             </div>
             <input
-              onChange={(e) => handleFileSelected(e)}
+              onChange={(e) =>
+                Helpers.handleFileSelected(
+                  e,
+                  enqueueSnackbar,
+                  setSize,
+                  setUserFile,
+                  setCurrFile,
+                  size
+                )
+              }
               type="file"
               id="file"
               ref={inputFile}

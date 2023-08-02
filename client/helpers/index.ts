@@ -11,6 +11,8 @@ import collaboration from "./../public/images/collaboration.png";
 import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
 import innovate from "./../public/images/innovate.png";
+import React, { ChangeEvent, FormEvent, ReactFragment } from "react";
+import axios from "axios";
 export type replacements = {
   name: string;
   message: string;
@@ -160,6 +162,204 @@ export const ServicesAssets: {
 ];
 export class Helpers {
   static isBrowser = () => typeof window !== "undefined";
+  static formatBytes(bytes: number, decimals = 2) {
+    if (!+bytes) return "0 Bytes";
+
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+  }
+  static toBase64 = (file: File) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+    });
+  static resizeTextArea = (
+    textAreaRef: React.MutableRefObject<HTMLTextAreaElement | null>
+  ) => {
+    if (textAreaRef.current) {
+      textAreaRef.current.style.height = "auto";
+      textAreaRef.current.style.height =
+        textAreaRef.current.scrollHeight + "px";
+    }
+  };
+  static handleFileSelected = async (
+    e: ChangeEvent<HTMLInputElement>,
+    enqueueSnackbar: any,
+    setSize: any,
+    setUserFile: any,
+    setCurrFile: any,
+    size: string
+  ) => {
+    const files = (e.target as HTMLInputElement).files;
+
+    if (!files) return;
+    const fileType = files[0].type;
+    console.log(fileType);
+    const acceptedFileTypes: string[] = [
+      "application/pdf",
+      "image/png",
+      "image/jpeg",
+      "image/png",
+    ];
+    if (!acceptedFileTypes.includes(fileType)) {
+      enqueueSnackbar(
+        "File type not supported. Kindly upload a valid pdf, jpeg or jpg",
+        {
+          variant: "error",
+        }
+      );
+      return;
+    }
+
+    const sizes = parseFloat(String(files[0].size / (1024 * 1024))).toFixed(2);
+    console.log(sizes);
+    setSize(Helpers.formatBytes(files[0].size));
+    setCurrFile(files[0].name + `, ${size}`);
+    if (Number(sizes) > 2) {
+      enqueueSnackbar("Max file size is 2MB", {
+        variant: "error",
+      });
+      return;
+    }
+
+    setUserFile(files[0]);
+  };
+  static handleSubmit = async (
+    setStatus: any,
+    setUserFile: any,
+    setVal: any,
+    setCurrFile: any,
+    policyRef: React.MutableRefObject<HTMLInputElement | null>,
+    currFile: string,
+    val: string,
+    e: FormEvent<HTMLFormElement>,
+    userFile: File | null,
+    enqueueSnackbar: any
+  ) => {
+    e.preventDefault();
+    let results: any;
+    if (userFile) {
+      try {
+        results = await this.toBase64(userFile);
+      } catch (error) {
+        enqueueSnackbar("There was an error parsing file: " + error, {
+          variant: "error",
+        });
+        return;
+      }
+    }
+    const data = {
+      fullName: (
+        e.target[
+          0 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      email: (
+        e.target[
+          1 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      phone: (
+        e.target[
+          2 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      choise: (
+        e.target[
+          3 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      budget: (
+        e.target[
+          4 as unknown as keyof typeof e.target
+        ] as unknown as HTMLInputElement
+      ).value,
+      message: val,
+      file: results,
+      filename: userFile?.name,
+    };
+
+    if (data.fullName.trim() === "") {
+      enqueueSnackbar("Full name cannot be empty", {
+        variant: "error",
+      });
+      return;
+    } else if (data.budget == "--Choose--" || data.choise == "--Choose--") {
+      enqueueSnackbar("Select a valid budget or choice", {
+        variant: "error",
+      });
+      return;
+    } else if (data.phone === "") {
+      enqueueSnackbar("Specify a phone number we can reach you with", {
+        variant: "error",
+      });
+      return;
+    } else if (
+      val === "" ||
+      data.message.trim() === "" ||
+      data.message.length < 10
+    ) {
+      enqueueSnackbar("Message cannot be empty or short", {
+        variant: "error",
+      });
+      return;
+    } else if (currFile === "No file selected*" || !userFile) {
+      enqueueSnackbar("Please upload a valid document!", {
+        variant: "error",
+      });
+      return;
+    }
+
+    if (policyRef.current) {
+      if (!policyRef.current.checked) {
+        enqueueSnackbar(
+          `You are to agree to pepnops' privacy policy
+          and non disclosure agreement.  `,
+          {
+            variant: "error",
+          }
+        );
+        return;
+      }
+    }
+    setStatus("Sending....");
+    try {
+      const url = "/api/contact";
+      const res = await axios.post(url, data);
+
+      res.status === 200 &&
+        enqueueSnackbar("Message successfully sent", {
+          variant: "success",
+        });
+      console.log(res.status);
+      console.log(res);
+      setStatus("Sent successfully");
+      setTimeout(() => {
+        const resetForm = e.target as HTMLFormElement;
+        resetForm.reset();
+        setUserFile(null);
+        setCurrFile("No file selected*");
+        setVal("");
+      }, 3000);
+    } catch (error) {
+      setStatus("...Error sending message");
+      enqueueSnackbar(
+        "There was an error sending message, try again: " + error,
+        {
+          variant: "error",
+        }
+      );
+      console.log(error);
+    }
+    setStatus("Submit");
+  };
   static setGreeting = (): string => {
     const hour = new Date().getHours();
 
