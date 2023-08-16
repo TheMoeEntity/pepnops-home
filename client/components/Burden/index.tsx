@@ -11,7 +11,7 @@ const Burden = () => {
         <h2 className={styles.burd}>
           {`Let's`} take <br /> these <br />
           <span>
-            burdens off <br /> you.
+            burdens <br /> off you.
           </span>
         </h2>
         <p>
