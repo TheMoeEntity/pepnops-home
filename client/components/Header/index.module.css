@@ -1,17 +1,16 @@
 .header {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: none;
   height: 90px;
   z-index: 1000;
-  top: 0;
-  left: 0;
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
   align-items: center;
   flex-flow: row wrap;
-  color: white;
+  color: black;
 }
 .sidebar {
   width: 100%;
@@ -87,8 +86,8 @@
   list-style-type: none;
   display: inline;
   margin: 0 30px;
-  font-weight: 200;
-  color: #fff;
+  color: black;
+  font-weight: 500;
   padding-bottom: 7px;
   cursor: pointer;
   transition: 0.25s;
@@ -96,7 +95,7 @@
 .header ul li.active {
   color: #00b960;
   font-weight: bolder;
-  border-bottom: 2px solid #00b960;
+  border-bottom: 0.5px solid #00b960;
 }
 .header ul li:hover {
   padding-bottom: 5px;
@@ -107,7 +106,7 @@
   border: 2.5px solid #00b960;
   border-radius: 8px;
   padding: 5px 10px;
-  color: #00b960;
+  color: black;
   font-weight: bolder;
 }
 .logo {

@@ -1,0 +1,46 @@
+.burden {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 25px;
+}
+.burden > div {
+  width: 50%;
+}
+.burden > div:first-child {
+  background-image: url("/images/pep guy.png");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.burden > div:nth-child(2) {
+  padding: 0px 10px;
+}
+.burd {
+  font-size: 55px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.burd span {
+  color: #00d169;
+}
+.burden > div > p {
+  font-weight: 600;
+}
+.cont {
+  width: 83%;
+  box-shadow: 5px 9px 10px 0 rgba(143, 143, 143, 0.1),
+    2.5px 0px 10px 0 rgba(143, 143, 143, 0.25);
+  margin-top: 40px;
+  border-radius: 10px;
+  height: fit-content;
+  padding-bottom: 20px;
+}
+.cont h2 {
+  margin: 20px 45px;
+}
+.cont p {
+  font-size: small;
+  padding: 5px 45px;
+}

@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import styles from "./page.module.css";
-const About = dynamic(() => import("@/components/About"), {
+const Burden = dynamic(() => import("@/components/Burden"), {
   suspense: true,
 });
 const Products = dynamic(() => import("@/components/Products"), {
@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Hero />
-      <About />
       <Products />
+      <Burden />
       <Sponsors />
     </main>
   );

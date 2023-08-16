@@ -7,20 +7,28 @@
 }
 .title {
   margin: 40px 120px;
-  width: fit-content;
   text-align: center;
+}
+.amp {
   color: #00d169;
+}
+.amp2 {
+  color: #422eff;
 }
 .title span {
   font-weight: bolder;
 }
 .title h2 {
-  font-size: 35px;
-  margin-top: 20px;
+  font-size: 40px;
+  margin-top: 40px;
   width: 100%;
   line-height: 1.35;
   margin-left: auto;
   margin-right: auto;
+}
+.title p {
+  margin-top: 30px;
+  font-weight: 600;
 }
 .grid {
   width: 100%;

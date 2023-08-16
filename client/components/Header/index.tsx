@@ -1,7 +1,7 @@
 "use client";
 import styles from "./index.module.css";
 import Image from "next/image";
-import pepnops from "../../public/images/pheader.png";
+import pepnops from "../../public/images/pep-header-black.png";
 import Link from "next/link";
 import { CSSProperties, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -20,10 +20,7 @@ const Header = () => {
       backgroundColor: "black",
     };
 
-    const normStyle: CSSProperties = {
-      position: "absolute",
-      backgroundColor: "rgba(0, 0, 0, 0.45)",
-    };
+    const normStyle: CSSProperties = {};
     return pathname === "/contact" ? talkStyle : normStyle;
   };
 
@@ -58,7 +55,7 @@ const Header = () => {
   };
 
   return (
-    <div style={showStyle()} className={styles.header}>
+    <div className={styles.header}>
       <div
         style={{
           right: sidebar ? "0%" : "-100%",
@@ -96,10 +93,10 @@ const Header = () => {
       </div>
       <div>
         <ul>
-          <li onClick={() => router.push("/#solutions")}>Solutions</li>
-          <li onClick={() => router.push("/about")}>Who we are</li>
-          <li onClick={() => router.push("/careers")}>Careers</li>
-          <li onClick={() => router.push("/contact")}>{`Let's Talk`}</li>
+          <li onClick={() => router.push("/#solutions")}>SOLUTIONS</li>
+          <li onClick={() => router.push("/about")}>SERVICES </li>
+          <li onClick={() => router.push("/careers")}>COMPANY</li>
+          <li onClick={() => router.push("/contact")}>{`LET TALK`}</li>
         </ul>
       </div>
     </div>

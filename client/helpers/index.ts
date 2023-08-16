@@ -114,50 +114,35 @@ export const ServicesAssets: {
   icon: StaticImageData;
 }[] = [
   {
-    icon: reporting,
-    title: "SOFTWARE ASSESSMENT",
-    text: "We offer cutting-edge software analysis which involves identifying architectural gaps within your existing software systems, and proposing scalable, maintainable, and efficient technological solutions that align with the long-term objectives.",
-  },
-  {
     icon: sos,
     title: "SOFTWARE DEVELOPMENT",
-    text: "Our expert team partners with businesses to deliver customized software solutions that drive innovation, efficiency, and growth. Our software development consulting services encompass a wide range of expertise. From initial project planning and requirement gathering to design, coding, testing, and deployment, we provide comprehensive consulting services throughout the software development lifecycle.",
+    text: "Our dedicated team collaborates with businesses to craft bespoke software solutions that foster innovation, efficiency, and growth. We offer a holistic approach to software development, guiding you from initial planning and requirement analysis to design, coding, testing, and deployment. With us, the journey of software development becomes a seamless experience, ensuring you can focus on growth without any hindrances.",
   },
   {
     icon: payment,
     title: "WHITE-LABEL SERVICE",
-    text: "We work with clients to design and develop end-to-end products that are ready for sale and execution. Our white-label software development service covers a wide range of industries and domains and is also open to businesses seeking to deploy some of our solutions as a third party. T&C Apply.",
+    text: "We collaborate with clients to craft ready-to-launch products tailored to their needs. Our white-label software development caters to diverse industries and domains. Businesses looking to deploy our solutions as third parties will find a smooth transition in line with our ethos of making processes simple and efficient. T&C Apply.",
   },
   {
     icon: push,
     title: "SYSTEM INTEGRATION",
-    text: `We facilitate the integration of different software systems, databases, and APIs to optimize workflows, improve efficiency, and enhance collaboration for businesses. We understand the importance of data security and privacy. We adhere to industry standards and best practices to safeguard your sensitive information and comply with regulatory requirements`,
+    text: `We seamlessly integrate various software systems, databases, and APIs, streamlining workflows and bolstering efficiency and collaboration for businesses. Recognizing the paramount importance of data security and privacy, we uphold industry benchmarks, ensuring your sensitive information is protected and regulatory mandates are met with ease.`,
   },
   {
     icon: push,
     title: "UI/UX DESIGN",
-    text: `We provide expertise in designing visually appealing and user-friendly interfaces to enhance user experience. Whether it's web, mobile, or desktop applications, we ensure that your digital product provides a consistent and optimized experience across all devices, enhancing user satisfaction and engagement. We also create wireframes, prototypes, and design systems that align with branding guidelines and best practices.`,
+    text: `We specialize in crafting visually stunning and intuitive interfaces to elevate user experiences. From web and mobile to desktop applications, we ensure a unified and smooth experience on every device. Dive into our design process, from wireframes and prototypes to systems that stay true to branding guidelines and industry standards, ensuring effortless interactions and heightened user engagement.`,
   },
 
   {
     icon: push,
     title: "PERFORMANCE OPTIMIZATION",
-    text: `We provide software optimization services aimed at enhancing software performance. We offer code optimization, database querying, and server configuration for optimal software performance and smooth user experience.`,
+    text: `We specialize in software optimization, focusing on elevating its performance. Our services encompass code refinement, efficient database queries, and precise server configurations, all aimed at ensuring a fluid and enhanced user experience.`,
   },
   {
     icon: push,
     title: "SYSTEM MODERNIZATION",
-    text: `We help businesses modernize and upgrade their outdated software systems. Our Legacy modernization service ranges across software reengineering, re-platforming, or building of new systems based on business requirements. We also facilitate data migration, integration with modern technologies, and knowledge transfer to go with the improvements.`,
-  },
-  {
-    icon: push,
-    title: "MOBILE DEVELOPMENT",
-    text: `We offer top-tier mobile app development services for established companies and startups. From conceptualizing your app idea to launching it on the App Store and Google Play Store, we guide you through every step of the mobile app development process. We also take into account important aspects like scalability, security, and performance to deliver a top-notch mobile solution that not only meets your current needs but also accommodates future growth.`,
-  },
-  {
-    icon: push,
-    title: "WEB DEVELOPMENT",
-    text: `We specialize in creating visually stunning, user-friendly, and highly functional websites. Whether you need a simple informational website, a sophisticated e-commerce platform, or a complex web application, we have the skillset and experience to deliver outstanding results. Our holistic approach to web design also ensures that your website is responsive and adapts perfectly across different devices and screen sizes, and is search engine optimized to attract organic traffic and rank well on search engine results`,
+    text: `We assist businesses in transitioning from outdated software systems to modern solutions. Our legacy modernization covers software reengineering, re-platforming, or creating new systems tailored to business needs. Additionally, we handle data migration, integrate the latest technologies, and ensure a smooth knowledge transfer accompanying the upgrades.`,
   },
 ];
 export class Helpers {

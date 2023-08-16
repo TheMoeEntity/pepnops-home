@@ -8,7 +8,15 @@ const Products = () => {
   return (
     <div id="solutions" className={styles.products}>
       <div className={styles.title}>
-        <h2>Our Solutions</h2>
+        <h2>
+          Simplify your world, <br />
+          <span className={styles.amp}>Amplify</span> your
+          <span className={styles.amp2}> Happiness</span>
+        </h2>
+        <p>
+          These and many more customizable solutions are available <br /> to
+          suit your technology needs.
+        </p>
       </div>
       <div className={styles.grid}>
         <div>
