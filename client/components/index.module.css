@@ -4,21 +4,23 @@
   padding: 20px;
 }
 .sponsors {
-  padding: 80px 20px;
+  padding: 80px 20px 40px 20px;
   width: 100%;
   height: 100%;
 }
 .sponsors .title {
-  margin-left: 60px;
 }
 .sponsors h2 {
-  color: #00d169;
-  font-size: 35px;
+  font-size: 45px;
+  text-align: center;
 }
-.sponsors .title p {
-  font-size: 22px;
-  color: #a4a4a4;
-  margin-top: 20px;
+.sponsors h2 span {
+  color: #00d169;
+}
+.sponsors h3 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 60px;
 }
 .container {
   width: fit-content;
@@ -51,6 +53,54 @@
 .sponsors .sponsorsGrid > div:last-child {
   margin-right: 0;
 }
+.thoughtGrid {
+  width: 85%;
+  margin: 50px auto;
+  border-radius: 25px;
+  padding: 40px 45px;
+  box-shadow: 5px 9px 10px 0 rgba(143, 143, 143, 0.1),
+    2.5px 0px 10px 0 rgba(143, 143, 143, 0.25);
+  display: flex;
+  overflow-x: scroll;
+  flex-flow: row;
+}
+.thoughtGrid::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.thoughtGrid > div {
+  min-width: 290px;
+  max-width: 300px;
+  margin: 0 20px;
+  height: fit-content;
+}
+.thoughtGrid > div:first-child {
+  margin-left: 0;
+}
+.thoughtGrid > div .image {
+  width: 100%;
+  height: calc(0.75 * 350px);
+  position: relative;
+  border: 10px solid #5271ff;
+  border-radius: 12px;
+}
+.thoughtGrid > div .details {
+  text-align: center;
+  padding: 12px 10px;
+}
+.sponsors .callToAction {
+  margin: 40px auto 0 auto;
+  text-align: center;
+}
+.sponsors .callToAction button {
+  margin: 50px 15px;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: medium;
+  border-radius: 7px;
+}
+
 @keyframes slide {
   from {
     transform: translate(0px, 0);

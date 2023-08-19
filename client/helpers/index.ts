@@ -12,6 +12,8 @@ import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
 import innovate from "./../public/images/innovate.png";
 import React, { ChangeEvent, FormEvent, ReactFragment } from "react";
+import vision from "./../public/images/vision 2 execute.png";
+import processAuto from "./../public/images/process auto.png";
 import axios from "axios";
 export type replacements = {
   name: string;
@@ -22,6 +24,32 @@ export type replacements = {
   email: string;
   greeting?: string;
 };
+export interface thoughts {
+  text: string;
+  image: StaticImageData;
+}
+export const thoughtsGrid: thoughts[] = [
+  {
+    text: "From Vision to Execution: How We Turn Software Ideas into Reality",
+    image: vision,
+  },
+  {
+    text: "The complete guide to process automation and why you need it.",
+    image: processAuto,
+  },
+  {
+    text: "The complete guide to process automation and why you need it.",
+    image: vision,
+  },
+  {
+    text: "The complete guide to process automation and why you need it.",
+    image: vision,
+  },
+  {
+    text: "The complete guide to process automation and why you need it.",
+    image: vision,
+  },
+];
 export type Props = {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };
