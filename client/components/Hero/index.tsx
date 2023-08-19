@@ -22,7 +22,7 @@ const Hero = () => {
 
         <p>
           Our tailored products and services help <br /> to streamline
-          processes, remove barriers, and pave a pathway <br /> to success.
+          processes, remove barriers, and pave a pathway to success.
         </p>
         <button>{`LET'S`} TALK</button>
       </div>

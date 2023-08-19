@@ -123,10 +123,12 @@
   .title h2 {
     text-align: center;
     width: 100%;
+    font-size: 30px;
   }
   .title {
     margin: 40px auto;
     margin-bottom: 0px;
+    padding: 0 25px;
   }
 }
 @media screen and (max-width: 420px) {

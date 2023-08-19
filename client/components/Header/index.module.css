@@ -3,7 +3,7 @@
   background-color: none;
   height: 90px;
   z-index: 1000;
-  /* position: absolute; */
+  position: absolute;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -136,6 +136,7 @@
 @media screen and (max-width: 500px) {
   .header {
     padding: 0 10px;
+    /* position: absolute; */
   }
 }
 @media screen and (max-width: 360px) {
