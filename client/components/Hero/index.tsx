@@ -21,10 +21,8 @@ const Hero = () => {
         </h1>
 
         <p>
-          Dive into the future where convenience is a given, and <br />{" "}
-          simplicity is a standard. Our tailored products and services <br />{" "}
-          help to streamline processes, eliminate obstacles, and <br />{" "}
-          illuminate the pathway to success
+          Our tailored products and services help <br /> to streamline
+          processes, remove barriers, and pave a pathway <br /> to success.
         </p>
         <button>{`LET'S`} TALK</button>
       </div>

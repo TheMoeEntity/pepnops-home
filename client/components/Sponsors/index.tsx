@@ -4,7 +4,7 @@ import sponsor1 from "../../public/images/sp1.png";
 import sponsor2 from "../../public/images/sp2.png";
 import sponsor3 from "../../public/images/sp3.png";
 import sponsor4 from "../../public/images/sp4.png";
-import vision from "../../public/images/vision 2 execute.png";
+import sponsor5 from "../../public/images/Bril logo.png";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { thoughtsGrid } from "@/helpers";
@@ -23,6 +23,16 @@ const Sponsors = () => {
       </div>
       <div className={styles.container}>
         <div ref={grid} className={styles.sponsorsGrid}>
+          <div>
+            <Image
+              src={sponsor5}
+              alt="sponsors"
+              fill={true}
+              quality={100}
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
           <div>
             <Image
               src={sponsor1}
@@ -92,7 +102,7 @@ const Sponsors = () => {
         <p>
           Reach out to our dedicated team for any inquiries, feedbak, or
           collaboration <br /> opportunities.
-          {`We're`} here to assist and eager to connect. {`Let's`} start the{" "}
+          {` We're`} here to assist and eager to connect. {`Let's`} start the{" "}
           <br /> conversation.
         </p>
         <button style={{ backgroundColor: "#00d169" }}>Contact Sales</button>

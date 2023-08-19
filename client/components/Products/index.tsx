@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import worker from "../../public/images/smartx.png";
 import worker2 from "../../public/images/tracker260.jpg";
-import worker3 from "../../public/images/IT.jpg";
+import worker3 from "../../public/images/ehr.png";
 import Link from "next/link";
 const Products = () => {
   return (
@@ -83,14 +83,14 @@ const Products = () => {
           </div>
           <div className={styles.capt}>
             <div className={styles.date}>
-              <h2>IT Consulting</h2>
+              <h2>Pepnops-EHR</h2>
               <p className={styles.secondp}>
-                Software consulting and outsourcing
+                Electronic Health Recording System
               </p>
             </div>
             <p className={styles.detail}>
-              Professional IT consulting and outsourcing to help drive growth,
-              enhance efficiency, and unlock your full business potential.
+              {`Revolutionize patient care with our electronic health recording
+              system: intuitive, secure, and fully integrated, ensuring`}
             </p>
             <Link href={"/IT_consulting"}>
               <button>LEARN MORE</button>

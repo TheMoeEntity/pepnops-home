@@ -13,7 +13,11 @@ const Best = () => {
               We give our <br /> Clients the <br /> best{" "}
             </span>
             run of <br /> value for <br /> their Money.
-          </h2>
+          </h2>{" "}
+          <br />
+          <p>
+            Check out some of our <br /> awesome projects.
+          </p>
         </div>
         <div>
           <div className={styles.image}>
@@ -39,8 +43,7 @@ const Best = () => {
         Some choose us for our attention to detail in ensuring excellence is at
         the helm of everything we do. Some love us for how we think in solving
         the problems we solve, others {`can't `}help but love our competent team
-        of intriguing personalities. In a nutshell, We go all out in helping you
-        embrace the ease side of life. A trial will convince you.
+        of intriguing personalities.
       </p>
     </div>
   );

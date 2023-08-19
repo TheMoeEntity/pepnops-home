@@ -19,7 +19,7 @@
 .burd {
   font-size: 55px;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 30px;
 }
 .burd span {
@@ -28,14 +28,14 @@
 .burden > div > p {
   font-weight: 600;
 }
-.cont {
+.cont > div {
   width: 83%;
   box-shadow: 5px 9px 10px 0 rgba(143, 143, 143, 0.1),
     2.5px 0px 10px 0 rgba(143, 143, 143, 0.25);
   margin-top: 40px;
   border-radius: 10px;
   height: fit-content;
-  padding-bottom: 20px;
+  padding-bottom: 45px;
 }
 .cont h2 {
   margin: 20px 45px;

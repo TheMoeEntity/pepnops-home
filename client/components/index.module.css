@@ -36,14 +36,14 @@
   margin-top: 15px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   /* animation: slide 10s infinite linear; */
 }
 .sponsors .sponsorsGrid > div {
   position: relative;
-  min-width: 250px;
+  min-width: 220px;
   height: 125.5px;
-  margin: 0 5px;
+  margin: 0 2.5px;
   border-radius: 5px;
   overflow: hidden;
 }
