@@ -138,6 +138,10 @@
     padding: 0 10px;
     /* position: absolute; */
   }
+  .logo {
+    width: calc(0.21 * 1179px);
+    height: calc(0.21 * 220px);
+  }
 }
 @media screen and (max-width: 360px) {
   .logo {

@@ -57,7 +57,7 @@
 }
 @media screen and (max-width: 612px) {
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .hero {
     height: 450px;
     background-position: bottom;
@@ -71,7 +71,7 @@
     color: black;
   }
   .captions h1 {
-    font-weight: 500;
+    font-weight: 800;
     line-height: 1;
     font-size: 30px;
   }
