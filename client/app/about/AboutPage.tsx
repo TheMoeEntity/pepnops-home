@@ -3,10 +3,8 @@ import Image from "next/image";
 import styles from "../../components/index.module.css";
 import man from "../../public/images/group-9_1.webp";
 import mac from "../../public/images/abt.png";
-import shake from "../../public/images/about2.png";
-import goals from "../../public/images/about1.png";
 import { useEffect, useState } from "react";
-import james from "../../public/images/James.jpeg";
+import james from "../../public/images/mr clever.jpeg";
 import { useAnimation } from "@/helpers/useAnimation";
 
 const AboutPage = () => {
@@ -38,19 +36,24 @@ const AboutPage = () => {
       </div>
       <div className={styles.aboutSection}>
         <div className="anim">
-          <h2>Hi,{` we're `}Pepnops Inc.</h2>
+          <span>
+            <b>At Pepnops</b>
+          </span>
+          <h2>
+            We are <br />
+            Passionate <br />
+            about <br />
+            transforming <br />
+            <span>LIVES</span>
+          </h2>
           <p>
-            Pepnops Inc. is a leading IT solutions company committed to
-            delivering innovative and customized technology solutions across
-            different industries. Our expert team of developers and engineers
-            are dedicated to providing cutting-edge solutions that are tailored
-            to meet the unique needs of your business. <br /> <br /> We are
-            committed to delivering solutions that are reliable, and tailored to
-            consistently exceed clients expectations, engineers and IT
-            professionals has a proven track record of delivering top-notch
-            software development, web and mobile application development, data
-            management, IT consulting, and digital marketing services to clients
-            across the globe.
+            <b>
+              Our team, driven by expertise and insight, crafts solutions that
+              not only simplify processes but also amplify potential. As we
+              guide businesses towards a seamless digital future, we remain
+              steadfast in our commitment to embracing ease at every step of the
+              journey.
+            </b>
           </p>
         </div>
         <div className="anim">
@@ -65,63 +68,11 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className={styles.aboutSection2}>
-        <div className="anim">
-          <Image
-            src={shake}
-            alt="hero-image"
-            fill={true}
-            quality={100}
-            priority={true}
-            sizes="(max-width: 1920px) 100vw, (max-width: 1920px) 50vw, 33vw"
-          />
-        </div>
-        <div className="anim">
-          <h2>Our Mission</h2>
-          <p>
-            Our mission is to prvide innovative and comprehensive technology
-            solutions across multiple industries through a collaborative and
-            client-focused approach. <br /> <br /> We strive to be the most
-            trusted and reliable IT solutions provider in the industry committed
-            to delivering superior quality services and building long-term
-            relationships, based on mutual trust and respect, while exceeding
-            our {`client's`} expectations in every step of the way.
-          </p>
-        </div>
-      </div>
-
-      <div className={styles.aboutSection}>
-        <div className="anim">
-          <h2>Our Goals</h2>
-          <p>
-            At pepnops Inc. our goal is to be the go-to IT solutions provider
-            for clients in a variety of industries. <br /> <br /> We strive to
-            continually provide innovative and customized solutions to meet the
-            unique needs of each unique client, by investing in the latest
-            technologies, recruiting and retaining the best talents, and staying
-            current with the latest trends and best practices in the industry.
-          </p>
-        </div>
-        <div className="anim">
-          <Image
-            src={goals}
-            alt="hero-image"
-            fill={true}
-            quality={100}
-            priority={true}
-            sizes="(max-width: 464px) 100vw, (max-width: 100%) 50vw, 33vw"
-          />
-        </div>
-      </div>
       <div className={styles.ourTeam}>
         <div className={styles.title}>
-          <h2>Our Team</h2>
-          <p>
-            Pepnops Inc. boasts of a forward-thinking leadership team with
-            extensive domain expertise that fosters a culture performance. We
-            have a remarkable group of technopreneurs and seasoned advisors with
-            a proven track record of success.
-          </p>
+          <h2>
+            Meet the <span>Innovators</span> <br /> Shaping Our Journey
+          </h2>
         </div>
         <div className={styles.cardss}>
           {[...Array(6)].map((_x, i) => (
@@ -137,8 +88,8 @@ const AboutPage = () => {
                 />
               </div>
               <div className={styles.teamDetails}>
-                <h3>CLEVER EGUASA</h3>
-                <span>CEO</span>
+                <h3>Bright Osarumen Eguasa</h3>
+                <span>CEO & Founder</span>
               </div>
             </div>
           ))}
