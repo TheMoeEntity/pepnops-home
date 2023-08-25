@@ -46,15 +46,6 @@ const AboutPage = () => {
             transforming <br />
             <span>LIVES</span>
           </h2>
-          <p>
-            <b>
-              Our team, driven by expertise and insight, crafts solutions that
-              not only simplify processes but also amplify potential. As we
-              guide businesses towards a seamless digital future, we remain
-              steadfast in our commitment to embracing ease at every step of the
-              journey.
-            </b>
-          </p>
         </div>
         <div className="anim">
           <Image
@@ -67,7 +58,32 @@ const AboutPage = () => {
           />
         </div>
       </div>
-
+      <p>
+        <b>
+          Our team, driven by expertise and insight, crafts solutions that not
+          only simplify processes but also amplify potential. As we guide
+          businesses towards a seamless digital future, we remain steadfast in
+          our commitment to embracing ease at every step of the journey.
+        </b>
+      </p>
+      <div className={styles.mission}>
+        <div>
+          <h2>OUR VISION</h2>
+          <p>
+            To be at the forefront of technological advancement pioneering a
+            society where people and businesses experience stress-free
+            functionality & efficiency in every sector and sphere of life
+            possible.
+          </p>
+        </div>
+        <div>
+          <h2>OUR MISSION</h2>
+          <p>
+            We are on a mission to guide individuals and businesses towards
+            success, simplifying their journey and eliminating stress.
+          </p>
+        </div>
+      </div>
       <div className={styles.ourTeam}>
         <div className={styles.title}>
           <h2>

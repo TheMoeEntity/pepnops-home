@@ -71,7 +71,7 @@ const Header = () => {
             <li onClick={() => LinkAction("/")}>Home</li>
             <li onClick={() => LinkAction("/#solutions")}>Solutions</li>
             <li onClick={() => LinkAction("/about")}>Who we are</li>
-            <li onClick={() => LinkAction("/careers")}>Careers</li>
+            <li onClick={() => LinkAction("/about")}>Company</li>
             <li onClick={() => LinkAction("/contact")}>{`Let's Talk`}</li>
           </ol>
         </div>
@@ -95,7 +95,7 @@ const Header = () => {
         <ul>
           <li onClick={() => router.push("/#solutions")}>SOLUTIONS</li>
           <li onClick={() => router.push("/about")}>SERVICES </li>
-          <li onClick={() => router.push("/careers")}>COMPANY</li>
+          <li onClick={() => router.push("/about")}>COMPANY</li>
           <li onClick={() => router.push("/contact")}>{`LET TALK`}</li>
         </ul>
       </div>

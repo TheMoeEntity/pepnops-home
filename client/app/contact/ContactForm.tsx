@@ -5,21 +5,11 @@ import styles from "../../components/index.module.css";
 import { useSnackbar } from "notistack";
 import axios from "axios";
 import { Helpers } from "@/helpers";
+import { useResize } from "@/helpers/hooks";
 
 const ContactForm = () => {
   const { enqueueSnackbar } = useSnackbar();
-  const [val, setVal] = useState("");
-  const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
-
-  const resizeTextArea = () => {
-    if (textAreaRef.current) {
-      textAreaRef.current.style.height = "auto";
-      textAreaRef.current.style.height =
-        textAreaRef.current.scrollHeight + "px";
-    }
-  };
-
-  useEffect(resizeTextArea, [val]);
+  const { val, setVal, textAreaRef } = useResize();
   const policyRef = useRef<HTMLInputElement | null>(null);
   const [selectedOption, setSelectedOption] =
     useState<String>("Frontend Developer");

@@ -393,7 +393,7 @@ export class Helpers {
           capt1:
             "Efficiently manage your processes and keep track of visitors within your community",
           capt2:
-            "The centralised community management system. Customizable to cater for your specific needs.",
+            "Take charge of your community administrative processes and maintain a keen oversight of guest movements with our Smart X solution.",
           showPhone: true,
           callToAction:
             "These and many more customizable features are available to suit your community management needs.",

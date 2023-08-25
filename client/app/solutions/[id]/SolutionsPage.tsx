@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
 import styles from "../../../components/index.module.css";
+import styles2 from "./index.module.css";
 import worker from "../../../public/images/smartx.png";
 import dashboard from "../../../public/images/smartXAdmin.jpg";
-import phone from "../../../public/images/smartXPhone.png";
+import phone from "../../../public/images/pep phone.png";
 import reporting from "../../../public/images/reporting.png";
 import motor from "../../../public/images/tracker260.jpg";
 import fencing from "../../../public/images/fencing.png";
@@ -77,9 +78,49 @@ const SolutionsPage = ({ data }: any) => {
             </div>
           </>
         )}
-        {fetchData.showPhone && <h3>{fetchData.capt2}</h3>}
+        <span style={{ padding: "0 100px" }}>
+          {fetchData.showPhone && <h3>{fetchData.capt2}</h3>}
+        </span>
       </div>
-      <div className={styles.featured}>
+      <div className={styles2.features}>
+        <h2>
+          Empowering <br /> <span>Communities,</span> One <br /> Feature at a
+          Time
+        </h2>
+        <div className={styles2.phoneContainer}>
+          <div className={styles2.featuresGrid}>
+            <div className={styles2.pepPhone}>
+              <Image
+                src={phone}
+                alt="Phone"
+                fill
+                quality={100}
+                priority={true}
+                sizes="(max-width: 1080px) 100vw, (max-width: 100%) 50vw, 33vw"
+              />
+            </div>
+            <div>
+              <div className={`${styles2.cardInfo} ${styles2.create}`}>
+                <div>
+                  <h3>CREATE VISIT</h3>
+                  <p>
+                    This feature offers residents a seamless way to schedule
+                    immediate or future guest visits, whether {`they're`}{" "}
+                    one-time or recurring, ensuring effortless community
+                    coordination and convenience.
+                  </p>
+                </div>
+              </div>
+              <div className={styles2.cardInfo}>COMMUNITY GUIDE</div>
+              <div className={styles2.cardInfo}>REPORTING</div>
+              <div className={styles2.cardInfo}>SOS</div>
+              <div className={styles2.cardInfo}>PAYMENT MANAGER</div>
+              <div className={styles2.cardInfo}>PUSH NOTIFICATION</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div className={styles.featured}>
         <div className={styles.key}>
           <h3>Key Features</h3>
           <p>{fetchData.KeyFeatures.title}</p>
@@ -125,7 +166,7 @@ const SolutionsPage = ({ data }: any) => {
             />
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
