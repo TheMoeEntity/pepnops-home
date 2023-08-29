@@ -86,7 +86,7 @@ const SolutionsPage = ({ data }: any) => {
       <div className={styles2.features}>
         <h2>
           Empowering <br /> <span>Communities,</span> One <br /> Feature at a
-          Time
+          Time.
         </h2>
         <div className={styles2.phoneContainer}>
           <div className={styles2.featuresGrid}>
@@ -103,7 +103,7 @@ const SolutionsPage = ({ data }: any) => {
             <div>
               <div className={`${styles2.create}`}>
                 <div>
-                  <h3>CREATE VISIT</h3>
+                  <h3>AWESOME FEATURES </h3>
                   <p>
                     This feature offers residents a seamless way to schedule
                     immediate or future guest visits, whether {`they're`}{" "}
@@ -116,7 +116,20 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                COMMUNITY GUIDE
+                CREATE VISIT &nbsp; <i className="fa-solid fa-angle-down"></i>
+              </div>
+              <div className={styles2.cardInfo}>
+                This feature offers residents a seamless way to schedule
+                immediate or future guest visits, whether {`they're`} one-time
+                or recurring, ensuring effortless community coordination and
+                convenience.
+              </div>
+              <div
+                onClick={(e) => Helpers.showDetails(e)}
+                className={styles2.cardInfo}
+              >
+                COMMUNITY GUIDE &nbsp;{" "}
+                <i className="fa-solid fa-angle-down"></i>
               </div>
               <div className={styles2.cardInfo}>
                 Residents can effortlessly navigate and discover key spots
@@ -127,7 +140,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                REPORTING
+                REPORTING &nbsp; <i className="fa-solid fa-angle-down"></i>
               </div>
               <div className={styles2.cardInfo}>
                 Effortlessly retrieve historical guest records within your
@@ -138,7 +151,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                SOS
+                SOS &nbsp; <i className="fa-solid fa-angle-down"></i>
               </div>
               <div className={styles2.cardInfo}>
                 With a simple click, residents can swiftly report emergencies
@@ -149,7 +162,8 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                PAYMENT MANAGER
+                PAYMENT MANAGER &nbsp;{" "}
+                <i className="fa-solid fa-angle-down"></i>
               </div>
               <div className={styles2.cardInfo}>
                 Simplify payment collection through automated processes. Our
@@ -161,7 +175,8 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                PUSH NOTIFICATION
+                PUSH NOTIFICATION &nbsp;{" "}
+                <i className="fa-solid fa-angle-down"></i>
               </div>
               <div className={styles2.cardInfo}>
                 Deliver vital information directly to residents via clickable
@@ -170,6 +185,17 @@ const SolutionsPage = ({ data }: any) => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles2.callTo}>
+          <p>
+            Our community management software was designed with user-centric
+            convenience in mind, and a goal to effortlessly bridge the gaps
+            between essential processes and daily needs.
+          </p>
+          <p>
+            <b>Ready to elevate your community experience?</b>
+          </p>
+          <button>Talk to us</button>
         </div>
       </div>
       {/* <div className={styles.featured}>

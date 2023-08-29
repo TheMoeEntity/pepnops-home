@@ -1,6 +1,7 @@
 .features {
   width: 100%;
-  padding: 0px 50px;
+  padding: 0px 10px;
+  margin-bottom: 50px;
 }
 .features h2 {
   font-size: 50px;
@@ -9,13 +10,36 @@
 .features h2 span {
   color: #00d169;
 }
+.callTo {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.callTo > p {
+  text-align: center;
+  padding: 20px 160px;
+}
+.callTo button {
+  color: white;
+  background-color: #00d169;
+  margin: 10px auto;
+  width: fit-content;
+  font-size: large;
+  height: fit-content;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 .phoneContainer {
-  width: 80%;
+  width: 900px;
+  max-width: 100%;
   display: flex;
   height: calc(0.3 * 1920px);
   justify-content: flex-start;
   flex-flow: row wrap;
   margin: 40px auto;
+  margin-bottom: 50px;
   position: relative;
   transition: 0.5s;
 }
@@ -61,11 +85,7 @@
   transition: 0.5s;
   border-radius: 10px;
 }
-.featuresGrid {
-  width: 65%;
-  height: 100%;
-  position: relative;
-}
+
 .moreInfo {
 }
 .pepPhone {
@@ -74,4 +94,51 @@
   height: calc(0.3 * 1779px);
   top: 0;
   right: -255px;
+}
+@media screen and (max-width: 720px) {
+  .pepPhone {
+    position: absolute;
+    width: calc(0.2 * 900px);
+    height: calc(0.2 * 1779px);
+    top: 0;
+    right: calc(-1 * 0.2 * 900px + 15px);
+  }
+  .create {
+    display: none;
+  }
+  .featuresGrid {
+    align-items: center;
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .cardInfo:nth-child(odd) {
+    flex: 1;
+
+    margin-left: 30px;
+  }
+  .cardInfo:nth-child(even) {
+    margin-left: 30px;
+    flex: 1;
+  }
+}
+@media screen and (max-width: 490px) {
+  .pepPhone {
+    position: absolute;
+    width: calc(0.16 * 900px);
+    height: calc(0.16 * 1779px);
+    top: 0;
+    right: calc(-1 * 0.16 * 900px + 15px);
+  }
+  .featuresGrid {
+    align-items: center;
+    padding-top: 20px;
+    font-size: small;
+  }
+  .cardInfo:nth-child(odd) {
+    margin-left: 5px;
+  }
+  .cardInfo:nth-child(even) {
+    margin-left: 5px;
+  }
 }
