@@ -149,18 +149,27 @@ const ContactForm = () => {
               </select>
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="">Project Budget:</label>
+              <label htmlFor="">Industry:</label>
               <select
                 className="custom-select"
                 style={{ width: "100%" }}
                 onChange={onOptionChangeHandler}
               >
                 <option>--Choose--</option>
-                <option>Below $10k </option>
-                <option>$10k - $49k </option>
-                <option>$50k - $249k </option>
-                <option>$150k - $499k </option>
-                <option>$500k and above</option>
+                <option>Transportation </option>
+                <option>Real Estate </option>
+                <option>Government </option>
+                <option>Energy</option>
+                <option>Hospitality & Tourism</option>
+                <option>Health Care</option>
+                <option>Information Technology</option>
+                <option>Financial Services</option>
+                <option>Wholesale & Retail</option>
+                <option>Public Utilities</option>
+                <option>Construction</option>
+                <option>Manufacturing</option>
+                <option>Agriculture</option>
+                <option>Others</option>
               </select>
             </div>
             <div className={styles.formGroup}>

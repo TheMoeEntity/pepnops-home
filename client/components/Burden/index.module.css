@@ -31,11 +31,13 @@
 .cont > div {
   width: 83%;
   box-shadow: 5px 9px 10px 0 rgba(143, 143, 143, 0.1),
-    2.5px 0px 10px 0 rgba(143, 143, 143, 0.25);
+    2.5px 9px 10px 0 rgba(143, 143, 143, 0.25);
   margin-top: 40px;
   border-radius: 10px;
   height: fit-content;
+  background-color: black;
   padding-bottom: 40px;
+  color: white;
 }
 .cont h2 {
   margin: 20px 45px;

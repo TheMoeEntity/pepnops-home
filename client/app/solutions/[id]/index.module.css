@@ -3,7 +3,7 @@
   padding: 0px 50px;
 }
 .features h2 {
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
 }
 .features h2 span {
@@ -17,6 +17,7 @@
   flex-flow: row wrap;
   margin: 40px auto;
   position: relative;
+  transition: 0.5s;
 }
 .featuresGrid {
   width: 65%;
@@ -25,23 +26,39 @@
   display: flex;
   align-items: flex-end;
   flex-flow: column wrap;
+  transition: 0.5s;
 }
 .create {
-  background-color: #00d169 !important;
-  margin-left: 20px !important;
+  background-color: #00d169;
+  margin-left: 20px;
   padding: 40px 50px !important;
-  margin-top: 60px !important;
+  margin-top: 60px;
+  color: white;
+  transition: 0.5s;
+  border-radius: 10px;
 }
-.cardInfo h3 {
+.create h3 {
   margin-bottom: 15px;
 }
-.cardInfo {
+.cardInfo:nth-child(odd) {
+  color: black;
+  flex: 90%;
+  background-color: #e8e8e8;
+  margin-left: 130px;
+  padding: 0px 30px;
+  max-height: 0;
+  font-size: 14px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.cardInfo:nth-child(even) {
   color: white;
   flex: 90%;
   background-color: black;
   margin-left: 120px;
   margin-top: 2.5px;
   padding: 10px 30px;
+  transition: 0.5s;
   border-radius: 10px;
 }
 .featuresGrid {

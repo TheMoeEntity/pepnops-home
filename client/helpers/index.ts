@@ -11,7 +11,12 @@ import collaboration from "./../public/images/collaboration.png";
 import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
 import innovate from "./../public/images/innovate.png";
-import React, { ChangeEvent, FormEvent, ReactFragment } from "react";
+import React, {
+  ChangeEvent,
+  FormEvent,
+  MouseEvent,
+  ReactFragment,
+} from "react";
 import vision from "./../public/images/vision 2 execute.png";
 import processAuto from "./../public/images/process auto.png";
 import axios from "axios";
@@ -485,5 +490,19 @@ export class Helpers {
       default:
         return undefined;
     }
+  };
+  static showDetails = (e: MouseEvent<HTMLDivElement>) => {
+    const event = e.target as HTMLElement;
+
+    const height = (event.nextSibling as HTMLElement).style.maxHeight;
+    const elemHeight = (event.nextSibling as HTMLElement).scrollHeight + 80;
+    event.style.background =
+      height === "" || height === "0px" ? "#00d169" : "black";
+    (event.nextSibling as HTMLElement).style.padding =
+      height === "" || height === "0px" ? "16px 30px" : "0 30px";
+    (event.nextSibling as HTMLElement).style.background =
+      height === "1300px" || height === "0px" ? "#e8e8e8" : "white";
+    (event.nextSibling as HTMLElement).style.maxHeight =
+      height === "" || height === "0px" ? `${elemHeight}px` : "0";
   };
 }

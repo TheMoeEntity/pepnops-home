@@ -12,8 +12,8 @@ import gps from "../../../public/images/gps.png";
 import safety from "../../../public/images/safety.png";
 import scheduling from "../../../public/images/scheduling.png";
 import security from "../../../public/images/security.png";
-import { useEffect, useState } from "react";
-import { assets10, fetchdata } from "@/helpers";
+import { MouseEvent, useEffect, useState } from "react";
+import { assets10, fetchdata, Helpers } from "@/helpers";
 import { useRouter } from "next/navigation";
 const SolutionsPage = ({ data }: any) => {
   const [fetchData] = useState<fetchdata>(data);
@@ -35,6 +35,7 @@ const SolutionsPage = ({ data }: any) => {
       );
     }
   }, []);
+
   return (
     <div className={styles.solutions}>
       <div className={styles.hero}>
@@ -100,7 +101,7 @@ const SolutionsPage = ({ data }: any) => {
               />
             </div>
             <div>
-              <div className={`${styles2.cardInfo} ${styles2.create}`}>
+              <div className={`${styles2.create}`}>
                 <div>
                   <h3>CREATE VISIT</h3>
                   <p>
@@ -111,11 +112,62 @@ const SolutionsPage = ({ data }: any) => {
                   </p>
                 </div>
               </div>
-              <div className={styles2.cardInfo}>COMMUNITY GUIDE</div>
-              <div className={styles2.cardInfo}>REPORTING</div>
-              <div className={styles2.cardInfo}>SOS</div>
-              <div className={styles2.cardInfo}>PAYMENT MANAGER</div>
-              <div className={styles2.cardInfo}>PUSH NOTIFICATION</div>
+              <div
+                onClick={(e) => Helpers.showDetails(e)}
+                className={styles2.cardInfo}
+              >
+                COMMUNITY GUIDE
+              </div>
+              <div className={styles2.cardInfo}>
+                Residents can effortlessly navigate and discover key spots
+                within the community, ensuring newcomers smoothly integrate and
+                familiarize themselves with their surroundings.
+              </div>
+              <div
+                onClick={(e) => Helpers.showDetails(e)}
+                className={styles2.cardInfo}
+              >
+                REPORTING
+              </div>
+              <div className={styles2.cardInfo}>
+                Effortlessly retrieve historical guest records within your
+                estate, offices, and service apartments, ensuring convenient
+                access to past visit information whenever you need it.
+              </div>
+              <div
+                onClick={(e) => Helpers.showDetails(e)}
+                className={styles2.cardInfo}
+              >
+                SOS
+              </div>
+              <div className={styles2.cardInfo}>
+                With a simple click, residents can swiftly report emergencies
+                and receive assistance, ensuring peace of mind and smooth crisis
+                management.
+              </div>
+              <div
+                onClick={(e) => Helpers.showDetails(e)}
+                className={styles2.cardInfo}
+              >
+                PAYMENT MANAGER
+              </div>
+              <div className={styles2.cardInfo}>
+                Simplify payment collection through automated processes. Our
+                Smart X solution also facilitates accurate invoicing and
+                hassle-free bookkeeping, streamlining your financial management
+                effortlessly.
+              </div>
+              <div
+                onClick={(e) => Helpers.showDetails(e)}
+                className={styles2.cardInfo}
+              >
+                PUSH NOTIFICATION
+              </div>
+              <div className={styles2.cardInfo}>
+                Deliver vital information directly to residents via clickable
+                pop-up notifications, ensuring they stay informed in real-time
+                without missing out on crucial updates.
+              </div>
             </div>
           </div>
         </div>

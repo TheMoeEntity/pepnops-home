@@ -235,7 +235,7 @@
 }
 .solutions .featured {
   width: 100%;
-  height: fit-content;
+  height: auto;
   padding-bottom: 80px;
   background: linear-gradient(90deg, #f1ffff, #00d1692d);
   position: relative;
@@ -415,6 +415,7 @@
 }
 .aboutUs > p {
   padding: 30px 160px;
+  text-align: center;
 }
 .mission {
   width: 58%;
