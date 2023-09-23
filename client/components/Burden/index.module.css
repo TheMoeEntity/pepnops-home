@@ -46,6 +46,16 @@
   font-size: small;
   padding: 5px 45px;
 }
+@media screen and (max-width: 1100px) {
+  .cont > div {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 939px) {
+  .cont > div {
+    width: 95%;
+  }
+}
 @media screen and (max-width: 892px) {
   .burden > div {
     width: 100%;

@@ -2,19 +2,22 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  padding: 200px 55px 20px 55px;
+  padding: 100px 55px 20px 55px;
 }
 .grid {
   display: flex;
   width: 100%;
   flex-flow: row wrap;
 }
+.grid > div {
+  flex: 1;
+}
 
 .grid > div:nth-child(2) {
   background-color: #f2f6f3;
   border-radius: 25px;
   height: fit-content;
-  flex: 55%;
+  flex-grow: 1.8;
   display: flex;
   justify-content: center;
   flex-flow: column wrap;
@@ -25,7 +28,6 @@
   width: 100%;
   height: calc(0.9 * 450px);
   border-radius: 25px;
-  /* background-image: url("/images/project.png"); */
   background-size: cover;
   position: relative;
   background-color: red;
@@ -38,7 +40,6 @@
 }
 .grid > div:nth-child(1) {
   padding: 0px 30px;
-  flex: 35%;
 }
 .grid > div:nth-child(1) p {
   font-size: 22px;
@@ -64,4 +65,70 @@
   padding: 90px 95px 0 95px;
   color: #4f5150;
   font-size: 18px;
+}
+@media screen and (max-width: 1134px) {
+  .image {
+    height: calc(0.73 * 450px);
+  }
+}
+@media screen and (max-width: 1019px) {
+  .image {
+    height: calc(0.6 * 450px);
+  }
+}
+@media screen and (max-width: 960px) {
+  .best {
+    padding: 100px 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .best {
+    padding: 100px 15px 20px 15px;
+  }
+  .grid > div:nth-child(2) {
+    flex-grow: 1.5;
+  }
+  .image {
+    height: calc(0.55 * 450px);
+  }
+}
+@media screen and (max-width: 785px) {
+  .grid > div:nth-child(2) {
+    flex-grow: 1.4;
+  }
+  .image {
+    height: calc(0.5 * 450px);
+  }
+}
+@media screen and (max-width: 760px) {
+  .grid {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid > div:nth-child(1) {
+    margin-bottom: 50px;
+    padding: 0px 10px;
+  }
+  .grid > div:nth-child(2) {
+    max-width: 100%;
+    width: 500px;
+  }
+  .grid > div h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .best > p {
+    padding: 40px 30px 0 30px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .image {
+    height: calc(0.45 * 450px);
+  }
+  .best > p {
+    padding: 40px 15px 0 15px;
+    text-align: justify;
+  }
 }

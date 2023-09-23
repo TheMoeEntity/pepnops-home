@@ -1177,6 +1177,23 @@
   }
 }
 @media screen and (max-width: 550px) {
+  .thoughtGrid {
+    width: 97%;
+  }
+  .thoughtGrid > div {
+    min-width: 270px;
+    max-width: 270px;
+  }
+  .thoughtGrid > div .image {
+    width: 100%;
+    height: calc(0.66 * 350px);
+    position: relative;
+    border: 10px solid #5271ff;
+    border-radius: 12px;
+  }
+  .thoughtGrid > div .image img {
+    object-fit: cover !important;
+  }
   .right {
     max-width: 100%;
   }

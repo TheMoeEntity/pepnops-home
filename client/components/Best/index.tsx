@@ -9,10 +9,8 @@ const Best = () => {
       <div className={styles.grid}>
         <div>
           <h2>
-            <span>
-              We give our <br /> Clients the <br /> best{" "}
-            </span>
-            run of <br /> value for <br /> their Money.
+            <span>We give our Clients the best </span>
+            run of value for <br /> their Money.
           </h2>{" "}
           <br />
           <p>

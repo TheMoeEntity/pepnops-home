@@ -95,18 +95,20 @@ const Sponsors = () => {
           </div>
         ))}
       </div>
-      <h3>
-        Lets make your next project <br /> a world class!
-      </h3>
-      <div className={styles.callToAction}>
-        <p>
-          Reach out to our dedicated team for any inquiries, feedbak, or
-          collaboration <br /> opportunities.
-          {` We're`} here to assist and eager to connect. {`Let's`} start the{" "}
-          <br /> conversation.
-        </p>
-        <button style={{ backgroundColor: "#00d169" }}>Contact Sales</button>
-        <button style={{ backgroundColor: "#3c3d3c" }}>Book a Call</button>
+      <div style={{ padding: "0 8px" }}>
+        <h3>
+          Lets make your next project <br /> a world class!
+        </h3>
+        <div className={styles.callToAction}>
+          <p>
+            Reach out to our dedicated team for any inquiries, feedbak, or
+            collaboration <br /> opportunities.
+            {` We're`} here to assist and eager to connect. {`Let's`} start the{" "}
+            <br /> conversation.
+          </p>
+          <button style={{ backgroundColor: "#00d169" }}>Contact Sales</button>
+          <button style={{ backgroundColor: "#3c3d3c" }}>Book a Call</button>
+        </div>
       </div>
     </div>
   );
