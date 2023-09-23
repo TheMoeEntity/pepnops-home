@@ -9,10 +9,8 @@ const Burden = () => {
       <div></div>
       <div>
         <h2 className={styles.burd}>
-          {`Let's`} take <br /> these <br />
-          <span>
-            burdens <br /> off you.
-          </span>
+          {`Let's`} take these <br />
+          <span> burdens off you.</span>
         </h2>
         <p>
           Unlock growth and efficiency with our expert IT <br /> consulting and

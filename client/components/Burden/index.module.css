@@ -14,7 +14,7 @@
   height: 600px;
 }
 .burden > div:nth-child(2) {
-  padding: 0px 10px;
+  padding: 0px 30px;
 }
 .burd {
   font-size: 55px;
@@ -36,7 +36,7 @@
   border-radius: 10px;
   height: fit-content;
   background-color: black;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   color: white;
 }
 .cont h2 {
@@ -45,4 +45,59 @@
 .cont p {
   font-size: small;
   padding: 5px 45px;
+}
+@media screen and (max-width: 892px) {
+  .burden > div {
+    width: 100%;
+  }
+  .burden > div:nth-child(2) {
+    padding: 50px 30px 0 30px;
+  }
+  .cont > div {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .burden > div {
+    width: 100%;
+  }
+  .burden > div:nth-child(2) {
+    padding: 50px 30px 0 30px;
+  }
+  .cont > div {
+    width: 75%;
+  }
+  .burden > div:first-child {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 678px) {
+  .cont > div {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 521px) {
+  .cont > div {
+    width: 100%;
+  }
+  .burden > div:nth-child(2) {
+    padding: 50px 10px 0 10px;
+  }
+  .burden > div:first-child {
+    height: 380px;
+  }
+  .burd {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .cont > div {
+    width: 100%;
+  }
+  .burden > div:nth-child(2) {
+    padding: 50px 0px 0 0px;
+  }
+  /* .burden > div:first-child {
+    height: 350px;
+  } */
 }
