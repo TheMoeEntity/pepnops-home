@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Delivering innovative and customized technology solutions | Pepnops",
+  title: "Embrace the ease side of life | Pepnops",
   description: "PEPNOPS Official homepage",
   icons: [
     {

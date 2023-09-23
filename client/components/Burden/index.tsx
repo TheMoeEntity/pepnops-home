@@ -13,7 +13,7 @@ const Burden = () => {
           <span> burdens off you.</span>
         </h2>
         <p>
-          Unlock growth and efficiency with our expert IT <br /> consulting and
+          Unlock growth and efficiency with our expert IT consulting and
           outsourcing services.
         </p>
         <div className={`slide-container ${styles.cont}`}>

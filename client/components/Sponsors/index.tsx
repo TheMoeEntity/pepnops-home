@@ -96,9 +96,7 @@ const Sponsors = () => {
         ))}
       </div>
       <div style={{ padding: "0 8px" }}>
-        <h3>
-          Lets make your next project <br /> a world class!
-        </h3>
+        <h3>Lets make your next project a world class!</h3>
         <div className={styles.callToAction}>
           <p>
             Reach out to our dedicated team for any inquiries, feedbak, or

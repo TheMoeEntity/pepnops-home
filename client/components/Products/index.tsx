@@ -14,8 +14,8 @@ const Products = () => {
           <span className={styles.amp2}> Happiness</span>
         </h2>
         <p>
-          These and many more customizable solutions are available <br /> to
-          suit your technology needs.
+          These and many more customizable solutions are available to suit your
+          technology needs.
         </p>
       </div>
       <div className={styles.grid}>
@@ -92,9 +92,7 @@ const Products = () => {
               {`Revolutionize patient care with our electronic health recording
               system: intuitive, secure, and fully integrated, ensuring`}
             </p>
-            <Link href={"/IT_consulting"}>
-              <button>LEARN MORE</button>
-            </Link>
+            <button style={{ backgroundColor: "gray" }}>COMING SOON</button>
           </div>
         </div>
       </div>

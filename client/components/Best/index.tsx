@@ -29,9 +29,7 @@ const Best = () => {
             />
           </div>
           <div className={styles.details}>
-            <b>
-              PRODUCT DESIGN AND PROCESS AUTOMATION <br /> FOR BRIL WATER
-            </b>
+            <b>PRODUCT DESIGN AND PROCESS AUTOMATION FOR BRIL WATER</b>
           </div>
         </div>
       </div>
