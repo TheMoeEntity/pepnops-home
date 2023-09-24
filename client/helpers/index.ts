@@ -33,6 +33,48 @@ export interface thoughts {
   text: string;
   image: StaticImageData;
 }
+export type careerType = {
+  title: string;
+  text: string;
+};
+export const careerCards: careerType[] = [
+  {
+    title: "Professional Development Opportunities",
+    text: "Your growth is our success. We provide ample opportunities for training, workshops, and courses to enhance your skills and elevate your career.",
+  },
+  {
+    title: "Flexible Work Arrangements",
+    text: "We understand the need for work-life balance. Benefit from flexible hours and remote working options tailored to meet your lifestyle.",
+  },
+  {
+    title: "Collaborative Workspace",
+    text: "Creativity thrives in collaboration. Our workspace is designed to foster teamwork, inspiration, and innovation every day",
+  },
+  {
+    title: "Health and Wellness Programs",
+    text: "Your well-being is paramount. Our comprehensive health and wellness initiatives ensure you stay at the peak of physical and mental health.",
+  },
+  {
+    title: "Tech Allowances",
+    text: "We provide stipends or allowances for the latest tech gadgets or essential software, ensuring your workspace remains cutting-edge.",
+  },
+  {
+    title: "Employee Recognition Programs",
+    text: "We regularly recognize outstanding performance, innovative ideas, and sustained dedication, ensuring that excellence never goes unnoticed.",
+  },
+  {
+    title: "Volunteer Days",
+    text: "We encourage community involvement, providing paid volunteer days to let you make a difference in the ways that matter to you.",
+  },
+  {
+    title: "Employee Assistance Programs",
+    text: "Your well-being, our priority. Whether you face personal or professional challenges, our counseling and support services are here to guide and assist.",
+  },
+  {
+    title: "Continuous Learning Credits",
+    text: "We offer financial support for external courses, seminars, and certifications, ensuring you stay at the forefront of your field.",
+  },
+];
 export const thoughtsGrid: thoughts[] = [
   {
     text: "From Vision to Execution: How We Turn Software Ideas into Reality",

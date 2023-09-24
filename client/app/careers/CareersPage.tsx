@@ -7,7 +7,7 @@ import Link from "next/link";
 import TypeEffect from "./TypeEffect";
 import { useRef } from "react";
 import { useAnimation } from "@/helpers/useAnimation";
-import { assets8 } from "@/helpers";
+import { assets8, careerCards } from "@/helpers";
 
 const CareersPage = () => {
   const grid = useRef<null | HTMLDivElement>(null);
@@ -17,13 +17,25 @@ const CareersPage = () => {
       <div className={styles.careerHero}>
         <div className={styles.overlay}></div>
         <div className={styles.centered}>
-          <h1>
+          {/* <h1>
             <TypeEffect />
+          </h1> */}
+          <h1>
+            Turn <span>Your</span> Passion into Their
+            <span> Progress</span>.
           </h1>
+          <h2>
+            Embrace a career where your passion fuels progress for individuals
+            and businesses alike. Your journey with us is a catalyst for their
+            success.
+          </h2>
+          <div>
+            <button>APPLY NOW</button>
+          </div>
         </div>
       </div>
       <div className={styles.why}>
-        <h2>Why Join Us?</h2>
+        {/* <h2>Why Join Us?</h2> */}
 
         <div className={styles.whyChoose}>
           <div>
@@ -39,17 +51,18 @@ const CareersPage = () => {
           <div>
             <h2>You Matter!</h2>
             <p>
-              At Pepnops, we believe that people and their opinions matter. We
-              are passionate about creating a collaborative and inclusive work
-              environment where {`everyone's`} voice is valued. We understand
-              that our success as a company is built upon the unique
-              perspectives and contributions of each team member. {`That's`} why
-              we are dedicated to fostering an atmosphere that encourages open
-              communication, creativity, and growth.
+              At Pepnops, {`we're `}driven by the belief that your passion
+              propels progress. Each voice, every perspective, is crucial in our
+              collaborative space. We thrive on the diversity of ideas, actively
+              promoting open conversations, innovation, and continuous growth.
+              With us, your dedication and insights lay the foundation for
+              mutual advancement and success.
             </p>
           </div>
         </div>
-
+        <h2>
+          Why <span>Pepnops?</span>
+        </h2>
         <div ref={grid} className={styles.cards}>
           {assets8.map((x, i) => (
             <div className={styles.cardDiv} key={i}>
@@ -72,8 +85,25 @@ const CareersPage = () => {
             </div>
           ))}
         </div>
+        <h2>
+          Your <span>Career</span> Journey Starts Here
+        </h2>
+        <p>
+          Whether {`you're`} a seasoned professional or just starting your
+          career, Pepnops offers a dynamic environment that encourages growth,
+          creativity, and impact.
+        </p>
+        <div className={styles.careerCards}>
+          {careerCards.map((x, i) => (
+            <div key={i}>
+              <h4>
+                <b>{x.title}</b>
+              </h4>
+              <div>{x.text}</div>
+            </div>
+          ))}
+        </div>
         <div className={styles.call}>
-          <h3>See where you fit in</h3>
           <h2>Join our community and Help define it.</h2>
           <p>Ready to join us? Take the bold step today!</p>
 
