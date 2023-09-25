@@ -4,7 +4,7 @@
   position: relative;
   padding-bottom: 0px;
   background-color: #fff;
-  background-image: url("/images/pep-girl2.png");
+  background-image: url("/images/pepHero.png");
   background-size: cover;
   background-position: right;
 }
@@ -28,12 +28,12 @@
 .captions p {
   font-weight: 600;
   font-size: 17px;
-  /* width: 48%; */
+  width: 60%;
   margin-top: 20px;
   line-height: 1.5;
 }
 .captions button {
-  background-color: #422eff;
+  background-color: #167252;
   color: white;
   border: none;
   outline: none;
@@ -42,7 +42,7 @@
   margin-top: 30px;
 }
 .dot {
-  color: #00d169;
+  color: #07da97;
 }
 
 .caption p {
@@ -82,7 +82,7 @@
     font-weight: 600;
     font-size: small;
     /* color: white; */
-    width: 75%;
+    width: 80%;
     margin-top: 20px;
   }
   .captions button {

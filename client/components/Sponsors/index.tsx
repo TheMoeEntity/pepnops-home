@@ -104,7 +104,7 @@ const Sponsors = () => {
             {` We're`} here to assist and eager to connect. {`Let's`} start the{" "}
             <br /> conversation.
           </p>
-          <button style={{ backgroundColor: "#00d169" }}>Contact Sales</button>
+          <button style={{ backgroundColor: "#167252" }}>Contact Sales</button>
           <button style={{ backgroundColor: "#3c3d3c" }}>Book a Call</button>
         </div>
       </div>

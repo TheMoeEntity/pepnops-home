@@ -1,7 +1,7 @@
 "use client";
 import styles from "./index.module.css";
 import Image from "next/image";
-import pepnops from "../../public/images/pep-header-black.png";
+import pepnops from "../../public/images/pepHeader.png";
 import Link from "next/link";
 import { CSSProperties, useRef, useState } from "react";
 import { usePathname } from "next/navigation";

@@ -93,17 +93,17 @@
   transition: 0.25s;
 }
 .header ul li.active {
-  color: #00b960;
+  color: #07da97;
   font-weight: bolder;
-  border-bottom: 0.5px solid #00b960;
+  border-bottom: 0.5px solid #07da97;
 }
 .header ul li:hover {
   padding-bottom: 5px;
   color: #00b960;
-  border-bottom: 1.5px solid #00b960;
+  border-bottom: 1.5px solid #07da97;
 }
 .header ul li:last-child {
-  border: 2.5px solid #00b960;
+  border: 2.5px solid #07da97;
   border-radius: 8px;
   padding: 5px 10px;
   color: black;
@@ -142,10 +142,6 @@
     width: calc(0.21 * 1179px);
     height: calc(0.21 * 220px);
   }
-
-
-
-  
 }
 @media screen and (max-width: 360px) {
   .logo {

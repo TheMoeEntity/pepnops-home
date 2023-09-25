@@ -650,8 +650,8 @@
   font-weight: lighter;
 }
 .left button {
-  border: 2px solid #00d169;
-  background: #00d169;
+  border: 2px solid #07da97;
+  background: #07da97;
   color: #fff;
   padding: 7px;
   margin-bottom: 70px;
@@ -680,8 +680,7 @@
 }
 .right {
   flex: 45%;
-  background-color: #02d28e;
-  background-color: #00d169;
+  background-color: #07da97;
   padding: 40px 45px;
 }
 .right form {

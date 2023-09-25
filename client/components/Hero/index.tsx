@@ -1,7 +1,5 @@
 "use client";
 import styles from "./index.module.css";
-import icon2 from "../../public/images/pep-girl2.png";
-import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -21,8 +19,8 @@ const Hero = () => {
         </h1>
 
         <p>
-          Our tailored products and services help <br /> to streamline
-          processes, remove barriers, and pave a pathway to success.
+          Our tailored products and services help to streamline processes,
+          remove barriers, and pave your pathway to success.
         </p>
         <button>{`LET'S`} TALK</button>
       </div>

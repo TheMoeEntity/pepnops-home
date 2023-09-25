@@ -20,7 +20,8 @@ const Burden = () => {
           <Fade
             arrows={true}
             infinite={true}
-            duration={7000}
+            autoplay={false}
+            // duration={7000}
             transitionDuration={400}
           >
             {ServicesAssets.map((x, i) => (
