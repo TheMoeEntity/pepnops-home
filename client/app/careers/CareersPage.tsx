@@ -80,7 +80,7 @@ const CareersPage = () => {
                 <strong>{x.title}</strong>
               </h2>
               <div>
-                <p style={{ fontSize: "12px", height: "300px" }}>{x.text}</p>
+                <p style={{ fontSize: "13px", height: "300px" }}>{x.text}</p>
               </div>
             </div>
           ))}
@@ -99,7 +99,9 @@ const CareersPage = () => {
               <h4>
                 <b>{x.title}</b>
               </h4>
-              <div>{x.text}</div>
+              <div>
+                <p> {x.text}</p>
+              </div>
             </div>
           ))}
         </div>

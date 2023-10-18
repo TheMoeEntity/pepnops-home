@@ -15,7 +15,7 @@
   text-align: center;
 }
 .sponsors h2 span {
-  color: #00d169;
+  color: #07da97;
 }
 .sponsors h3 {
   font-size: 35px;
@@ -81,7 +81,7 @@
   width: 100%;
   height: calc(0.75 * 350px);
   position: relative;
-  border: 10px solid #5271ff;
+  border: 10px solid #167252;
   border-radius: 12px;
 }
 .thoughtGrid > div .details {
@@ -156,7 +156,7 @@
   /* color: rgb(139, 139, 139); */
 }
 .solutions .centered h1 {
-  color: #00d169;
+  color: #07da97;
   text-align: center;
   font-size: 45px;
 }
@@ -219,7 +219,7 @@
   text-align: center;
 }
 .solutions .key h3 {
-  color: #00d169;
+  color: #07da97;
   font-weight: 500;
   font-size: 30px;
 }
@@ -245,7 +245,7 @@
   font-size: 19px !important;
 }
 .key button {
-  background-color: #00d169;
+  background-color: #07da97;
   color: white;
   border: none;
   outline: none;
@@ -382,7 +382,7 @@
 }
 .aboutHero .centered h1 span,
 .itHero .centered h1 span {
-  color: #00d169;
+  color: #07da97;
 }
 .aboutSection {
   width: 85%;
@@ -408,10 +408,10 @@
   text-align: justify;
 }
 .aboutSection > div > span {
-  color: #00d169;
+  color: #07da97;
 }
 .aboutSection > div h2 span {
-  color: #00d169;
+  color: #07da97;
 }
 .aboutUs > p {
   padding: 30px 160px;
@@ -494,7 +494,7 @@
   font-size: 50px;
 }
 .ourTeam h2 span {
-  color: #00d169;
+  color: #07da97;
 }
 .ourTeam .cardss {
   width: 100%;
@@ -547,7 +547,7 @@
 }
 .teamDetails .icons {
   margin: 10px auto;
-  color: #00d169;
+  color: #07da97;
   width: fit-content;
 }
 .teamDetails .icons a {
@@ -586,7 +586,7 @@
   margin-right: auto;
 }
 .chooseUs h2 {
-  color: #00d169;
+  color: #07da97;
   text-align: center;
 }
 .chooseUs h3 {
@@ -641,7 +641,7 @@
 }
 .left ul li i {
   margin-right: 8px;
-  color: #00d169;
+  color: #07da97;
 }
 .left p {
   font-size: 13.5px;
@@ -788,13 +788,13 @@
   margin: 20px 0;
 }
 .careers .centered h1 span {
-  color: #00d169;
+  color: #07da97;
 }
 .careers .centered h2 {
   text-align: center;
 }
 .careers .centered button {
-  background-color: #00d169;
+  background-color: #07da97;
   color: white;
   border: none;
   padding: 15px 20px;
@@ -821,7 +821,7 @@
   text-align: center;
 }
 .why > h2 span {
-  color: #00d169;
+  color: #07da97;
 }
 .why > p {
   width: 65%;
@@ -841,11 +841,16 @@
 }
 .careerCards > div {
   flex: 30%;
-  padding: 30px 25px;
+  padding: 20px 25px;
   margin: 10px 10px;
   min-width: 285px;
   max-width: 350px;
   background-color: #f2f4ff;
+}
+.careerCards > div > div p {
+  font-weight: lighter;
+  font-size: 13px;
+  line-height: 1.5;
 }
 .careerCards > div > div {
   margin: 10px 0;
@@ -888,7 +893,7 @@
   font-size: 40px;
 }
 .call button {
-  background-color: #00d169;
+  background-color: #07da97;
   color: white;
   border: none;
   outline: none;
@@ -900,7 +905,7 @@
   cursor: pointer;
 }
 .typeStyles {
-  color: #00d169;
+  color: #07da97;
 }
 .whyChoose {
   width: 95%;

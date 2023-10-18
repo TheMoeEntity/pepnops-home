@@ -6,6 +6,7 @@ const Sponsors = dynamic(() => import("./SolutionsPage"), {
   suspense: true,
 });
 import { redirect } from "next/navigation";
+import TrackerPage from "@/components/TrackerPage";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
@@ -23,7 +24,8 @@ const Solutions = async ({ params }: any) => {
   if (!data) {
     redirect("/not-found.tsx");
   }
-  return <Sponsors data={data} />;
+  // return <Sponsors data={data} />;
+  return <TrackerPage />;
 };
 
 export default Solutions;
