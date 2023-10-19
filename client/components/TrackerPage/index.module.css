@@ -3,19 +3,22 @@
 }
 .tracker .hero {
   width: 100%;
-  height: 600px;
-  background-image: url("/images/trackerman.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  /* background-position: center; */
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
   position: relative;
 }
+.tracker .hero > div {
+  flex: 1 1;
+}
+.tracker .hero > div:first-child {
+  position: relative;
+  height: calc(0.45 * 1080px);
+  width: calc(0.45 * 1080px);
+  margin-right: 10px;
+}
 .trackerText {
-  position: absolute;
-  right: 40px;
-  top: 20%;
-  transform: translateY(-20%);
-  width: 40%;
+  padding-top: 50px;
 }
 .trackerText h3 {
   color: #07da97;
@@ -30,7 +33,7 @@
 }
 .analyze {
   width: 100%;
-  padding: 40px 20px;
+  padding: 40px 10px;
   display: flex;
   /* justify-content: center; */
   flex-flow: row wrap;
@@ -56,6 +59,55 @@
   width: calc(0.7 * 700px);
   height: calc(0.7 * 400px);
 }
+.features {
+  padding: 20px 10px;
+  overflow-x: scroll;
+}
+.features > p {
+  text-align: center;
+  padding: 20px 160px;
+}
+.features > p span {
+  text-align: center !important;
+}
+.talk {
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}
+.talk > button {
+  background-color: #07da97;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  border: none;
+  font-size: medium;
+}
+@media screen and (max-width: 1024px) {
+  .analyze > div:nth-child(2) {
+    width: calc(0.58 * 700px);
+    height: calc(0.58 * 400px);
+  }
+}
+@media screen and (max-width: 850px) {
+  .analyze > div:nth-child(2) {
+    width: calc(0.5 * 700px);
+    height: calc(0.5 * 400px);
+  }
+  .features > p {
+    text-align: center;
+    padding: 20px 100px;
+  }
+
+  .trackerText h3 {
+    padding: 0 40px;
+  }
+  .trackerText h1 {
+    font-size: 37px;
+    padding: 40px;
+  }
+}
 @media screen and (max-width: 768px) {
   .analyze {
     display: block;
@@ -64,15 +116,55 @@
     width: calc(0.7 * 700px);
     height: calc(0.7 * 400px);
     max-width: 100%;
+    margin: 30px 0;
   }
   .analyze > div:first-child {
     padding: 20px 10px;
   }
+  .features > p {
+    text-align: center;
+    padding: 20px 70px;
+  }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 620px) {
+  .tracker .hero > div {
+    flex: 100%;
+  }
+  .trackerText h3 {
+    padding: 0 30px;
+  }
+  .trackerText h1 {
+    font-size: 37px;
+    padding: 30px;
+  }
+
+  .tracker .hero > div:first-child {
+    position: relative;
+    height: calc(0.35 * 1080px);
+    width: calc(0.35 * 1080px);
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .trackerText {
+    padding-top: 30px;
+  }
   .analyze > div:nth-child(2) {
     width: calc(0.45 * 700px);
     height: calc(0.45 * 400px);
+  }
+  .tracker .hero > div:first-child {
+    position: relative;
+    height: calc(0.3 * 1080px);
+    width: calc(0.3 * 1080px);
+  }
+  .features > p {
+    /* text-align: left; */
+    padding: 20px 10px;
+  }
+  .features > p span {
+    text-align: center !important;
   }
 
   .analyze > div:first-child p {
