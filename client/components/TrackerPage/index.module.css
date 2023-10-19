@@ -61,7 +61,7 @@
 }
 .features {
   padding: 20px 10px;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 .features > p {
   text-align: center;
