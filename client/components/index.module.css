@@ -172,7 +172,7 @@
   width: 100%;
   background-image: url("/images/bg333.png");
   background-size: cover;
-  padding-bottom: 95px;
+  padding-bottom: 30px;
   height: fit-content;
   position: relative;
 }
@@ -236,7 +236,7 @@
 .solutions .featured {
   width: 100%;
   height: auto;
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
   background: linear-gradient(90deg, #f1ffff, #00d1692d);
   position: relative;
 }
