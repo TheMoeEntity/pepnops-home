@@ -96,14 +96,14 @@ body {
 #customers td,
 #customers th {
   border: 1px solid rgba(221, 221, 221, 0.355);
-  padding: 12px 17px !important;
+  padding: 15px 13px !important;
 }
 #customers {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 1000px;
   margin: auto;
-  width: 100%;
+  width: 90%;
   border: 1px solid #ddd;
   cursor: pointer;
   font-size: 16px;
@@ -125,13 +125,9 @@ body {
   background-color: black;
   color: white;
 }
-@media screen and (max-width: 768px) {
-  /* #customers th {
-    width: 70px;
-    overflow: hidden;
-    white-space: nowrap;
-  } */
-  #customers th:last-child {
+@media screen and (max-width: 420px) {
+  #customers {
+    width: 100%;
   }
 }
 body {

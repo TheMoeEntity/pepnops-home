@@ -1219,6 +1219,9 @@
   }
 }
 @media screen and (max-width: 550px) {
+  .solutions .about h3 {
+    padding: 20px 30px;
+  }
   .thoughtGrid {
     width: 97%;
   }

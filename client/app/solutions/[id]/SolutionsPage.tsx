@@ -67,21 +67,7 @@ const SolutionsPage = ({ data }: any) => {
             />
           </div>
         )}
-        {!fetchData.showPhone && (
-          <>
-            <h3 style={{ marginBottom: "40px" }}>{fetchData.capt2}</h3>
-            <div className={styles.video}>
-              <video width="320" height="240" controls preload="auto">
-                <source src="/videos/video.mp4" type="video/mp4" />
-                <source src="movie.ogg" type="video/ogg" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </>
-        )}
-        <span style={{ padding: "0 100px" }}>
-          {fetchData.showPhone && <h3>{fetchData.capt2}</h3>}
-        </span>
+        <span>{fetchData.showPhone && <h3>{fetchData.capt2}</h3>}</span>
       </div>
       <div className={styles2.features}>
         <h2>
@@ -116,7 +102,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                CREATE VISIT &nbsp; <i className="fa-solid fa-angle-down"></i>
+                CREATE VISIT &nbsp;
               </div>
               <div className={styles2.cardInfo}>
                 This feature offers residents a seamless way to schedule
@@ -129,7 +115,7 @@ const SolutionsPage = ({ data }: any) => {
                 className={styles2.cardInfo}
               >
                 COMMUNITY GUIDE &nbsp;{" "}
-                <i className="fa-solid fa-angle-down"></i>
+                {/* <i className="fa-solid fa-angle-down"></i> */}
               </div>
               <div className={styles2.cardInfo}>
                 Residents can effortlessly navigate and discover key spots
@@ -140,7 +126,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                REPORTING &nbsp; <i className="fa-solid fa-angle-down"></i>
+                REPORTING
               </div>
               <div className={styles2.cardInfo}>
                 Effortlessly retrieve historical guest records within your
@@ -151,7 +137,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                SOS &nbsp; <i className="fa-solid fa-angle-down"></i>
+                SOS
               </div>
               <div className={styles2.cardInfo}>
                 With a simple click, residents can swiftly report emergencies
@@ -163,7 +149,7 @@ const SolutionsPage = ({ data }: any) => {
                 className={styles2.cardInfo}
               >
                 PAYMENT MANAGER &nbsp;{" "}
-                <i className="fa-solid fa-angle-down"></i>
+                {/* <i className="fa-solid fa-angle-down"></i> */}
               </div>
               <div className={styles2.cardInfo}>
                 Simplify payment collection through automated processes. Our
@@ -176,7 +162,7 @@ const SolutionsPage = ({ data }: any) => {
                 className={styles2.cardInfo}
               >
                 PUSH NOTIFICATION &nbsp;{" "}
-                <i className="fa-solid fa-angle-down"></i>
+                {/* <i className="fa-solid fa-angle-down"></i> */}
               </div>
               <div className={styles2.cardInfo}>
                 Deliver vital information directly to residents via clickable

@@ -7,6 +7,7 @@ const Sponsors = dynamic(() => import("./SolutionsPage"), {
 });
 import { redirect } from "next/navigation";
 import TrackerPage from "@/components/TrackerPage";
+import SolutionsPage from "./SolutionsPage";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
@@ -18,6 +19,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const showSolutions = (id: string, data: any): JSX.Element | undefined => {
+  if (id === "tracker_360") {
+    return <TrackerPage />;
+  }
+  return <SolutionsPage data={data} />;
+};
+
 const Solutions = async ({ params }: any) => {
   const data = await Helpers.FetchData(params.id);
 
@@ -25,7 +33,7 @@ const Solutions = async ({ params }: any) => {
     redirect("/not-found.tsx");
   }
   // return <Sponsors data={data} />;
-  return <TrackerPage />;
+  return showSolutions(params.id, data);
 };
 
 export default Solutions;

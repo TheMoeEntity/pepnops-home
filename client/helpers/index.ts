@@ -535,9 +535,25 @@ export class Helpers {
   };
   static showDetails = (e: MouseEvent<HTMLDivElement>) => {
     const event = e.target as HTMLElement;
-
+    const parent = event.parentElement;
     const height = (event.nextSibling as HTMLElement).style.maxHeight;
     const elemHeight = (event.nextSibling as HTMLElement).scrollHeight + 80;
+    if (parent) {
+      for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i] as HTMLElement;
+        if (i == 0) {
+          continue;
+        }
+        if (i % 2 == 0) {
+          element.style.background = "black";
+          element.style.padding = "0 30px";
+          element.style.background = "white";
+          element.style.maxHeight = "0";
+        } else {
+          element.style.background = "black";
+        }
+      }
+    }
     event.style.background =
       height === "" || height === "0px" ? "#00d169" : "black";
     (event.nextSibling as HTMLElement).style.padding =
