@@ -102,7 +102,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                CREATE VISIT &nbsp;
+                CREATE VISIT
               </div>
               <div className={styles2.cardInfo}>
                 This feature offers residents a seamless way to schedule
@@ -114,7 +114,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                COMMUNITY GUIDE &nbsp;{" "}
+                COMMUNITY GUIDE
                 {/* <i className="fa-solid fa-angle-down"></i> */}
               </div>
               <div className={styles2.cardInfo}>
@@ -148,8 +148,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                PAYMENT MANAGER &nbsp;{" "}
-                {/* <i className="fa-solid fa-angle-down"></i> */}
+                PAYMENT MANAGER
               </div>
               <div className={styles2.cardInfo}>
                 Simplify payment collection through automated processes. Our
@@ -161,8 +160,7 @@ const SolutionsPage = ({ data }: any) => {
                 onClick={(e) => Helpers.showDetails(e)}
                 className={styles2.cardInfo}
               >
-                PUSH NOTIFICATION &nbsp;{" "}
-                {/* <i className="fa-solid fa-angle-down"></i> */}
+                PUSH NOTIFICATION
               </div>
               <div className={styles2.cardInfo}>
                 Deliver vital information directly to residents via clickable

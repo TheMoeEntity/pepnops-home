@@ -86,7 +86,7 @@ const ContactForm = () => {
             <h3>Head Office:</h3>
             <div>
               <i className="fa-solid fa-building"></i>
-              Ikoyi, Lagos State, Nigeria.
+              Lagos State, Nigeria.
             </div>
             <br />
             <div className={styles.maps}>
