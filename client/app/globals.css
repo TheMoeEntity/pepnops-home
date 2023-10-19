@@ -101,12 +101,12 @@ body {
 #customers {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
-  max-width: 100%;
+  width: 100%;
   border: 1px solid #ddd;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 16px;
   margin-bottom: 40px;
 }
 
