@@ -325,14 +325,20 @@
   position: relative;
 }
 .intro {
-  width: 100%;
+  width: 85%;
   padding: 20px 10px;
+  margin: auto;
+}
+.intro > p {
+  line-height: 1.6;
+  font-weight: bold;
+  padding: 20px 100px;
 }
 .introGrid {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 85%;
+  width: 100%;
   margin: auto;
 }
 .introGrid h2 {
@@ -356,6 +362,7 @@
   width: calc(0.9 * 464px);
   position: relative;
   height: calc(0.9 * 390px);
+  max-width: 100%;
 }
 .backVideo {
   position: absolute;
@@ -969,6 +976,14 @@
   }
 }
 @media screen and (max-width: 1063px) {
+  .introGrid > div:nth-child(2) {
+    width: calc(0.65 * 464px);
+    position: relative;
+    height: calc(0.65 * 390px);
+  }
+  .intro > p {
+    padding: 20px 40px;
+  }
   .solutions .featured .phone {
     width: calc(0.26 * 1080px);
     height: calc(0.26 * 1920px);
@@ -1021,6 +1036,14 @@
   .cards {
     justify-content: center;
   }
+  .introGrid > div:nth-child(2) {
+    width: calc(0.6 * 464px);
+    position: relative;
+    height: calc(0.6 * 390px);
+  }
+  .intro > p {
+    padding: 20px 40px;
+  }
   .careers .cards > div {
     flex: 44% !important;
     max-width: 422px;
@@ -1042,6 +1065,18 @@
   }
 }
 @media screen and (max-width: 888px) {
+  .intro {
+    width: 95%;
+  }
+  .introGrid > div:nth-child(1) {
+    width: calc(0.58 * 464px);
+  }
+  .introGrid h2 {
+    width: 60%;
+  }
+  /* .introGrid {
+    justify-content: flex-start;
+  } */
   .solutions .about .dashboard {
     width: calc(0.145 * 4095px);
     height: calc(0.145 * 2646px);
@@ -1138,6 +1173,20 @@
   }
 }
 @media screen and (max-width: 680px) {
+  .introGrid {
+    justify-content: flex-start;
+    flex-flow: column wrap;
+  }
+  .introGrid > div:nth-child(1) {
+    width: calc(0.58 * 464px);
+    height: fit-content;
+  }
+  .introGrid > div {
+    margin: 20px 0px;
+  }
+  .intro > p {
+    padding: 20px 0;
+  }
   .mission > div {
     padding: 50px 25px;
   }

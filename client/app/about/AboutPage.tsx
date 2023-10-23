@@ -6,6 +6,7 @@ import mac from "../../public/images/abt.png";
 import { useEffect, useState } from "react";
 import james from "../../public/images/mr clever.jpeg";
 import { useAnimation } from "@/helpers/useAnimation";
+import TypeEffect from "../careers/TypeEffect";
 
 const AboutPage = () => {
   const [anim, setAnim] = useState<any>(null);
@@ -27,6 +28,11 @@ const AboutPage = () => {
           <div>
             <span>At Pepnops</span>
             <h2>We are Passionate about Transforming</h2>
+            <h2>
+              <span>
+                <TypeEffect />
+              </span>
+            </h2>
           </div>
           <div>
             <Image
@@ -39,6 +45,12 @@ const AboutPage = () => {
             />
           </div>
         </div>
+        <p>
+          Our team, driven by expertise and insight, crafts solutions that not
+          only simplify processes but also amplify potential. As we guide
+          businesses towards a seamless digital future, we remain steadfast in
+          our commitment to embracing ease at every step of the journey.
+        </p>
       </div>
       <div className={styles.missionGrid}>
         <div className={styles.mission}>

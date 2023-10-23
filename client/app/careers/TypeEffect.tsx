@@ -2,7 +2,6 @@ import Typewriter from "typewriter-effect";
 import styles from "../../components/index.module.css";
 
 const TypeEffect = () => {
-  const classname = styles.typeStyles;
   return (
     <Typewriter
       // options={{
