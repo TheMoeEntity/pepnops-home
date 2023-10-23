@@ -559,7 +559,7 @@ export class Helpers {
     (event.nextSibling as HTMLElement).style.padding =
       height === "" || height === "0px" ? "16px 30px" : "0 30px";
     (event.nextSibling as HTMLElement).style.background =
-      height === "1300px" || height === "0px" ? "#e8e8e8" : "white";
+      height === "1300px" || height === "0px" ? "#e8e8e8" : "#e8e8e8";
     (event.nextSibling as HTMLElement).style.maxHeight =
       height === "" || height === "0px" ? `${elemHeight}px` : "0";
   };

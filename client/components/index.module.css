@@ -321,9 +321,63 @@
 }
 .aboutHero {
   width: 100%;
-  height: 553px;
+  height: 500px;
   position: relative;
 }
+.intro {
+  width: 100%;
+  padding: 20px 10px;
+}
+.introGrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+}
+.introGrid h2 {
+  width: 40%;
+  font-size: 40px;
+  margin: 10px 0;
+}
+.introGrid > div {
+  margin: 20px 10px;
+}
+.introGrid span {
+  color: #07da97;
+  font-weight: bolder;
+}
+.introGrid > div:nth-child(1) {
+  width: calc(0.9 * 464px);
+  position: relative;
+  height: calc(0.9 * 390px);
+}
+.introGrid > div:nth-child(2) {
+  width: calc(0.9 * 464px);
+  position: relative;
+  height: calc(0.9 * 390px);
+}
+.backVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+/* @media (min-aspect-ratio: 16/9) {
+  .backVideo {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .backVideo {
+    height: 100%;
+    width: auto;
+  }
+} */
 
 .itHero {
   width: 100%;
@@ -384,41 +438,18 @@
 .itHero .centered h1 span {
   color: #07da97;
 }
-.aboutSection {
-  width: 85%;
-  height: auto;
-  /* background: linear-gradient(90deg, #f1ffff, #66d19b2d); */
-  /* background-image: url("/images/about-bg.jpeg"); */
-  background-size: cover;
-  background-position: bottom;
-  padding: 40px 50px;
-  display: flex;
-  flex-flow: row wrap;
-  margin: auto;
-  justify-content: space-around;
-}
-.aboutSection > div {
-  flex: 40%;
-  margin: 10px 40px;
-  transition: 0.75s;
-}
-.aboutSection > div h2 {
-  font-size: 50px;
-  margin: 10px 0;
-  text-align: justify;
-}
-.aboutSection > div > span {
-  color: #07da97;
-}
-.aboutSection > div h2 span {
-  color: #07da97;
-}
 .aboutUs > p {
   padding: 30px 160px;
   text-align: center;
 }
+.missionGrid {
+  max-width: 100%;
+  padding: 20px 20px;
+  width: 700px;
+  margin: auto;
+}
 .mission {
-  width: 58%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -427,54 +458,24 @@
 .mission > div {
   flex: 50%;
   padding: 50px 50px;
+  max-height: 320px;
+  font-size: 15px;
 }
 .mission > div h2 {
   text-align: center;
   margin: 0px 0 30px 0;
 }
-.mission > div p {
+/* .mission > div p {
   padding: 0 20px 0 50px;
   font-weight: 500;
-  /* text-align: center; */
-}
+
+} */
 .mission > div:nth-child(1) {
   background-color: #f9f9f9;
 }
 .mission > div:nth-child(2) {
   background-color: #dce2fa;
 }
-.aboutSection > div p {
-  line-height: 1.5;
-  font-size: 14px;
-  text-align: justify;
-  font-weight: 200;
-  padding-top: 50px;
-}
-
-.aboutSection > div:nth-child(1) {
-  transform: translateX(-200px);
-  opacity: 0;
-}
-.aboutSection > div:nth-child(1).addWidth,
-.aboutSection > div:nth-child(2).addWidth {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.aboutSection > div:nth-child(2) {
-  height: 390px;
-  transform: translateX(200px);
-  opacity: 0;
-  border-radius: 12px;
-  margin-left: 30px;
-  background: none;
-  -webkit-filter: drop-shadow(5px 9px 35px rgba(143, 143, 143, 0.2));
-  filter: drop-shadow(5px 9px 35px rgba(143, 143, 143, 0.2));
-  overflow: hidden;
-  /* width: 540px; */
-  position: relative;
-}
-
 .ourTeam {
   width: 100%;
   padding: 40px 10px;
@@ -966,14 +967,6 @@
   .aboutHero {
     height: 600px;
   }
-  .aboutSection {
-    justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  .aboutSection > div {
-    max-width: 530px;
-  }
 }
 @media screen and (max-width: 1063px) {
   .solutions .featured .phone {
@@ -981,10 +974,6 @@
     height: calc(0.26 * 1920px);
     right: -20px;
     animation: bounce2 2.5s ease infinite;
-  }
-  .aboutSection > div:nth-child(2) {
-    height: calc(0.8 * 390px);
-    width: calc(0.8 * 100%);
   }
   .solutions .about .dashboard {
     width: calc(0.21 * 4095px);
@@ -1029,15 +1018,6 @@
   }
 }
 @media screen and (max-width: 980px) {
-  .aboutSection {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .aboutSection > div:nth-child(2) {
-    height: calc(0.7 * 390px);
-    width: calc(0.7 * 100%);
-    min-width: 339px;
-  }
   .cards {
     justify-content: center;
   }
@@ -1095,19 +1075,6 @@
     height: calc(0.22 * 1920px);
     right: -30px;
   }
-  .aboutSection {
-    align-items: center;
-    width: 80%;
-    max-width: 95%;
-    margin: auto;
-  }
-
-  .aboutSection > div {
-    margin-top: 40px;
-  }
-  .aboutSection > div:nth-child(2) {
-    height: calc(0.8 * 390px);
-  }
 
   .contactForm .form {
     flex-flow: column wrap;
@@ -1139,9 +1106,7 @@
   .why {
     border-image: none;
   }
-  .aboutSection {
-    width: 85%;
-  }
+
   .cards {
     justify-content: center;
     flex-flow: column wrap;
@@ -1173,6 +1138,9 @@
   }
 }
 @media screen and (max-width: 680px) {
+  .mission > div {
+    padding: 50px 25px;
+  }
   .solutions .featured .phone {
     width: calc(0.184 * 1080px);
     height: calc(0.184 * 1920px);
@@ -1184,9 +1152,6 @@
   .about .grid > div {
     height: 375px;
   }
-  .aboutSection {
-    width: 90%;
-  }
   .whyChoose > div:nth-child(1) {
     flex: calc(0.4 * 1000px);
     width: calc(0.4 * 1000px);
@@ -1196,9 +1161,6 @@
     margin-right: 0;
     margin-left: 0;
     max-width: 90%;
-  }
-  .aboutSection {
-    width: 100%;
   }
   .cards {
     width: 95%;
@@ -1219,6 +1181,16 @@
   }
 }
 @media screen and (max-width: 550px) {
+  .ourTeam h2 {
+    font-size: 35px;
+  }
+  .mission > div {
+    padding: 33px 20px;
+    max-height: 330px;
+    font-size: small;
+  }
+  .mission > div p {
+  }
   .solutions .about h3 {
     padding: 20px 30px;
   }
@@ -1351,23 +1323,12 @@
     line-height: normal;
     margin-top: 30px;
   }
-  .aboutSection {
-    padding: 40px 15px;
-  }
-  .aboutSection > div {
-    margin: 25px 0;
-    flex: 100%;
-  }
-  .aboutSection > div:nth-child(2) {
-    width: 100%;
-    height: 250px;
-  }
 
   .cards {
     width: 95%;
   }
   .aboutHero {
-    height: 450px;
+    height: 290px;
   }
   .solutions .featured .phone {
     width: calc(0.15 * 1080px);
@@ -1429,6 +1390,17 @@
   }
 }
 @media screen and (max-width: 470px) {
+  .missionGrid {
+    padding: 20px 10px;
+  }
+  .ourTeam h2 {
+    font-size: 32px;
+  }
+  .mission > div {
+    padding: 33px 15px;
+    max-height: 330px;
+    font-size: small;
+  }
   .solutions .about .dashboard {
     width: calc(0.09 * 4095px);
     height: calc(0.09 * 2646px);
@@ -1658,9 +1630,6 @@
   .careers h2 {
     font-size: 20px !important;
     text-align: center;
-  }
-  .aboutSection h2 {
-    text-align: left !important;
   }
   .maps {
     width: calc(0.7 * 328px);

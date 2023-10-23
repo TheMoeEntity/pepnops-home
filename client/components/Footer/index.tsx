@@ -84,10 +84,8 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <Link href={"/IT_consulting"}>
-              <i className="fa fa-angle-right"></i>
-              PEPNOPS-EHR
-            </Link>
+            <i className="fa fa-angle-right"></i>
+            PEPNOPS-EHR
           </div>
         </div>
         <div>

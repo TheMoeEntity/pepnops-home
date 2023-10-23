@@ -67,7 +67,7 @@
 .cardInfo:nth-child(odd) {
   color: black;
   flex: 90%;
-  background-color: #e8e8e8;
+  background-color: #e8e8e8 !important;
   margin-left: 130px;
   padding: 0px 30px;
   max-height: 0;

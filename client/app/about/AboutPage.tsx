@@ -18,72 +18,49 @@ const AboutPage = () => {
   return (
     <div className={styles.aboutUs}>
       <div className={styles.aboutHero}>
-        <div className={styles.centered}>
-          <h1>
-            Innovation<span>. </span>
-            Collaboration<span>. </span>
-            Excellence<span>. </span>
-          </h1>
-        </div>
-        <Image
-          src={man}
-          alt="hero-image"
-          fill={true}
-          quality={100}
-          priority={true}
-          sizes="(max-width: 1920px) 100vw, (max-width: 1920px) 50vw, 33vw"
-        />
+        <video autoPlay loop muted playsInline className={styles.backVideo}>
+          <source src="/videos/comp1.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div className={styles.aboutSection}>
-        <div className="anim">
-          <span>
-            <b>At Pepnops</b>
-          </span>
-          <h2>
-            We are <br />
-            Passionate <br />
-            about <br />
-            transforming <br />
-            <span>LIVES</span>
-          </h2>
-        </div>
-        <div className="anim">
-          <Image
-            src={mac}
-            alt="hero-image"
-            fill={true}
-            quality={100}
-            priority={true}
-            sizes="(max-width: 1920px) 100vw, (max-width: 1920px) 50vw, 33vw"
-          />
+      <div className={styles.intro}>
+        <div className={styles.introGrid}>
+          <div>
+            <span>At Pepnops</span>
+            <h2>We are Passionate about Transforming</h2>
+          </div>
+          <div>
+            <Image
+              src={mac}
+              alt="pepnops"
+              fill={true}
+              quality={100}
+              priority={true}
+              sizes="(max-width: 464px) 100vw, (max-width:100%) 50vw, 33vw"
+            />
+          </div>
         </div>
       </div>
-      <p>
-        <b>
-          Our team, driven by expertise and insight, crafts solutions that not
-          only simplify processes but also amplify potential. As we guide
-          businesses towards a seamless digital future, we remain steadfast in
-          our commitment to embracing ease at every step of the journey.
-        </b>
-      </p>
-      <div className={styles.mission}>
-        <div>
-          <h2>OUR VISION</h2>
-          <p>
-            To be at the forefront of technological advancement pioneering a
-            society where people and businesses experience stress-free
-            functionality & efficiency in every sector and sphere of life
-            possible.
-          </p>
-        </div>
-        <div>
-          <h2>OUR MISSION</h2>
-          <p>
-            We are on a mission to guide individuals and businesses towards
-            success, simplifying their journey and eliminating stress.
-          </p>
+      <div className={styles.missionGrid}>
+        <div className={styles.mission}>
+          <div>
+            <h2>OUR VISION</h2>
+            <p>
+              To be at the forefront of technological advancement pioneering a
+              society where people and businesses experience stress-free
+              functionality & efficiency in every sector and sphere of life
+              possible.
+            </p>
+          </div>
+          <div>
+            <h2>OUR MISSION</h2>
+            <p>
+              We are on a mission to guide individuals and businesses towards
+              success, simplifying their journey and eliminating stress.
+            </p>
+          </div>
         </div>
       </div>
+
       <div className={styles.ourTeam}>
         <div className={styles.title}>
           <h2>
