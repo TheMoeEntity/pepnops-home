@@ -1255,7 +1255,7 @@
     width: 100%;
     height: calc(0.66 * 350px);
     position: relative;
-    border: 10px solid #5271ff;
+    border: 10px solid #167252;
     border-radius: 12px;
   }
   .thoughtGrid > div .image img {
