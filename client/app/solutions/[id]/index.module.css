@@ -15,6 +15,7 @@
   flex-flow: column wrap;
   justify-content: center;
   padding-bottom: 20px;
+  margin: auto;
 }
 .callTo > p {
   text-align: center;
@@ -24,12 +25,10 @@
   color: white;
   background-color: #00d169;
   margin: 10px auto;
-  width: fit-content;
-  font-size: large;
-  height: fit-content;
+  padding: 12px 20px;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  font-size: medium;
+  border-radius: 7px;
 }
 .phoneContainer {
   width: 900px;

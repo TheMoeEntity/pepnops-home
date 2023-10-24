@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import bus from "../../public/images/pepbus.png";
 import trackerman from "../../public/images/tracker man.png";
+import Link from "next/link";
 
 const TrackerPage = () => {
   return (
@@ -139,7 +140,9 @@ const TrackerPage = () => {
           </span>
         </p>
         <div className={styles.talk}>
-          <button>Talk to us</button>
+          <Link href={"/contact"}>
+            <button>Talk to us</button>
+          </Link>
         </div>
       </div>
     </div>

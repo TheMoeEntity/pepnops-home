@@ -179,7 +179,7 @@ const SolutionsPage = ({ data }: any) => {
           <p>
             <b>Ready to elevate your community experience?</b>
           </p>
-          <button>Talk to us</button>
+          <button onClick={() => router.push("/contact")}>Talk to us</button>
         </div>
       </div>
       {/* <div className={styles.featured}>

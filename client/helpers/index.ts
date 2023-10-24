@@ -352,7 +352,7 @@ export class Helpers {
       });
       return;
     } else if (data.budget == "--Choose--" || data.choise == "--Choose--") {
-      enqueueSnackbar("Select a valid budget or choice", {
+      enqueueSnackbar("Select a valid service or industry", {
         variant: "error",
       });
       return;
