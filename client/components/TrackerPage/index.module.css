@@ -18,11 +18,12 @@
   margin-right: 10px;
 }
 .trackerText {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 .trackerText h3 {
   color: #07da97;
   font-weight: bolder;
+  font-size: 24px;
 }
 .trackerText h1 {
   font-size: 50px;
@@ -33,6 +34,7 @@
 }
 .analyze {
   width: 100%;
+  margin-top: 50px;
   padding: 40px 10px;
   display: flex;
   /* justify-content: center; */
@@ -76,7 +78,7 @@
   height: fit-content;
 }
 .talk button {
-  background-color: #07da97;
+  background-color: #167252;
   color: white;
   padding: 12px 20px;
   border: none;

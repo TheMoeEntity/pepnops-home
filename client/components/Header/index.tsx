@@ -70,7 +70,7 @@ const Header = () => {
           </div>
           <ol>
             <li onClick={() => LinkAction("/")}>Home</li>
-            <li onClick={() => LinkAction("/#solutions")}>Services</li>
+            <li onClick={() => LinkAction("/#burden")}>Services</li>
             <li onClick={(e) => Helpers.showMore(e)}>Products +</li>
             <li className={styles.dropMobile}>
               <span onClick={() => LinkAction("/solutions/smartx")}>
