@@ -17,14 +17,14 @@ const TypeEffect = () => {
       onInit={(writer) => {
         writer
           .pauseFor(2500)
-          .typeString("Lives")
+          .typeString("Lives.")
           .pauseFor(2000)
           .deleteAll()
-          .typeString("Business")
+          .typeString("Businesses.")
           .pauseFor(2000)
           .deleteAll()
           // .deleteChars(10)
-          .typeString("Operations")
+          .typeString("Operations.")
           .pauseFor(2000)
           .deleteAll()
           .start();

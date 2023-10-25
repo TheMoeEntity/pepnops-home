@@ -5,7 +5,7 @@ import "react-slideshow-image/dist/styles.css";
 import { ServicesAssets } from "@/helpers";
 const Burden = () => {
   return (
-    <div className={styles.burden}>
+    <div id="burden" className={styles.burden}>
       <div></div>
       <div>
         <h2 className={styles.burd}>

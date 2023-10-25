@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CSSProperties, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { Helpers } from "@/helpers";
 
 const Header = () => {
   const [sidebar, setSideBar] = useState<boolean>(false);
@@ -69,9 +70,22 @@ const Header = () => {
           </div>
           <ol>
             <li onClick={() => LinkAction("/")}>Home</li>
-            <li onClick={() => LinkAction("/#solutions")}>Solutions</li>
-            <li onClick={() => LinkAction("/about")}>Who we are</li>
-            <li onClick={() => LinkAction("/about")}>Company</li>
+            <li onClick={() => LinkAction("/#solutions")}>Services</li>
+            <li onClick={(e) => Helpers.showMore(e)}>Products +</li>
+            <li className={styles.dropMobile}>
+              <span onClick={() => LinkAction("/solutions/smartx")}>
+                Smart-X
+              </span>
+              <span onClick={() => LinkAction("/solutions/tracker_360")}>
+                Tracker 360
+              </span>
+              <span>Pepnops-EHR</span>
+            </li>
+            <li onClick={(e) => Helpers.showMore(e)}>Company +</li>
+            <li className={styles.dropMobile}>
+              <span onClick={() => LinkAction("/about")}>About us</span>
+              <span onClick={() => LinkAction("/careers")}>Careers</span>
+            </li>
             <li onClick={() => LinkAction("/contact")}>{`Let's Talk`}</li>
           </ol>
         </div>
@@ -93,9 +107,26 @@ const Header = () => {
       </div>
       <div>
         <ul>
-          <li onClick={() => router.push("/#solutions")}>SOLUTIONS</li>
-          <li>SERVICES </li>
-          <li onClick={() => router.push("/about")}>COMPANY</li>
+          <li onClick={() => router.push("/#burden")}>SERVICES</li>
+          <li>
+            PRODUCTS
+            <div className={styles.dropDown}>
+              <span onClick={() => router.push("/solutions/smartx")}>
+                Smart-X
+              </span>
+              <span onClick={() => router.push("/solutions/tracker_360")}>
+                Tracker 360
+              </span>
+              <span>Pepnops-EHR</span>
+            </div>
+          </li>
+          <li>
+            COMPANY
+            <div className={styles.dropDown}>
+              <span onClick={() => router.push("/about")}>About us</span>
+              <span onClick={() => router.push("/careers")}>Careers</span>
+            </div>
+          </li>
           <li onClick={() => router.push("/contact")}>{`LET TALK`}</li>
         </ul>
       </div>

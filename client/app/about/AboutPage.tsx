@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import james from "../../public/images/mr clever.jpeg";
 import { useAnimation } from "@/helpers/useAnimation";
 import TypeEffect from "../careers/TypeEffect";
+import { team } from "@/helpers";
 
 const AboutPage = () => {
   const [anim, setAnim] = useState<any>(null);
@@ -80,11 +81,11 @@ const AboutPage = () => {
           </h2>
         </div>
         <div className={styles.cardss}>
-          {[...Array(6)].map((_x, i) => (
+          {team.map((x, i) => (
             <div key={i}>
               <div className={styles.img}>
                 <Image
-                  src={james}
+                  src={x.image}
                   alt="team image"
                   fill={true}
                   quality={100}
@@ -93,8 +94,8 @@ const AboutPage = () => {
                 />
               </div>
               <div className={styles.teamDetails}>
-                <h3>Bright Osarumen Eguasa</h3>
-                <span>CEO & Founder</span>
+                <h3>{x.title}</h3>
+                <span>{x.profile}</span>
               </div>
             </div>
           ))}

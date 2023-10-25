@@ -10,6 +10,9 @@ import excellence2 from "./../public/images/innovation.png";
 import collaboration from "./../public/images/collaboration.png";
 import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
+import moe from "./../public/images/moe2.jpeg";
+import clever from "./../public/images/mr clever.jpeg";
+import alfred from "./../public/images/moe.jpeg";
 import innovate from "./../public/images/innovate.png";
 import React, {
   ChangeEvent,
@@ -37,6 +40,28 @@ export type careerType = {
   title: string;
   text: string;
 };
+export type teamType = {
+  title: string;
+  profile: string;
+  image: StaticImageData;
+};
+export const team: teamType[] = [
+  {
+    title: "Bright Osarumen Eguasa",
+    profile: "Founder & Chief Product Officer",
+    image: clever,
+  },
+  {
+    title: "Moses Chukwudi Nwigberi",
+    profile: "Frontend Engineer",
+    image: moe,
+  },
+  {
+    title: "Alfred",
+    profile: "Frontend Engineer",
+    image: moe,
+  },
+];
 export const careerCards: careerType[] = [
   {
     title: "Professional Development Opportunities",
@@ -532,6 +557,17 @@ export class Helpers {
       default:
         return undefined;
     }
+  };
+  static showMore = (e: MouseEvent<HTMLLIElement>) => {
+    const event = e.target as HTMLElement;
+    const elemHeight = (event.nextSibling as HTMLElement).scrollHeight + 180;
+    const nextSibling = event.nextSibling as HTMLElement;
+    const height = (event.nextSibling as HTMLElement).style.maxHeight;
+
+    (nextSibling as HTMLElement).style.maxHeight =
+      height === "" || height === "0px" ? `${elemHeight}px` : "0";
+    (event.nextSibling as HTMLElement).style.padding =
+      height === "" || height === "0px" ? "10px 30px" : "0 30px";
   };
   static showDetails = (e: MouseEvent<HTMLDivElement>) => {
     const event = e.target as HTMLElement;
