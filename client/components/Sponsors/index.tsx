@@ -6,14 +6,13 @@ import sponsor3 from "../../public/images/sp3.png";
 import sponsor4 from "../../public/images/sp4.png";
 import sponsor5 from "../../public/images/Bril logo.png";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { thoughtsGrid } from "@/helpers";
+import { useRouter } from "next/navigation";
 
 const Sponsors = () => {
   const grid = useRef<HTMLDivElement | null>(null);
-  const [pos, setPos] = useState<number>(0);
-  const interval = useRef(null);
-  const move = () => {};
+  const router = useRouter();
   return (
     <div className={styles.sponsors}>
       <div className={styles.title}>
@@ -104,8 +103,21 @@ const Sponsors = () => {
             {` We're`} here to assist and eager to connect. {`Let's`} start the{" "}
             <br /> conversation.
           </p>
-          <button style={{ backgroundColor: "#167252" }}>Contact Sales</button>
-          <button style={{ backgroundColor: "#3c3d3c" }}>Book a Call</button>
+          <button style={{ backgroundColor: "#167252" }}>
+            <a
+              target={`_blank`}
+              rel="noopener noreferrer"
+              href="mailto:biz@pepnops.com"
+            >
+              Contact Sales
+            </a>
+          </button>
+          <button
+            onClick={() => router.push("/contact")}
+            style={{ backgroundColor: "#3c3d3c" }}
+          >
+            Book a Call
+          </button>
         </div>
       </div>
     </div>

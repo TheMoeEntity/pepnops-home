@@ -47,17 +47,17 @@ export type teamType = {
 };
 export const team: teamType[] = [
   {
-    title: "Bright Osarumen Eguasa",
+    title: "Bright Eguasa",
     profile: "Founder & Chief Product Officer",
     image: clever,
   },
   {
-    title: "Moses Chukwudi Nwigberi",
+    title: "Moses Nwigberi",
     profile: "Frontend Engineer",
     image: moe,
   },
   {
-    title: "Alfred",
+    title: "Alfred Emmanuel",
     profile: "Frontend Engineer",
     image: moe,
   },

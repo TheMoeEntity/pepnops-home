@@ -87,7 +87,10 @@ const SolutionsPage = ({ data }: any) => {
               />
             </div>
             <div>
-              <div className={`${styles2.create}`}>
+              <div
+                style={{ visibility: "hidden" }}
+                className={`${styles2.create}`}
+              >
                 <div>
                   <h3>AWESOME FEATURES </h3>
                   <p>
