@@ -57,10 +57,9 @@
   /* position: absolute; */
   position: sticky;
   position: -ms-page;
-  transition: 0.6s;
+  transition: all 0.5s;
 }
 .sideContent > ol > li {
-  transition: 0.7s;
   width: 100%;
   padding: 20px;
   font-weight: bold;
@@ -71,7 +70,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  transition: 0.7s;
+  transition: all 0.5s;
 }
 .dropMobile {
   display: flex;
@@ -82,7 +81,7 @@
   max-height: 0;
   padding: 0;
   font-weight: 400;
-  transition: all 0.7s;
+  transition: all 0.5s;
   z-index: 99;
   overflow: hidden;
 }

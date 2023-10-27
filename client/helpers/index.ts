@@ -560,14 +560,14 @@ export class Helpers {
   };
   static showMore = (e: MouseEvent<HTMLLIElement>) => {
     const event = e.target as HTMLElement;
-    const elemHeight = (event.nextSibling as HTMLElement).scrollHeight + 180;
+    const elemHeight = (event.nextSibling as HTMLElement).scrollHeight + 140;
     const nextSibling = event.nextSibling as HTMLElement;
     const height = (event.nextSibling as HTMLElement).style.maxHeight;
 
     (nextSibling as HTMLElement).style.maxHeight =
       height === "" || height === "0px" ? `${elemHeight}px` : "0";
     (event.nextSibling as HTMLElement).style.padding =
-      height === "" || height === "0px" ? "10px 30px" : "0 30px";
+      height === "" || height === "0px" ? "10px 10px" : "0 10px";
   };
   static showDetails = (e: MouseEvent<HTMLDivElement>) => {
     const event = e.target as HTMLElement;
