@@ -80,7 +80,7 @@
 .talk button {
   background-color: #167252;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 30px;
   border: none;
   font-size: medium;
   border-radius: 7px;
@@ -149,6 +149,9 @@
 }
 
 @media screen and (max-width: 450px) {
+  .talk button {
+    padding: 12px 20px;
+  }
   .trackerText {
     padding-top: 30px;
   }
