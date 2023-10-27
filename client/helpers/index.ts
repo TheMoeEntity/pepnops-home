@@ -10,9 +10,9 @@ import excellence2 from "./../public/images/innovation.png";
 import collaboration from "./../public/images/collaboration.png";
 import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
-import moe from "./../public/images/moe2.jpeg";
-import clever from "./../public/images/mr clever.jpeg";
-import alfred from "./../public/images/moe.jpeg";
+import moe from "./../public/images/moses 2.png";
+import clever from "./../public/images/bright.png";
+import alfred from "./../public/images/moses 2.png";
 import innovate from "./../public/images/innovate.png";
 import React, {
   ChangeEvent,
