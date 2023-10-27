@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import bus from "../../public/images/pepbus.png";
-import trackerman from "../../public/images/tracker man.png";
+import trackerman from "../../public/images/tracker3.png";
 import Link from "next/link";
 
 const TrackerPage = () => {

@@ -1,6 +1,6 @@
 "use client";
 import styles from "../index.module.css";
-import sponsor1 from "../../public/images/sp1.png";
+import sponsor1 from "../../public/images/aman.png";
 import sponsor2 from "../../public/images/sp2.png";
 import sponsor3 from "../../public/images/sp3.png";
 import sponsor4 from "../../public/images/sp4.png";
