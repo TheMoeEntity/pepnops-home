@@ -12,7 +12,7 @@ import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
 import moe from "./../public/images/moses 2.png";
 import clever from "./../public/images/bright.png";
-import alfred from "./../public/images/moses 2.png";
+import alfred from "./../public/images/alfred.jpg";
 import innovate from "./../public/images/innovate.png";
 import React, {
   ChangeEvent,
@@ -59,7 +59,7 @@ export const team: teamType[] = [
   {
     title: "Alfred Emmanuel",
     profile: "Frontend Engineer",
-    image: moe,
+    image: alfred,
   },
 ];
 export const careerCards: careerType[] = [
