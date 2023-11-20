@@ -12,7 +12,7 @@ import excellence from "./../public/images/excellence.png";
 import collaborate from "./../public/images/collaborate.png";
 import moe from "./../public/images/moses 2.png";
 import clever from "./../public/images/bright.png";
-import alfred from "./../public/images/alfred.jpg";
+import alfred from "./../public/images/alfred2.jpg";
 import innovate from "./../public/images/innovate.png";
 import React, {
   ChangeEvent,
